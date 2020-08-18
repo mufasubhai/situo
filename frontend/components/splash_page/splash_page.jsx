@@ -14,9 +14,9 @@ const SplashPage = () => (
         </header>
 
 
-        <body className='splash content'>
+        <div className='splash content'>
             
-        </body>
+        </div>
     </div>
 )
 

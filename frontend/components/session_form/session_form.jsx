@@ -8,9 +8,9 @@ class SessionForm extends React.Component {
             email: '',
             password: ''
         }
-        console.log(this.props.navLink.props.to)
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     update(field) {
@@ -23,6 +23,12 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+    }
+
+    demoLogin(e) {
+        e.preventDefault();
+        const demoUser = {email: 'woz@woz.woz', password: 'hunter2'}
+        this.props.processForm(demoUser)
     }
 
     renderErrors() {
@@ -57,8 +63,10 @@ class SessionForm extends React.Component {
                                     className="login-input"
                                     />
                             </label> 
-                            : null
+                            : <button onClick={this.demoLogin} >Demo Situo</button>
                         }
+
+                       
                         <br />
                         <label>Email Address
               <input type="text"
