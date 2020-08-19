@@ -1,11 +1,15 @@
 import React from 'react';
+import SideNavContainer from "../side_nav/side_nav_container"
+import TopNavContainer from "../top_nav/top_nav_container"
+
 class Home extends React.Component {
 
     render() {
         return (
-        <div>
+            <div>
+            <TopNavContainer/>
             <p>Home Page</p>
-            <button onClick={this.props.logout}>Logout</button>
+            <SideNavContainer/>
 
         </div>
 

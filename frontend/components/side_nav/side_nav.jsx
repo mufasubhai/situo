@@ -3,7 +3,13 @@ import React from 'react';
 class SideNav extends React.Component {
 
     render () {
-        return null
+        return(
+            <div>
+                <p>
+                    this is the side nav
+                </p>
+            </div>
+        )
     }
 }
 
