@@ -49,11 +49,14 @@ class SessionForm extends React.Component {
         return (
             <div className='session-background'>
 
+                <img src={window.logoWhite} className='session-logo' />
+
+
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                         
                         <p className="login-text">{this.props.formType}</p>
 
-                        <button onClick={this.demoLogin} >Situo Live Demo</button>
+                        <button onClick={this.demoLogin} className="demo-button" >Situo Live Demo</button>
 
                         <span className="separator-row">
                         <span className='separator-horizontal'></span>
@@ -63,7 +66,7 @@ class SessionForm extends React.Component {
 
                     {this.renderErrors()}
                        
-                        <label>Email Address
+                        <label className='input-text'>Email Address
                                 <input            
                                 type="text"
                                 value={this.state.email}
@@ -72,21 +75,21 @@ class SessionForm extends React.Component {
                                 id='top-input'
                             />
                         </label>
-                                            <div className="login-form">
-                                                {this.props.navLink.props.to === '/login' ?
-                                                <label>Name
-                                                    <br />
-                                                        <input 
-                                                        className="splash-input"
-                                                        type="text"
-                                                        value={this.state.name}
-                                                        onChange={this.update('name')}
-                                                        className="login-input"
-                                                        />
-                                                </label> 
-                                                : null
+                    <div className="login-form">
+                        {this.props.navLink.props.to === '/login' ?
+                        <label className='input-text'>Name
+                            <br />
+                                <input 
+                                className="splash-input"
+                                type="text"
+                                value={this.state.name}
+                                onChange={this.update('name')}
+                                className="login-input"
+                                />
+                        </label> 
+                        : null
                                             }
-                        <label>Password
+                        <label className='input-text bottom-input'>Password
                                 <input 
                             
                                 type="password"
@@ -97,27 +100,30 @@ class SessionForm extends React.Component {
                         </label>
 
                         <span/>
-                        
-                        <button className="session-submit" >{this.props.formType}</button>
+                        <span className="submit-wrapper">
+                            <button className="session-submit" >{this.props.formType}</button>
+                        </span>
                     </div>
                 </form>
 
-                    
-                <p id="splash-button">{this.props.navLinkPhrase} <button id="splash-button">{this.props.navLink}</button></p>
+            <div className="session-footer">
 
-                <ul className='splash-sublist'>
+                <p className='footer-el footer-top'>{this.props.navLinkPhrase}<button id="session-button">{this.props.navLink}</button></p>
+
+                    <ul className='footer-el footer-list'>
                     <a className='navli' href="#">Link 1</a>
                     <a className='navli' href="#">Link 2</a>
                     <a className='navli' href="#">Link 3</a>
                     <a className='navli' href="#">Link 4</a>
                 </ul>
                 
-                <ul className='splash-sublist small'>
+                    <ul className='footer-el footer-list'>
                     <a className='navli' href="#">Link 1</a>
                     <a className='navli' href="#">Link 2</a>
                     <a className='navli' href="#">Link 3</a>
                     <a className='navli' href="#">Link 4</a>
                 </ul>
+            </div>
                 
             </div>
         

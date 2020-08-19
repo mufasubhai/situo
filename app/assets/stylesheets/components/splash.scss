@@ -1,0 +1,48 @@
+.splash-body {
+    display: flex;
+    flex-direction: column
+}
+
+
+.splash-content {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.splash-header {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px 10px rgba(247,247,247,0.84);
+    border-bottom: 1px, solid, rgba(240,240,240,0.84);
+  
+}
+
+.splash-logo {
+    padding-left: 64px;
+     padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.splash-links {
+    padding-right: 55px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.splash-link {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.splash-logo {
+    height: 24px;
+    width: auto;
+}
+
+.splash-text {
+    width: 50%;
+}
+
+

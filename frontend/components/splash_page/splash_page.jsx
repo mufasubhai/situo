@@ -4,25 +4,31 @@ import { Link } from 'react-router-dom';
 
 
 const SplashPage = () => (
-    <div>
-        <header className="splash content">
+    <div className='splash-body'>
+        <header className="splash-header">
             
-            
+                <img src={window.logoBlack} className='splash-logo'/>
 
-                <a href='mailto:aapodaca@gmail.com'>Contact</a>
-          
-            <br/>
-                <Link to='/login'>Log In</Link>
-            <br/>
-                <Link to='/signup'>Try for Free</Link>
+                <span className='splash-links'>
+                    <a className='splash-link' href='mailto:aapodaca@gmail.com'>Contact</a>
+                <Link to='/login' className='splash-link'>Log In</Link>
+                <Link to='/signup' className='splash-link'>Try for Free</Link>                    
+                </span> 
+
+
         </header>
 
+        <span>
+            <div className='splash-content'>
+                <div className="splash-text">
+                </div>
 
-        <div className='splash content'>
-            
-        </div>
+                    <img src={window.DS9} className='DS9' />
+
+            </div>
+        </span>
     </div>
-)
+    )
 
 
 export default SplashPage;
