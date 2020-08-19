@@ -23,8 +23,17 @@ const SplashPage = () => (
                 <div className="splash-text">
                 </div>
 
-                    <img src={window.DS9} className='DS9' />
 
+
+
+
+                <video class="videoAnimation js-logo-farm-image"
+                    poster="https://luna1.co/2b4335.png"
+                    data-src="https://d1gwm4cf8hecp4.cloudfront.net/videos/homepage/list-grid/home-list-EN.mp4"
+                    muted="" playsinline="" autoplay="" loop="" src="https://d1gwm4cf8hecp4.cloudfront.net/videos/homepage/list-grid/home-list-EN.mp4">
+
+                </video>
+            
             </div>
         </span>
     </div>
@@ -32,3 +41,4 @@ const SplashPage = () => (
 
 
 export default SplashPage;
+
