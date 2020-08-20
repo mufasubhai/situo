@@ -11,6 +11,7 @@ class Home extends React.Component {
             <p>Home Page</p>
             <SideNavContainer/>
 
+
         </div>
 
         )
@@ -18,3 +19,7 @@ class Home extends React.Component {
 }
 
 export default Home;
+
+
+// add TaskIndexContainer
+// add ProjectIndexContainer

@@ -1,16 +1,15 @@
 class Api::ProjectsController < ApplicationController
+
+    befpre_action, :require_logged_in
     
     def index
-        @projects = Project.call
+        @projects = Project.all
         render :index
     end
 
     def show
         @project = project.find_by(id: params[:id])
-        
         render :show
-        
-
     end
 
     def new

@@ -40,7 +40,8 @@ class SessionForm extends React.Component {
     renderErrors() {
         return (
             <ul className='session-error-list'>
-                <span className='session-error-pad'>
+                
+                <span className='errors-span'>
 
                
                 {this.props.errors.map((error, i) => (
@@ -49,6 +50,7 @@ class SessionForm extends React.Component {
                     </li>
                 ))}
                 </span>
+                
             </ul>
         );
         
@@ -74,12 +76,12 @@ class SessionForm extends React.Component {
                                 <span className='separator-label'>or</span>
                                 <span className='separator-horizontal'></span>
                                 </span>
+                                         {this.renderErrors()}
                         </div>
 
-                            <span className="errors-span">
+                        
 
-                                         {this.renderErrors()}
-                            </span>
+                            
                  
 
                 <form onSubmit={this.handleSubmit} >                        
