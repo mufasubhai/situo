@@ -1,34 +1,43 @@
 .splash-body {
     display: flex;
     flex-direction: column
+
 }
 
 
 .splash-content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-self: center;
 
 }
 
 .splash-header {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
     box-shadow: 0px 3px 5px 10px rgba(247,247,247,0.84);
     border-bottom: 1px, solid, rgba(240,240,240,0.84);
+    background-color: #fff;
+    
   
 }
 
 .splash-logo {
     padding-left: 64px;
      padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
+    height: 24px;
+    width: auto;
 }
 
 
 .splash-links {
     padding-right: 55px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .splash-link {
@@ -36,13 +45,203 @@
     padding-right: 10px;
 }
 
-.splash-logo {
-    height: 24px;
-    width: auto;
-}
-
 .splash-text {
     width: 50%;
 }
 
 
+.splash-container {
+    font-style: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding-top: 75px;
+}
+
+.splash-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-bottom: 500px;
+}
+
+.splash-company-logo {
+    display: flex;
+    height: 45px;
+    width: auto;
+    z-index: -1;
+
+}
+
+.splash-contact {
+    background-image: url('mailgrey.png') ;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 50px;
+}
+
+.image-container {
+    display: flex;
+    position: relative;
+    align-self: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.splash-vid {
+    height: auto;
+    width: 890px;
+    position: absolute;
+    top: 150px;
+    z-index: -1;
+    box-shadow: 10px 71px 151px -34px rgba(0,0,0,0.42);
+    align-self: center;
+
+}
+
+.header-bottom {
+    padding-top: 180px;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: gordita;
+    text-align: left;
+
+}
+
+.text-bottom {
+    padding-top: 20px;
+    padding-right: 15px;
+
+    font-size: 17px;
+}
+.splash-bottom {
+    display: flex;
+    flex-direction: row;
+    height: 485px;
+    background-color: rgb(245, 247, 248);
+    z-index: -2;
+    padding-right: 182px;
+    padding-left: 182px;
+
+}
+
+.title-header {
+    
+    font-size: 45px;
+    width: 800px;
+    text-align: center;
+    font-weight: 350;
+    font-style: gordita,Helvetica Neue, Helvetica, sans-serif;
+    letter-spacing: .05em;
+
+}
+
+.title-text{
+    
+    width: 800px;
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: gordita;
+    letter-spacing: .05em;
+
+
+}
+
+
+.splash-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.splash-button {
+    background-color: #796eff;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 36px;
+    letter-spacing: .5px;
+    line-height: 36px;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .15s,color .15s ease-in-out;
+    white-space: nowrap;
+}
+
+.splash-button:hover {
+
+    background-color: #635ac7;
+}
+
+.splash-link {
+    background: none;
+    border-radius: 0;
+    border: 0;
+    color: #646f79;
+    display: inline-block;
+    height: 100%;
+    letter-spacing: 0;
+    font-size: 14px;
+    padding-right: 20px;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+
+.email-button {
+      display: inline-block;
+      height: 16px;
+      width: auto;
+      padding-right: 15px;
+      padding-top: 8px;
+}
+
+.email-button:hover {
+    cursor: pointer;
+}
+
+.splash-link:hover {
+    color: #796eff;
+}
+
+.splash-link-large {
+    background-color: #796eff;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    height: 36px;
+    letter-spacing: .5px;
+    line-height: 36px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .15s,color .15s ease-in-out;
+    white-space: nowrap;
+}
+
+.splash-link-large:hover {
+        background-color: #635ac7;
+}
+
+.trusted {
+    padding-top: 80px;
+    padding-bottom: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #151b26;
+}
