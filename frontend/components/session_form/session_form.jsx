@@ -39,12 +39,16 @@ class SessionForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul className='session-error-list'>
+                <span className='session-error-pad'>
+
+               
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li className="session-error" key={`error-${i}`}>
                         {error}
                     </li>
                 ))}
+                </span>
             </ul>
         );
         
@@ -71,12 +75,16 @@ class SessionForm extends React.Component {
                                 <span className='separator-horizontal'></span>
                                 </span>
                         </div>
+
+                            <span className="errors-span">
+
+                                         {this.renderErrors()}
+                            </span>
                  
 
                 <form onSubmit={this.handleSubmit} >                        
 
 
-                        <span className="errors">{this.renderErrors()}</span>
                        
                         <label className='input-text'>Email Address
                                 <input            

@@ -35,14 +35,18 @@
 
 
 .splash-links {
+    display: flex;
     padding-right: 55px;
     padding-top: 10px;
     padding-bottom: 10px;
+    align-items: center;
 }
 
 .splash-link {
+    padding-top: 18px;
     padding-left: 10px;
     padding-right: 10px;
+    align-self: center;
 }
 
 .splash-text {
@@ -173,6 +177,7 @@
     text-decoration: none;
     transition: background-color .15s,color .15s ease-in-out;
     white-space: nowrap;
+    display: flex;
 }
 
 .splash-button:hover {
@@ -196,11 +201,10 @@
 }
 
 .email-button {
-      display: inline-block;
       height: 16px;
       width: auto;
       padding-right: 15px;
-      padding-top: 8px;
+      align-self: center;
 }
 
 .email-button:hover {
