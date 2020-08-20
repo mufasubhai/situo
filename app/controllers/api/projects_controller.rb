@@ -32,8 +32,8 @@ class Api::ProjectsController < ApplicationController
 
     def update
         @project = project.find_by(id: params[:id])
-        if @project.update_attributes
-
+        # if @project.update_attributes
+        # end
     end
 
     
