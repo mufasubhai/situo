@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
     demoLogin(e) {
         e.preventDefault();
         const demoUser = {email: 'woz@woz.woz', password: 'hunter2'}
-        this.props.processForm(demoUser)
+        this.props.demoStart(demoUser)
     }
 
     componentWillUnmount() {
@@ -60,7 +60,9 @@ class SessionForm extends React.Component {
                 
                 <div className="login-form-box">
                     <p className="login-text">{this.props.formType}</p>
-                    {this.props.navLink.props.to === '/signup' ?
+
+
+                   
                         <div className="login-span">
                             <button onClick={this.demoLogin} className="demo-button" >Situo Live Demo</button> 
                                 <span className="separator-row">
@@ -68,9 +70,9 @@ class SessionForm extends React.Component {
                                 <span className='separator-label'>or</span>
                                 <span className='separator-horizontal'></span>
                                 </span>
-
                         </div>
-                        :  null }
+                 
+
                 <form onSubmit={this.handleSubmit} >                        
 
 
