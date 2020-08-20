@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const SplashPage = () => (
     <div className='splash-body'>
         <header className="splash-header">
-                <img src={window.logoBlack} className='splash-logo'/>
+            <Link to='/'><img src={window.logoBlack} className='splash-logo' /></Link>
 
                 <span className='splash-links'>
                 <a href='mailto:aapodaca@gmail.com'><img className="email-button" src={window.mailgrey}/></a>

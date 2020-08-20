@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -31,6 +33,10 @@ class SessionForm extends React.Component {
         this.props.processForm(demoUser)
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+
     renderErrors() {
         return (
             <ul>
@@ -48,15 +54,14 @@ class SessionForm extends React.Component {
         
         return (
             <div className='session-background'>
-
-                <img src={window.logoWhite} className='session-logo' />
-
-
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                        
+            
+                <Link to='/'><img src={window.logoWhite} className='session-logo' /></Link>
+                
+                
+                <div className="login-form-box">
                         <p className="login-text">{this.props.formType}</p>
-
                         <button onClick={this.demoLogin} className="demo-button" >Situo Live Demo</button>
+                <form onSubmit={this.handleSubmit} >                        
 
                         <span className="separator-row">
                         <span className='separator-horizontal'></span>
@@ -64,7 +69,7 @@ class SessionForm extends React.Component {
                         <span className='separator-horizontal'></span>
                         </span>
 
-                    {this.renderErrors()}
+                        <span className="errors">{this.renderErrors()}</span>
                        
                         <label className='input-text'>Email Address
                                 <input            
@@ -105,6 +110,7 @@ class SessionForm extends React.Component {
                         </span>
                     </div>
                 </form>
+                </div>
 
             <div className="session-footer">
 
