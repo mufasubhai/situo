@@ -10,22 +10,70 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_213139) do
+ActiveRecord::Schema.define(version: 2020_08_20_034150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "comments", force: :cascade do |t|
+    t.integer "author_id", null: false
+    t.integer "project_id", null: false
+    t.integer "task_id", null: false
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_comments_on_author_id"
+    t.index ["project_id"], name: "index_comments_on_project_id"
+    t.index ["task_id"], name: "index_comments_on_task_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "project_name", null: false
+    t.string "summary"
+    t.integer "owner_id", null: false
+    t.datetime "start_date", null: false
+    t.datetime "due_date", null: false
+    t.boolean "complete", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_projects_on_owner_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "owner_id", null: false
+    t.integer "creator_id", null: false
+    t.string "task_name", null: false
+    t.text "description"
+    t.datetime "start_date", null: false
+    t.datetime "due_date", null: false
+    t.boolean "complete", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_tasks_on_creator_id"
+    t.index ["owner_id"], name: "index_tasks_on_owner_id"
+    t.index ["project_id"], name: "index_tasks_on_project_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
-    t.string "name", null: false
     t.string "session_token", null: false
     t.string "password_digest", null: false
     t.string "photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["name"], name: "index_users_on_name", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
+  end
+
+  create_table "users_projects", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "project_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_users_projects_on_project_id"
+    t.index ["user_id"], name: "index_users_projects_on_user_id"
   end
 
 end

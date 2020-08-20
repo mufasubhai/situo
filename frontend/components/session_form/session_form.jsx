@@ -59,15 +59,20 @@ class SessionForm extends React.Component {
                 
                 
                 <div className="login-form-box">
-                        <p className="login-text">{this.props.formType}</p>
-                        <button onClick={this.demoLogin} className="demo-button" >Situo Live Demo</button>
+                    <p className="login-text">{this.props.formType}</p>
+                    {this.props.navLink.props.to === '/signup' ?
+                        <div className="login-span">
+                            <button onClick={this.demoLogin} className="demo-button" >Situo Live Demo</button> 
+                                <span className="separator-row">
+                                <span className='separator-horizontal'></span>
+                                <span className='separator-label'>or</span>
+                                <span className='separator-horizontal'></span>
+                                </span>
+
+                        </div>
+                        :  null }
                 <form onSubmit={this.handleSubmit} >                        
 
-                        <span className="separator-row">
-                        <span className='separator-horizontal'></span>
-                        <span className='separator-label'>or</span>
-                        <span className='separator-horizontal'></span>
-                        </span>
 
                         <span className="errors">{this.renderErrors()}</span>
                        
