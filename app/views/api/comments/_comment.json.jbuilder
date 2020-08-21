@@ -1,1 +1,1 @@
-json.extract! project, :project_name, :summary, :complete, :id
+json.extract! comment, :author_id, :project_id, :task_id, :id, :body

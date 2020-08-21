@@ -1,6 +1,6 @@
-@projects.each do |project|
-    json.set! project.id do
-        json.partial! "api/comments/comment", project: project
+@comments.each do |comment|
+    json.set! comment.id do
+        json.partial! "api/comments/comment", comment: comment
 
     end
 end
