@@ -8,19 +8,26 @@ class ProjectIndex extends React.Component {
     }
     constructor(props) {
         super(props)
-    }
+      
 
+    }
+   
     render () {
+
+        const {projects, deleteProject, updateProject } = this.props;
         return (
+            
+
             <div>
                 <button>New Project</button>
                 <ul>
                     {  
-                        this.props.projects.map(project => (
+                        projects.map(project => (
                             <ProjectIndexItem 
                                 project={project}
-                                deleteProject={this.props.deleteProject}
-                                updateProject={this.props.updateProject}
+                                deleteProject={deleteProject}
+                                updateProject={updateProject}
+                                key={project.id}
                             />
                         ))
 

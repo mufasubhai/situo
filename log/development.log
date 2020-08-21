@@ -17580,3 +17580,2653 @@ Processing by Api::ProjectsController#index as JSON
 Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.9ms)
 
 
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (5042.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "situo_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-20 22:53:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 451ms (Views: 437.6ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:53:30 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.8ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (36.0ms)
+Completed 200 OK in 61ms (Views: 40.5ms | ActiveRecord: 11.2ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-08-20 22:53:32 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "U4ddAJAz7ZtmM8ayp-cFLA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "U4ddAJAz7ZtmM8ayp-cFLA"], ["updated_at", "2020-08-21 05:53:32.491779"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 21ms (Views: 9.6ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-20 22:53:36 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"woz@woz.woz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "73BrmKrwcxpv8kbzBBbpZw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "73BrmKrwcxpv8kbzBBbpZw"], ["updated_at", "2020-08-21 05:53:36.741423"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 241ms (Views: 8.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:53:36 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "73BrmKrwcxpv8kbzBBbpZw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/index.json.jbuilder (12.5ms)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:12:59 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Adrian/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "73BrmKrwcxpv8kbzBBbpZw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (4.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (136.4ms)
+Completed 200 OK in 2839ms (Views: 2804.4ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:13:03 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "73BrmKrwcxpv8kbzBBbpZw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (41.6ms)
+Completed 200 OK in 65ms (Views: 42.8ms | ActiveRecord: 12.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-08-21 10:13:05 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "73BrmKrwcxpv8kbzBBbpZw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SGkfRRdQH5EXGUkCtZfJVg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "SGkfRRdQH5EXGUkCtZfJVg"], ["updated_at", "2020-08-21 17:13:05.298808"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 27ms (Views: 12.1ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-21 10:13:08 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"woz@woz.woz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ihuPzTsWvceGKW1yqFaftA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ihuPzTsWvceGKW1yqFaftA"], ["updated_at", "2020-08-21 17:13:08.454797"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (3.3ms)
+Completed 200 OK in 293ms (Views: 18.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:13:08 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ihuPzTsWvceGKW1yqFaftA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (19.5ms)
+Completed 200 OK in 51ms (Views: 43.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:13:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ihuPzTsWvceGKW1yqFaftA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 110ms (Views: 107.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:13:15 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ihuPzTsWvceGKW1yqFaftA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (20.2ms)
+Completed 200 OK in 46ms (Views: 38.8ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:13:22 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ihuPzTsWvceGKW1yqFaftA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.3ms)
+
+
+
+NameError - undefined local variable or method `project' for #<Api::ProjectsController:0x00007fd0e3b12950>
+Did you mean?  proc:
+  app/controllers/api/projects_controller.rb:36:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-21 10:27:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ','
+      owned_tasks:,
+                  ^
+/Users/Adrian/Desktop/situo/app/models/user.rb:29: syntax error, unexpected ',', expecting keyword_end
+      class_name: 'Task',
+                        ^
+/Users/Adrian/Desktop/situo/app/models/user.rb:32: syntax error, unexpected ')', expecting keyword_end
+    )
+    ^
+/Users/Adrian/Desktop/situo/app/models/user.rb:35: syntax error, unexpected ','
+      created_tasks:,
+                    ^
+/Users/Adrian/Desktop/situo/app/models/user.rb:36: syntax error, unexpected ',', expecting keyword_end
+      class_name: 'Task',
+                        ^
+/Users/Adrian/Desktop/situo/app/models/user.rb:39: syntax error, unexpected ')', expecting keyword_end
+    )
+    ^:
+  app/models/user.rb:28:in `'
+  app/controllers/application_controller.rb:10:in `current_user'
+  app/controllers/application_controller.rb:14:in `logged_in?'
+  app/views/static_pages/root.html.erb:3:in `_app_views_static_pages_root_html_erb___4593706671693713596_70267576538920'
+
+Started POST "/__better_errors/a17091b8eecae24f/variables" for ::1 at 2020-08-21 10:27:36 -0700
+Started GET "/" for ::1 at 2020-08-21 10:28:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ','
+      owned_tasks:,
+                  ^
+/Users/Adrian/Desktop/situo/app/models/user.rb:29: syntax error, unexpected ',', expecting keyword_end
+      class_name: 'Task',
+                        ^
+/Users/Adrian/Desktop/situo/app/models/user.rb:32: syntax error, unexpected ')', expecting keyword_end
+    )
+    ^
+/Users/Adrian/Desktop/situo/app/models/user.rb:35: syntax error, unexpected ','
+      created_tasks:,
+                    ^
+/Users/Adrian/Desktop/situo/app/models/user.rb:36: syntax error, unexpected ',', expecting keyword_end
+      class_name: 'Task',
+                        ^
+/Users/Adrian/Desktop/situo/app/models/user.rb:39: syntax error, unexpected ')', expecting keyword_end
+    )
+    ^:
+  app/models/user.rb:28:in `'
+  app/controllers/application_controller.rb:10:in `current_user'
+  app/controllers/application_controller.rb:14:in `logged_in?'
+  app/views/static_pages/root.html.erb:3:in `_app_views_static_pages_root_html_erb___4593706671693713596_70267575034720'
+
+Started POST "/__better_errors/2dab121134e92e16/variables" for ::1 at 2020-08-21 10:28:37 -0700
+Started GET "/" for ::1 at 2020-08-21 10:29:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ihuPzTsWvceGKW1yqFaftA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 128ms (Views: 106.6ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:29:32 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ihuPzTsWvceGKW1yqFaftA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (2.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/index.json.jbuilder (74.2ms)
+Completed 200 OK in 102ms (Views: 76.7ms | ActiveRecord: 12.1ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-08-21 10:29:34 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ihuPzTsWvceGKW1yqFaftA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "drJOrYTt3xYwIM4ZIUfB7w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:84
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:68
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:68
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "drJOrYTt3xYwIM4ZIUfB7w"], ["updated_at", "2020-08-21 17:29:34.750456"], ["id", 37]]
+  ↳ app/models/user.rb:68
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:68
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (2.2ms)
+Completed 200 OK in 27ms (Views: 13.5ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-21 10:39:37 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"woz@woz.woz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:68
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:68
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["updated_at", "2020-08-21 17:39:38.247165"], ["id", 37]]
+  ↳ app/models/user.rb:68
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:68
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.7ms)
+Completed 200 OK in 295ms (Views: 12.9ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:39:38 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (5.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (44.8ms)
+Completed 200 OK in 100ms (Views: 65.7ms | ActiveRecord: 11.2ms)
+
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:39:41 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.0ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started PATCH "/api/projects/undefined" for ::1 at 2020-08-21 10:39:50 -0700
+Processing by Api::ProjectsController#update as JSON
+  Parameters: {"project"=>{"project_name"=>"Determine if this is in fact our beautiful house.", "summary"=>"We did not, in fact, find ourselves living in a shotgun shack. How did we get here? This is not my beautiful house... is it?", "complete"=>"false"}, "id"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:26
+Completed 500 Internal Server Error in 292ms (ActiveRecord: 1.2ms)
+
+
+
+NameError - undefined local variable or method `post_params' for #<Api::ProjectsController:0x00007fd0decd4c98>
+Did you mean?  to_param:
+  app/controllers/api/projects_controller.rb:28:in `update'
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:41:47 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-21 10:41:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 87ms (Views: 78.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:41:49 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (19.9ms)
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:41:53 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-21 10:42:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 1597ms (Views: 1583.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:42:44 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (17.6ms)
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:42:45 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.6ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-21 10:45:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 561ms (Views: 556.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:46:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:46:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 268ms (Views: 264.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:46:15 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (19.6ms)
+Completed 200 OK in 41ms (Views: 35.9ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:46:53 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.5ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:46:56 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:46:58 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.9ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:46:58 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:46:59 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-21 10:46:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 491ms (Views: 487.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:47:00 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (14.9ms)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:47:26 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.5ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:48:26 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.1ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-21 10:50:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 71ms (Views: 67.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:50:54 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (16.5ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:52:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 589ms (Views: 586.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:52:23 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (18.7ms)
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-21 10:52:28 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.3ms)
+
+
+
+NoMethodError - undefined method `destroy' for nil:NilClass:
+  app/controllers/api/projects_controller.rb:38:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-21 10:53:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 560ms (Views: 554.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:53:07 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (16.2ms)
+Completed 200 OK in 38ms (Views: 31.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:53:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (5.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 686ms (Views: 682.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:53:29 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (15.0ms)
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:54:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 665ms (Views: 661.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:54:09 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (20.3ms)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:54:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 717ms (Views: 712.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:54:31 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (26.0ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:55:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 771ms (Views: 764.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:56:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 736ms (Views: 731.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:56:09 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (15.7ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:56:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 557ms (Views: 553.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:56:40 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (14.8ms)
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:57:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 517ms (Views: 512.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:57:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 771ms (Views: 767.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:57:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 709ms (Views: 699.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:57:52 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/index.json.jbuilder (102.5ms)
+Completed 200 OK in 146ms (Views: 135.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:58:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 303ms (Views: 293.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:58:36 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (21.1ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 10:59:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 103ms (Views: 100.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 10:59:14 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (14.8ms)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:04:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 725ms (Views: 710.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:04:18 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/index.json.jbuilder (41.4ms)
+Completed 200 OK in 142ms (Views: 103.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:04:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 126ms (Views: 117.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:04:50 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (18.9ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:05:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 428ms (Views: 424.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:05:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 86ms (Views: 79.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:05:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 66ms (Views: 61.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:05:29 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (19.9ms)
+Completed 200 OK in 36ms (Views: 31.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:06:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 501ms (Views: 498.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:06:45 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (25.3ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:06:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:06:48 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (14.2ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:06:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 65ms (Views: 61.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:06:50 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.8ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (17.5ms)
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:06:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:06:52 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (10.8ms)
+Completed 200 OK in 31ms (Views: 26.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:07:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:07:00 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/index.json.jbuilder (11.5ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:07:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 80ms (Views: 77.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:07:10 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (16.9ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:08:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 818ms (Views: 811.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:08:07 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (28.0ms)
+Completed 200 OK in 75ms (Views: 66.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:08:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (10.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 554ms (Views: 543.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:08:26 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (20.0ms)
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:08:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 471ms (Views: 465.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:08:29 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (18.9ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:09:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 54ms (Views: 49.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:09:07 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/index.json.jbuilder (24.4ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:10:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 570ms (Views: 566.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:11:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 105ms (Views: 99.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:11:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 504ms (Views: 500.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:11:04 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.8ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (47.6ms)
+Completed 200 OK in 68ms (Views: 63.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:11:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (8.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 191ms (Views: 186.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:11:57 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/index.json.jbuilder (22.0ms)
+Completed 200 OK in 45ms (Views: 39.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:11:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 432ms (Views: 428.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:12:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 81ms (Views: 75.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:12:09 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (22.0ms)
+Completed 200 OK in 40ms (Views: 33.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:12:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 472ms (Views: 468.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:13:00 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.8ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (24.6ms)
+Completed 200 OK in 46ms (Views: 40.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:13:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 99ms (Views: 93.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:13:02 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (13.9ms)
+Completed 200 OK in 32ms (Views: 27.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:13:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:13:04 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (12.0ms)
+Completed 200 OK in 29ms (Views: 23.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:13:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 72ms (Views: 67.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:13:58 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (18.4ms)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:13:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 82ms (Views: 77.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:13:59 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (14.2ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:14:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 58ms (Views: 53.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:14:04 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (18.5ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:14:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 126ms (Views: 121.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:14:22 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.8ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (14.6ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:14:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 456ms (Views: 453.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:14:32 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.8ms)
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (20.7ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/api/projects/14" for ::1 at 2020-08-21 11:14:48 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/projects_controller.rb:38
+  [1m[36mProject Destroy (2.5ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/api/projects_controller.rb:38
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/projects_controller.rb:38
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/show.json.jbuilder (2.6ms)
+Completed 200 OK in 33ms (Views: 17.2ms | ActiveRecord: 10.1ms)
+
+
+Started PATCH "/api/projects/undefined" for ::1 at 2020-08-21 11:14:51 -0700
+Processing by Api::ProjectsController#update as JSON
+  Parameters: {"project"=>"15", "id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:26
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 0.6ms)
+
+
+
+NameError - undefined local variable or method `post_params' for #<Api::ProjectsController:0x00007fd0e41d72e0>
+Did you mean?  to_param:
+  app/controllers/api/projects_controller.rb:28:in `update'
+
+Started PATCH "/api/projects/undefined" for ::1 at 2020-08-21 11:14:52 -0700
+Processing by Api::ProjectsController#update as JSON
+  Parameters: {"project"=>"15", "id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:26
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.6ms)
+
+
+
+NameError - undefined local variable or method `post_params' for #<Api::ProjectsController:0x00007fd0e3eb9fe0>
+Did you mean?  to_param:
+  app/controllers/api/projects_controller.rb:28:in `update'
+
+Started PATCH "/api/projects/undefined" for ::1 at 2020-08-21 11:14:53 -0700
+Processing by Api::ProjectsController#update as JSON
+  Parameters: {"project"=>"15", "id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:26
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 0.6ms)
+
+
+Started PATCH "/api/projects/undefined" for ::1 at 2020-08-21 11:14:53 -0700
+
+NameError - undefined local variable or method `post_params' for #<Api::ProjectsController:0x00007fd0e531bf10>
+Did you mean?  to_param:
+  app/controllers/api/projects_controller.rb:28:in `update'
+
+Processing by Api::ProjectsController#update as JSON
+  Parameters: {"project"=>"15", "id"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (4.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:26
+Started PATCH "/api/projects/undefined" for ::1 at 2020-08-21 11:14:53 -0700
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 5.6ms)
+
+
+Processing by Api::ProjectsController#update as JSON
+  Parameters: {"project"=>"15", "id"=>"undefined"}
+  [1m[36mUser Load (45.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (44.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+
+NameError - undefined local variable or method `post_params' for #<Api::ProjectsController:0x00007fd0e5283da0>
+Did you mean?  to_param:
+  app/controllers/api/projects_controller.rb:28:in `update'
+
+  ↳ app/controllers/api/projects_controller.rb:26
+Completed 500 Internal Server Error in 456ms (ActiveRecord: 89.5ms)
+
+
+
+NameError - undefined local variable or method `post_params' for #<Api::ProjectsController:0x00007fd0deadf3c0>
+Did you mean?  to_param:
+  app/controllers/api/projects_controller.rb:28:in `update'
+
+Started GET "/" for ::1 at 2020-08-21 11:15:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 64ms (Views: 60.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:15:02 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (13.5ms)
+Completed 200 OK in 31ms (Views: 22.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:15:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 99ms (Views: 92.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:15:44 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (14.2ms)
+Completed 200 OK in 33ms (Views: 26.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:15:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 82ms (Views: 76.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:15:47 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (13.7ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 11:15:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 63ms (Views: 58.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 11:15:48 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/index.json.jbuilder (78.5ms)
+Completed 200 OK in 99ms (Views: 95.4ms | ActiveRecord: 1.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-21 12:07:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 140ms (Views: 126.3ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 12:07:35 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (31.6ms)
+Completed 200 OK in 70ms (Views: 48.1ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 12:19:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 89ms (Views: 69.0ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 12:19:43 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (3.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (41.4ms)
+Completed 200 OK in 79ms (Views: 48.7ms | ActiveRecord: 14.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-08-21 12:19:44 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YBtcGRq1c984TGFnV9OpNw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KEi91fkzNGFuksZL-I_OmQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:84
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:68
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:68
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "KEi91fkzNGFuksZL-I_OmQ"], ["updated_at", "2020-08-21 19:19:44.412751"], ["id", 37]]
+  ↳ app/models/user.rb:68
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:68
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (3.0ms)
+Completed 200 OK in 365ms (Views: 21.3ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-21 12:19:46 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"woz@woz.woz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:84
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:68
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:68
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["updated_at", "2020-08-21 19:19:47.263579"], ["id", 37]]
+  ↳ app/models/user.rb:68
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:68
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/users/show.json.jbuilder (3.8ms)
+Completed 200 OK in 449ms (Views: 83.0ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 12:19:47 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (15.7ms)
+Completed 200 OK in 49ms (Views: 38.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 12:20:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 88ms (Views: 83.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 12:20:17 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (13.2ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 12:20:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 533ms (Views: 526.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 12:20:19 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (13.2ms)
+Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 12:20:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 142ms (Views: 135.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 12:20:21 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (3.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (1.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (263.9ms)
+Completed 200 OK in 298ms (Views: 292.3ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/api/projects/15" for ::1 at 2020-08-21 12:20:41 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (7.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:36
+  [1m[35m (5.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/projects_controller.rb:38
+  [1m[36mProject Destroy (3.5ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/api/projects_controller.rb:38
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/projects_controller.rb:38
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.8ms)
+  Rendered api/projects/show.json.jbuilder (48.0ms)
+Completed 200 OK in 111ms (Views: 75.0ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 12:21:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 521ms (Views: 516.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 12:21:15 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (1.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.9ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (12.6ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 1.4ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (2.1ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUsersProject Destroy (3.0ms)[0m  [1m[31mDELETE FROM "users_projects"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Uo2muTeYX_DiKtj7qXetwQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "woz@woz.woz"], ["session_token", "Uo2muTeYX_DiKtj7qXetwQ"], ["password_digest", "$2a$12$pkTDgBRaxpuUngDYvH7bHexOQ9nadu2iI58DvGJA6rpWSUu33Relm"], ["photo_url", ""], ["created_at", "2020-08-21 19:21:29.851182"], ["updated_at", "2020-08-21 19:21:29.851182"], ["name", "Steve Wozniak"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tbCQba2uP98sGSamWufYMQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "byrne@byrne.byrne"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "byrne@byrne.byrne"], ["session_token", "tbCQba2uP98sGSamWufYMQ"], ["password_digest", "$2a$12$6iMxbJkKgZhIm0TdTqxBWOrKSf8zGUTu9Xxmt2AL4DEk7EUPcK5D2"], ["photo_url", ""], ["created_at", "2020-08-21 19:21:30.102406"], ["updated_at", "2020-08-21 19:21:30.102406"], ["name", "David Byrne"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "m8V7RrnyyT0-cgE0hbpnUw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@jeff.jeff"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jeff@jeff.jeff"], ["session_token", "m8V7RrnyyT0-cgE0hbpnUw"], ["password_digest", "$2a$12$RuKVaYRaZm8gg0SMjp9HvODX7JtiOShzDxuTXQ0TFfH09/loBwWFy"], ["photo_url", ""], ["created_at", "2020-08-21 19:21:30.340056"], ["updated_at", "2020-08-21 19:21:30.340056"], ["name", "Jeff Lebowski"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FXS4mbUeq9JnRSWhNm9zDw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruth@ruth.ruth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruth@ruth.ruth"], ["session_token", "FXS4mbUeq9JnRSWhNm9zDw"], ["password_digest", "$2a$12$NrtFWxMXyOBTvS3kjXpHDeO.SEDPvoZWlG/8dguRUsO7nklVZ3W4a"], ["photo_url", ""], ["created_at", "2020-08-21 19:21:30.580767"], ["updated_at", "2020-08-21 19:21:30.580767"], ["name", "Ruth Bader Ginsberg"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zryRfg10PtumNcpWfb-Ihg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:84
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rocky@dax.cat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "rocky@dax.cat"], ["session_token", "zryRfg10PtumNcpWfb-Ihg"], ["password_digest", "$2a$12$9L6vnDCasLIERvj9VzdeqOtXbEnDNnvF.G54Zd1b88QLItdeDYoju"], ["photo_url", ""], ["created_at", "2020-08-21 19:21:30.819686"], ["updated_at", "2020-08-21 19:21:30.819686"], ["name", "Rocky Dax"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Figure out who kidnapped Mrs. Lebowski."], ["summary", "There's just a lot of in's and out's... And, look at the kid. The kid has a brand new corvette, man. We gotta get to the bottom of this."], ["created_at", "2020-08-21 19:21:30.844390"], ["updated_at", "2020-08-21 19:21:30.844390"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Usher in the era of modern computing."], ["summary", "We thought we wanted to build a video game machine, but now that we think of it there isn't anything cooler than a GUI and some spreadsheets."], ["created_at", "2020-08-21 19:21:30.846858"], ["updated_at", "2020-08-21 19:21:30.846858"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Get as much kibble and canned cat food as is reasonable."], ["summary", "We are so hungry. We must figure out a method for procuring all of the food from the hoomons. This is a dire situation. Let us divide it into tasks."], ["created_at", "2020-08-21 19:21:30.848980"], ["updated_at", "2020-08-21 19:21:30.848980"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Determine if this is in fact our beautiful house."], ["summary", "We did not, in fact, find ourselves living in a shotgun shack. How did we get here? This is not my beautiful house... is it?"], ["created_at", "2020-08-21 19:21:30.851006"], ["updated_at", "2020-08-21 19:21:30.851006"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Keep on fighting!"], ["summary", "We made it this far. No time to slow down. Once I check out of this place it's time to go down to the martial arts gym and GET BACK IN SHAPE!"], ["created_at", "2020-08-21 19:21:30.853142"], ["updated_at", "2020-08-21 19:21:30.853142"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Build a website or something."], ["summary", "Do we want to build an internet? I think we do. We can get this done if we just put our minds to it. What is a javascript anyway? Who knows... I guess let's get started!"], ["created_at", "2020-08-21 19:21:30.855340"], ["updated_at", "2020-08-21 19:21:30.855340"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mUsersProject Create (2.8ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 42], ["project_id", 19], ["created_at", "2020-08-21 19:21:30.879153"], ["updated_at", "2020-08-21 19:21:30.879153"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:87
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:87
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:87
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 42], ["project_id", 20], ["created_at", "2020-08-21 19:21:30.886387"], ["updated_at", "2020-08-21 19:21:30.886387"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:91
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 42], ["project_id", 21], ["created_at", "2020-08-21 19:21:30.891091"], ["updated_at", "2020-08-21 19:21:30.891091"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:91
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:95
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:95
+  [1m[36mUsersProject Create (0.5ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 42], ["project_id", 22], ["created_at", "2020-08-21 19:21:30.895219"], ["updated_at", "2020-08-21 19:21:30.895219"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:99
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:99
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:99
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 42], ["project_id", 23], ["created_at", "2020-08-21 19:21:30.900881"], ["updated_at", "2020-08-21 19:21:30.900881"]]
+  ↳ db/seeds.rb:99
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:99
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mUsersProject Create (0.5ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 42], ["project_id", 24], ["created_at", "2020-08-21 19:21:30.914725"], ["updated_at", "2020-08-21 19:21:30.914725"]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:107
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:107
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:107
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 43], ["project_id", 19], ["created_at", "2020-08-21 19:21:30.920648"], ["updated_at", "2020-08-21 19:21:30.920648"]]
+  ↳ db/seeds.rb:107
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:107
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:111
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 43], ["project_id", 20], ["created_at", "2020-08-21 19:21:30.924676"], ["updated_at", "2020-08-21 19:21:30.924676"]]
+  ↳ db/seeds.rb:111
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:111
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:115
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:115
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:115
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 43], ["project_id", 21], ["created_at", "2020-08-21 19:21:30.928415"], ["updated_at", "2020-08-21 19:21:30.928415"]]
+  ↳ db/seeds.rb:115
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:115
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:119
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:119
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:119
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 43], ["project_id", 22], ["created_at", "2020-08-21 19:21:30.932678"], ["updated_at", "2020-08-21 19:21:30.932678"]]
+  ↳ db/seeds.rb:119
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:119
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:123
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:123
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:123
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 43], ["project_id", 23], ["created_at", "2020-08-21 19:21:30.937895"], ["updated_at", "2020-08-21 19:21:30.937895"]]
+  ↳ db/seeds.rb:123
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:123
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:127
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 43], ["project_id", 24], ["created_at", "2020-08-21 19:21:30.941998"], ["updated_at", "2020-08-21 19:21:30.941998"]]
+  ↳ db/seeds.rb:127
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:127
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:131
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:131
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 44], ["project_id", 19], ["created_at", "2020-08-21 19:21:30.946353"], ["updated_at", "2020-08-21 19:21:30.946353"]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:135
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 44], ["project_id", 20], ["created_at", "2020-08-21 19:21:30.950062"], ["updated_at", "2020-08-21 19:21:30.950062"]]
+  ↳ db/seeds.rb:135
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:135
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:139
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:139
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:139
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 44], ["project_id", 21], ["created_at", "2020-08-21 19:21:30.954587"], ["updated_at", "2020-08-21 19:21:30.954587"]]
+  ↳ db/seeds.rb:139
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:139
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 44], ["project_id", 22], ["created_at", "2020-08-21 19:21:30.959274"], ["updated_at", "2020-08-21 19:21:30.959274"]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:147
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:147
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:147
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 44], ["project_id", 23], ["created_at", "2020-08-21 19:21:30.963079"], ["updated_at", "2020-08-21 19:21:30.963079"]]
+  ↳ db/seeds.rb:147
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:147
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:151
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 44], ["project_id", 24], ["created_at", "2020-08-21 19:21:30.967124"], ["updated_at", "2020-08-21 19:21:30.967124"]]
+  ↳ db/seeds.rb:151
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:151
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:155
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:155
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:155
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 45], ["project_id", 19], ["created_at", "2020-08-21 19:21:30.971211"], ["updated_at", "2020-08-21 19:21:30.971211"]]
+  ↳ db/seeds.rb:155
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:155
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:159
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mUsersProject Create (0.6ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 45], ["project_id", 20], ["created_at", "2020-08-21 19:21:30.975397"], ["updated_at", "2020-08-21 19:21:30.975397"]]
+  ↳ db/seeds.rb:159
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:159
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:163
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:163
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:163
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 45], ["project_id", 21], ["created_at", "2020-08-21 19:21:30.980989"], ["updated_at", "2020-08-21 19:21:30.980989"]]
+  ↳ db/seeds.rb:163
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:163
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:167
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 45], ["project_id", 22], ["created_at", "2020-08-21 19:21:30.985603"], ["updated_at", "2020-08-21 19:21:30.985603"]]
+  ↳ db/seeds.rb:167
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:167
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 45], ["project_id", 23], ["created_at", "2020-08-21 19:21:30.989673"], ["updated_at", "2020-08-21 19:21:30.989673"]]
+  ↳ db/seeds.rb:171
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:175
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 45], ["project_id", 24], ["created_at", "2020-08-21 19:21:30.993428"], ["updated_at", "2020-08-21 19:21:30.993428"]]
+  ↳ db/seeds.rb:175
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:175
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:179
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:179
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:179
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 46], ["project_id", 19], ["created_at", "2020-08-21 19:21:30.999014"], ["updated_at", "2020-08-21 19:21:30.999014"]]
+  ↳ db/seeds.rb:179
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:179
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:183
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 46], ["project_id", 20], ["created_at", "2020-08-21 19:21:31.007605"], ["updated_at", "2020-08-21 19:21:31.007605"]]
+  ↳ db/seeds.rb:183
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:183
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:187
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:187
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:187
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 46], ["project_id", 21], ["created_at", "2020-08-21 19:21:31.012121"], ["updated_at", "2020-08-21 19:21:31.012121"]]
+  ↳ db/seeds.rb:187
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:187
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 46], ["project_id", 22], ["created_at", "2020-08-21 19:21:31.017209"], ["updated_at", "2020-08-21 19:21:31.017209"]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:195
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:195
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:195
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 46], ["project_id", 23], ["created_at", "2020-08-21 19:21:31.021964"], ["updated_at", "2020-08-21 19:21:31.021964"]]
+  ↳ db/seeds.rb:195
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:195
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:200
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ db/seeds.rb:200
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:200
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 46], ["project_id", 24], ["created_at", "2020-08-21 19:21:31.026127"], ["updated_at", "2020-08-21 19:21:31.026127"]]
+  ↳ db/seeds.rb:200
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:200
+Started GET "/" for ::1 at 2020-08-21 12:21:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ktnw6D7BNGjJ2XISdHq5pw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 134ms (Views: 129.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-21 12:21:35 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"woz@woz.woz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZfwjN9z1n8JQmX3LoEvmmg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:68
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 42], ["LIMIT", 1]]
+  ↳ app/models/user.rb:68
+  [1m[36mUser Update (3.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ZfwjN9z1n8JQmX3LoEvmmg"], ["updated_at", "2020-08-21 19:21:35.522428"], ["id", 42]]
+  ↳ app/models/user.rb:68
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:68
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.7ms)
+Completed 200 OK in 353ms (Views: 20.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 12:21:35 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZfwjN9z1n8JQmX3LoEvmmg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (11.8ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-21 12:43:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZfwjN9z1n8JQmX3LoEvmmg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 161ms (Views: 130.3ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-21 12:43:09 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZfwjN9z1n8JQmX3LoEvmmg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (48.2ms)
+Completed 200 OK in 83ms (Views: 58.4ms | ActiveRecord: 10.6ms)
+
+

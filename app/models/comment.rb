@@ -11,4 +11,16 @@
 #  updated_at :datetime         not null
 #
 class Comment < ApplicationRecord
+    validates :author_id, :task_id, :project_id, presence: true
+
+    belongs_to(
+        :author,
+        class_name: 'User',
+        foreign_key: :author_id,
+        primary_key: :id
+    )
+
+    belongs_to :project
+    belongs_to :task
+
 end

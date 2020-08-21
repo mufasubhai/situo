@@ -23,22 +23,22 @@ class Api::ProjectsController < ApplicationController
     end
     
     def update
-        @project = project.find_by(id: params[:id])
+        @project = Project.find_by(id: params[:id])
 
         if @project.update(post_params)
             render :show
         else
-            render json: @post.errors.full_messages, status: 422
+            render json: @project.errors.full_messages, status: 422
         end
     end
     
     def destroy
-        @project = project.find_by(id: params[:id])
+        @project = Project.find_by(id: params[:id])
 
         if @project.destroy
-            remder :show
+            render :show
         else
-            remder json: @post.errors.full_messages, status: 422
+            render json: @project.errors.full_messages, status: 422
         end
 
 

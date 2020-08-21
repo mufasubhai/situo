@@ -12,6 +12,9 @@
 class Project < ApplicationRecord
     validates :project_name, presence: true
 
+   has_many :tasks
+   has_many :comments
+   
     has_many(
         :users_projects,
         class_name: 'UsersProject',
