@@ -3,6 +3,13 @@ import * as ProjectAPIUtil from '../util/project_api_util'
 export const RECEIVE_PROJECTS = 'RECEIVE_PROJECTS';
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const REMOVE_PROJECT = "REMOVE_PROJECT";
+export const RECEIVE_PROJECT_ERRORS ="RECEIVE_PROJECT_ERRORS"
+export const CLEAR_ERRORS = 'CLEAR_ERRORS'
+
+const receiveErrors = errors => ({
+    type: RECEIVE_PROJECT_ERRORS,
+    errors
+})
 
 const receiveProjects = projects => ({
     type: RECEIVE_PROJECTS,
@@ -21,22 +28,35 @@ const removeProject = projectId => ({
 
 export const fetchProjects = () => dispatch => (
     ProjectAPIUtil.fetchProjects()
-        .then(projects => dispatch(receiveProjects(projects)))
+        .then(projects => (dispatch(receiveProjects(projects))     
+        ), err => (
+            dispatch(receiveErrors(err.responseJSON))
+        ))
 )
 
 export const fetchProject = project => dispatch => (
     ProjectAPIUtil.fetchProject(project)
-        .then(project => dispatch(receiveProject(project)))
+        .then(project => (dispatch(receiveProject(project))
+        ), err => (
+            dispatch(receiveErrors(err.responseJSON))
+        ))
 )
+
 export const createProject = project => dispatch => (
     ProjectAPIUtil.createProject(project)
-        .then(project => dispatch(receiveProject(project)))
+        .then(project => (dispatch(receiveProject(project))
+        ), err => (
+            dispatch(receiveErrors(err.responseJSON))
+        ))
 )
-export const fetchProject = project => dispatch => (
+export const updateProject = project => dispatch => (
     ProjectAPIUtil.updateProject(project)
-        .then(project => dispatch(receiveProject(project)))
+        .then(project => (dispatch(receiveProject(project))
+        ), err => (
+            dispatch(receiveErrors(err.responseJSON))
+        ))
 )
-export const fetchProject = project => dispatch => (
-    ProjectAPIUtil.fetchProject(project)
-        .then(project => dispatch(removeProject(project)))
+export const deleteProject = projectId => dispatch => (
+    ProjectAPIUtil.deleteProject(projectId)
+        .then(() => dispatch(removeProject(projectId)))
 )

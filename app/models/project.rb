@@ -5,14 +5,20 @@
 #  id           :bigint           not null, primary key
 #  project_name :string           not null
 #  summary      :string
-#  owner_id     :integer          not null
-#  start_date   :datetime         not null
-#  due_date     :datetime         not null
-#  complete     :boolean          not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  complete     :boolean          default(FALSE)
 #
 class Project < ApplicationRecord
-    validates :project_name, :owner_id, :start_date, :due_date, :complete, presence: true
-    
+    validates :project_name, presence: true
+
+    has_many(
+        :users_projects,
+        class_name: 'UsersProject',
+        foreign_key: :project_id,
+        primary_key: :id
+    )
+
+  has_many :users, through: :users_projects, source: :user
+
 end

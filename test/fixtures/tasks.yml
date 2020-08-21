@@ -10,9 +10,9 @@
 #  description :text
 #  start_date  :datetime         not null
 #  due_date    :datetime         not null
-#  complete    :boolean          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  status      :string           default("not-started")
 #
 
 # This model initially had no columns defined. If you add columns to the

@@ -15524,3 +15524,2059 @@ Processing by Api::UsersController#create as JSON
 Completed 422 Unprocessable Entity in 247ms (Views: 0.2ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for ::1 at 2020-08-20 17:04:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 102ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-20 17:05:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 275ms (Views: 270.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-20 17:05:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 311ms (Views: 306.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to FixTables (20200821004347)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to FixTables (20200821004347)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to FixTables (20200821004347)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (22.8ms)[0m  [1m[35mALTER TABLE "projects" DROP COLUMN "start_date"[0m
+  ↳ db/migrate/20200821004347_fix_tables.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "projects" DROP COLUMN "due_date"[0m
+  ↳ db/migrate/20200821004347_fix_tables.rb:4
+  [1m[35m (5.2ms)[0m  [1m[35mALTER TABLE "projects" DROP COLUMN "owner_id"[0m
+  ↳ db/migrate/20200821004347_fix_tables.rb:5
+  [1m[35m (10.7ms)[0m  [1m[35mALTER TABLE "tasks" DROP COLUMN "complete"[0m
+  ↳ db/migrate/20200821004347_fix_tables.rb:6
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "tasks" ADD "status" character varying DEFAULT 'not-started'[0m
+  ↳ db/migrate/20200821004347_fix_tables.rb:7
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200821004347"]]
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Adrian/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsersProjects (20200821005136)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (23.2ms)[0m  [1m[35mCREATE TABLE "users_projects" ("id" bigserial primary key, "user_id" integer NOT NULL, "project_id" integer NOT NULL)[0m
+  ↳ db/migrate/20200821005136_create_users_projects.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1797241747458029460)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-20 17:53:41 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Adrian/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 85ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DropUsersProjects (20200821010153)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mDROP TABLE "users_projects"[0m
+  ↳ db/migrate/20200821010153_drop_users_projects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200821010153"]]
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsersProjects (20200821010250)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "users_projects" ("id" bigserial primary key, "user_id" integer NOT NULL, "project_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200821010250_create_users_projects.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_users_projects_on_user_id" ON "users_projects"  ("user_id")[0m
+  ↳ db/migrate/20200821010250_create_users_projects.rb:8
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_users_projects_on_project_id" ON "users_projects"  ("project_id")[0m
+  ↳ db/migrate/20200821010250_create_users_projects.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200821010250"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-20 18:06:06 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Adrian/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddDefaultValueComplete (20200821010831)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "projects" DROP COLUMN "complete"[0m
+  ↳ db/migrate/20200821010831_add_default_value_complete.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "projects" ADD "complete" boolean DEFAULT FALSE[0m
+  ↳ db/migrate/20200821010831_add_default_value_complete.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200821010831"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1797241747458029460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Adrian/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Adrian/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (3.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (1.8ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.7ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUsersProject Destroy (1.8ms)[0m  [1m[31mDELETE FROM "users_projects"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Cij1OWxBAPizKYAl5TbomA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "woz@woz.woz"], ["session_token", "Cij1OWxBAPizKYAl5TbomA"], ["password_digest", "$2a$12$TypmeS0WKPLZXpL2OFq/ZOW7yFVCHlsIM.3.9pJoL9JCBYCnZUr1a"], ["photo_url", ""], ["created_at", "2020-08-21 01:41:23.068715"], ["updated_at", "2020-08-21 01:41:23.068715"], ["name", "Steve Wozniak"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lLEPHhyRrLE5rQCtfniuyg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "byrne@byrne.byrne"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "byrne@byrne.byrne"], ["session_token", "lLEPHhyRrLE5rQCtfniuyg"], ["password_digest", "$2a$12$rpXm5El3lIkHPk2wbbH9iuqpxVchWSZcIziLNcG6smzbHwQTKR4/K"], ["photo_url", ""], ["created_at", "2020-08-21 01:41:23.298573"], ["updated_at", "2020-08-21 01:41:23.298573"], ["name", "David Byrne"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QyNEkswvJJ20kk40MndcVw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@jeff.jeff"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jeff@jeff.jeff"], ["session_token", "QyNEkswvJJ20kk40MndcVw"], ["password_digest", "$2a$12$yGBQSykRrVZTgy41gbSYV.hUKVRcGWNkpbeIWqFca.ted2qXQX2U6"], ["photo_url", ""], ["created_at", "2020-08-21 01:41:23.527044"], ["updated_at", "2020-08-21 01:41:23.527044"], ["name", "Jeff Lebowski"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mICAz0i7XKhGmWQsSnXE6Q"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruth@ruth.ruth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruth@ruth.ruth"], ["session_token", "mICAz0i7XKhGmWQsSnXE6Q"], ["password_digest", "$2a$12$ZHB6/bIwc1VQV4RYZkLxB.KUs9JRH5kYJQpMNKhpmW4WRmiImImoO"], ["photo_url", ""], ["created_at", "2020-08-21 01:41:23.758342"], ["updated_at", "2020-08-21 01:41:23.758342"], ["name", "Ruth Bader Ginsberg"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "R_eq66Rs_MajVv4NNwwHPA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rocky@dax.cat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "rocky@dax.cat"], ["session_token", "R_eq66Rs_MajVv4NNwwHPA"], ["password_digest", "$2a$12$kWcNAWlSDHiSP.kYVXCPC.6iW4sp5NyuZlU2RfEpX.gs.vrZEMWUa"], ["photo_url", ""], ["created_at", "2020-08-21 01:41:23.986525"], ["updated_at", "2020-08-21 01:41:23.986525"], ["name", "Rocky Dax"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUsersProject Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users_projects"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wpPrOe1NGhkiu7OKfiHXIw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "woz@woz.woz"], ["session_token", "wpPrOe1NGhkiu7OKfiHXIw"], ["password_digest", "$2a$12$3kig.VFUnOH8YgdbMYPJ3uiRIOAyxPlw1uWydkLTB.frgqSm.5YEa"], ["photo_url", ""], ["created_at", "2020-08-21 01:42:11.443614"], ["updated_at", "2020-08-21 01:42:11.443614"], ["name", "Steve Wozniak"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tg_vELMw8RnOugsqNIQ54w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "byrne@byrne.byrne"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "byrne@byrne.byrne"], ["session_token", "tg_vELMw8RnOugsqNIQ54w"], ["password_digest", "$2a$12$pS0cyROAMuncdCS11CwBaOpasOMMaypIFAMSnHx6U8Ws1oREZB0ba"], ["photo_url", ""], ["created_at", "2020-08-21 01:42:11.680924"], ["updated_at", "2020-08-21 01:42:11.680924"], ["name", "David Byrne"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wBRPU-MpBjVY-NETvynzaA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@jeff.jeff"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jeff@jeff.jeff"], ["session_token", "wBRPU-MpBjVY-NETvynzaA"], ["password_digest", "$2a$12$dA2iw/7wB55oPrzITfsvQ.u1.clYGGiujq2OfP7caKRiaY9TgoitC"], ["photo_url", ""], ["created_at", "2020-08-21 01:42:11.910572"], ["updated_at", "2020-08-21 01:42:11.910572"], ["name", "Jeff Lebowski"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qRRCRIMuKBhB2PHsLiXFgg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruth@ruth.ruth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruth@ruth.ruth"], ["session_token", "qRRCRIMuKBhB2PHsLiXFgg"], ["password_digest", "$2a$12$g6AnfAUyrqI6Dbu8DTXBF.87CDZglHju1tUrPymhtQ8mSNihONVYG"], ["photo_url", ""], ["created_at", "2020-08-21 01:42:12.139059"], ["updated_at", "2020-08-21 01:42:12.139059"], ["name", "Ruth Bader Ginsberg"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JXF1nGgjSDfaT9jDOwNEGA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rocky@dax.cat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "rocky@dax.cat"], ["session_token", "JXF1nGgjSDfaT9jDOwNEGA"], ["password_digest", "$2a$12$.OuJpc1llIJJogZJfb4Gm.3pmZpGpRP6WcvzlsBi3YIDTPe4yDHEG"], ["photo_url", ""], ["created_at", "2020-08-21 01:42:12.367219"], ["updated_at", "2020-08-21 01:42:12.367219"], ["name", "Rocky Dax"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.5ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUsersProject Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users_projects"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "uOpebwY9XelEzGCbKE4VDw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "woz@woz.woz"], ["session_token", "uOpebwY9XelEzGCbKE4VDw"], ["password_digest", "$2a$12$ofSDSq.aNci4yqEcigui3e.x9L3iZBMtdE11e2sTPVgo4OWr5CGj6"], ["photo_url", ""], ["created_at", "2020-08-21 01:44:44.574521"], ["updated_at", "2020-08-21 01:44:44.574521"], ["name", "Steve Wozniak"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "GoD50ct9-gRt-k0cjX0Zpw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "byrne@byrne.byrne"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "byrne@byrne.byrne"], ["session_token", "GoD50ct9-gRt-k0cjX0Zpw"], ["password_digest", "$2a$12$qZy6WXpbu8ok4FX6Zwp4wu7qg5.n7X0w2DYpR0h45vYRZCrhJ/466"], ["photo_url", ""], ["created_at", "2020-08-21 01:44:44.806302"], ["updated_at", "2020-08-21 01:44:44.806302"], ["name", "David Byrne"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8b2_BelnNFpWCZnEr7aAcw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@jeff.jeff"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jeff@jeff.jeff"], ["session_token", "8b2_BelnNFpWCZnEr7aAcw"], ["password_digest", "$2a$12$CxX24rCWJScQLRrBUaedneHPP1VTe69GS4gqXKYeGzhY2vFukzyCq"], ["photo_url", ""], ["created_at", "2020-08-21 01:44:45.038516"], ["updated_at", "2020-08-21 01:44:45.038516"], ["name", "Jeff Lebowski"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lw1X8stpO0RW2OJXedU7hQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruth@ruth.ruth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruth@ruth.ruth"], ["session_token", "lw1X8stpO0RW2OJXedU7hQ"], ["password_digest", "$2a$12$8TagkVlYPODixRIkO3.KquJQOMaSzCwMF0GJmFUGzCQrmNh4i1Yrq"], ["photo_url", ""], ["created_at", "2020-08-21 01:44:45.272882"], ["updated_at", "2020-08-21 01:44:45.272882"], ["name", "Ruth Bader Ginsberg"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9NO-VyWXxCd6FMczvfBYnA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rocky@dax.cat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "rocky@dax.cat"], ["session_token", "9NO-VyWXxCd6FMczvfBYnA"], ["password_digest", "$2a$12$fP4aHqonpnzi9uQDesW4YeLf8ojc8yz6wRfcMpMBKLdUg232vJQqG"], ["photo_url", ""], ["created_at", "2020-08-21 01:44:45.500755"], ["updated_at", "2020-08-21 01:44:45.500755"], ["name", "Rocky Dax"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUsersProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users_projects"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MWcc_udAotihmYzL8lqqvQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "woz@woz.woz"], ["session_token", "MWcc_udAotihmYzL8lqqvQ"], ["password_digest", "$2a$12$1M7cVtdN.j4EoZAyboELEuNjCmEjjGJs1OR9pdj1e7rQ6peYYQ5Ia"], ["photo_url", ""], ["created_at", "2020-08-21 01:47:47.019988"], ["updated_at", "2020-08-21 01:47:47.019988"], ["name", "Steve Wozniak"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "12VQLK2U1Vmj7RViHM8ccQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "byrne@byrne.byrne"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "byrne@byrne.byrne"], ["session_token", "12VQLK2U1Vmj7RViHM8ccQ"], ["password_digest", "$2a$12$M1lW9sRE4laNIkp/Cj1Mi.B4vTzWb.UvFMyLkn731hCx8OsW8JeXK"], ["photo_url", ""], ["created_at", "2020-08-21 01:47:47.248318"], ["updated_at", "2020-08-21 01:47:47.248318"], ["name", "David Byrne"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vSyKvrEzEjb5B27S-EswEg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@jeff.jeff"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jeff@jeff.jeff"], ["session_token", "vSyKvrEzEjb5B27S-EswEg"], ["password_digest", "$2a$12$xtzpIlKM3Tek5vIoZz50runqwZ2tk1P4wmvr6WtFJePjFG6bJk/pW"], ["photo_url", ""], ["created_at", "2020-08-21 01:47:47.475435"], ["updated_at", "2020-08-21 01:47:47.475435"], ["name", "Jeff Lebowski"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcPxbzXGUC_7K_o_cFQnDw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruth@ruth.ruth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruth@ruth.ruth"], ["session_token", "kcPxbzXGUC_7K_o_cFQnDw"], ["password_digest", "$2a$12$AQEOGnNDX9HhiF8gqqoUXu43aCX0zqMkGRKlYdYfu1KtnVfw3nOSi"], ["photo_url", ""], ["created_at", "2020-08-21 01:47:47.718378"], ["updated_at", "2020-08-21 01:47:47.718378"], ["name", "Ruth Bader Ginsberg"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cJUZ-Y7ZzATAM6Iarbl2Ig"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rocky@dax.cat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "rocky@dax.cat"], ["session_token", "cJUZ-Y7ZzATAM6Iarbl2Ig"], ["password_digest", "$2a$12$hrH5HsSBMhMPAuwUgxU4g.LJeTsER7yTR/p7UGMrg6BAdI06m7IlO"], ["photo_url", ""], ["created_at", "2020-08-21 01:47:47.951119"], ["updated_at", "2020-08-21 01:47:47.951119"], ["name", "Rocky Dax"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mProject Create (0.6ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Figure out who kidnapped Mrs. Lebowski."], ["summary", "There's just a lot of in's and out's... And, look at the kid. The kid has a brand new corvette, man. We gotta get to the bottom of this."], ["created_at", "2020-08-21 01:47:47.963881"], ["updated_at", "2020-08-21 01:47:47.963881"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Usher in the era of modern computing."], ["summary", "We thought we wanted to build a video game machine, but now that we think of it there isn't anything cooler than a GUI and some spreadsheets."], ["created_at", "2020-08-21 01:47:47.966522"], ["updated_at", "2020-08-21 01:47:47.966522"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Get as much kibble and canned cat food as is reasonable."], ["summary", "We are so hungry. We must figure out a method for procuring all of the food from the hoomons. This is a dire situation. Let us divide it into tasks."], ["created_at", "2020-08-21 01:47:47.968296"], ["updated_at", "2020-08-21 01:47:47.968296"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Determine if this is in fact our beautiful house."], ["summary", "We did not, in fact, find ourselves living in a shotgun shack. How did we get here? This is not my beautiful house... is it?"], ["created_at", "2020-08-21 01:47:47.970172"], ["updated_at", "2020-08-21 01:47:47.970172"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Keep on fighting!"], ["summary", "We made it this far. No time to slow down. Once I check out of this place it's time to go down to the martial arts gym and GET BACK IN SHAPE!"], ["created_at", "2020-08-21 01:47:47.971990"], ["updated_at", "2020-08-21 01:47:47.971990"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Build a website or something."], ["summary", "Do we want to build an internet? I think we do. We can get this done if we just put our minds to it. What is a javascript anyway? Who knows... I guess let's get started!"], ["created_at", "2020-08-21 01:47:47.973801"], ["updated_at", "2020-08-21 01:47:47.973801"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Adrian/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Adrian/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.8ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUsersProject Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users_projects"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5w6ne6a5RSTzni_XQtImdQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "woz@woz.woz"], ["session_token", "5w6ne6a5RSTzni_XQtImdQ"], ["password_digest", "$2a$12$twn74tgOsJlkm3iokjePI.RNtDP4CYkUQDc3OMePcIBUsOhGts2bO"], ["photo_url", ""], ["created_at", "2020-08-21 01:48:23.767735"], ["updated_at", "2020-08-21 01:48:23.767735"], ["name", "Steve Wozniak"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tNKiyIox-nuW3sfnc1UN1A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "byrne@byrne.byrne"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "byrne@byrne.byrne"], ["session_token", "tNKiyIox-nuW3sfnc1UN1A"], ["password_digest", "$2a$12$dl8sbB1ZxevWmMjwO2e5WucvfjLjUTzZj.8vHa3azB7ZlHox9Exby"], ["photo_url", ""], ["created_at", "2020-08-21 01:48:24.003986"], ["updated_at", "2020-08-21 01:48:24.003986"], ["name", "David Byrne"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jQlGdtX4rjY2yo-04vKt9A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@jeff.jeff"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jeff@jeff.jeff"], ["session_token", "jQlGdtX4rjY2yo-04vKt9A"], ["password_digest", "$2a$12$DlqCBtT7PqvhstAy91jTY.L0gapYXP.8SgSfOvs9ZCW4dDBaxUKn6"], ["photo_url", ""], ["created_at", "2020-08-21 01:48:24.237250"], ["updated_at", "2020-08-21 01:48:24.237250"], ["name", "Jeff Lebowski"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qtXdzKsUc325Sj9ReeMMOw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruth@ruth.ruth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruth@ruth.ruth"], ["session_token", "qtXdzKsUc325Sj9ReeMMOw"], ["password_digest", "$2a$12$DFRJw6shVUX8kHltp6G64.N1niSE/bYawfkJagTUKq6KR7fMbzOde"], ["photo_url", ""], ["created_at", "2020-08-21 01:48:24.467476"], ["updated_at", "2020-08-21 01:48:24.467476"], ["name", "Ruth Bader Ginsberg"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fCWmMksqbZzpSwvLR7Zy9A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rocky@dax.cat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "rocky@dax.cat"], ["session_token", "fCWmMksqbZzpSwvLR7Zy9A"], ["password_digest", "$2a$12$IDTAuLxPPZTIVJOAjBxhAOXFr/QMvT.vB54CYQtmVxri4CF.QMQzm"], ["photo_url", ""], ["created_at", "2020-08-21 01:48:24.701623"], ["updated_at", "2020-08-21 01:48:24.701623"], ["name", "Rocky Dax"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Figure out who kidnapped Mrs. Lebowski."], ["summary", "There's just a lot of in's and out's... And, look at the kid. The kid has a brand new corvette, man. We gotta get to the bottom of this."], ["created_at", "2020-08-21 01:48:24.717010"], ["updated_at", "2020-08-21 01:48:24.717010"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Usher in the era of modern computing."], ["summary", "We thought we wanted to build a video game machine, but now that we think of it there isn't anything cooler than a GUI and some spreadsheets."], ["created_at", "2020-08-21 01:48:24.719518"], ["updated_at", "2020-08-21 01:48:24.719518"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mProject Create (1.0ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Get as much kibble and canned cat food as is reasonable."], ["summary", "We are so hungry. We must figure out a method for procuring all of the food from the hoomons. This is a dire situation. Let us divide it into tasks."], ["created_at", "2020-08-21 01:48:24.721741"], ["updated_at", "2020-08-21 01:48:24.721741"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Determine if this is in fact our beautiful house."], ["summary", "We did not, in fact, find ourselves living in a shotgun shack. How did we get here? This is not my beautiful house... is it?"], ["created_at", "2020-08-21 01:48:24.724974"], ["updated_at", "2020-08-21 01:48:24.724974"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Keep on fighting!"], ["summary", "We made it this far. No time to slow down. Once I check out of this place it's time to go down to the martial arts gym and GET BACK IN SHAPE!"], ["created_at", "2020-08-21 01:48:24.736084"], ["updated_at", "2020-08-21 01:48:24.736084"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Build a website or something."], ["summary", "Do we want to build an internet? I think we do. We can get this done if we just put our minds to it. What is a javascript anyway? Who knows... I guess let's get started!"], ["created_at", "2020-08-21 01:48:24.738295"], ["updated_at", "2020-08-21 01:48:24.738295"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mUsersProject Create (1.8ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 27], ["project_id", 7], ["created_at", "2020-08-21 01:48:24.762137"], ["updated_at", "2020-08-21 01:48:24.762137"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:87
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:87
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:87
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 27], ["project_id", 8], ["created_at", "2020-08-21 01:48:24.767741"], ["updated_at", "2020-08-21 01:48:24.767741"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:91
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 27], ["project_id", 9], ["created_at", "2020-08-21 01:48:24.771841"], ["updated_at", "2020-08-21 01:48:24.771841"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:91
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:95
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:95
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 27], ["project_id", 10], ["created_at", "2020-08-21 01:48:24.775311"], ["updated_at", "2020-08-21 01:48:24.775311"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:99
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:99
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:99
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 27], ["project_id", 11], ["created_at", "2020-08-21 01:48:24.778753"], ["updated_at", "2020-08-21 01:48:24.778753"]]
+  ↳ db/seeds.rb:99
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:99
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 27], ["project_id", 12], ["created_at", "2020-08-21 01:48:24.783783"], ["updated_at", "2020-08-21 01:48:24.783783"]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:107
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:107
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:107
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 28], ["project_id", 7], ["created_at", "2020-08-21 01:48:24.787864"], ["updated_at", "2020-08-21 01:48:24.787864"]]
+  ↳ db/seeds.rb:107
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:107
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:111
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 28], ["project_id", 8], ["created_at", "2020-08-21 01:48:24.791859"], ["updated_at", "2020-08-21 01:48:24.791859"]]
+  ↳ db/seeds.rb:111
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:111
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:115
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:115
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:115
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 28], ["project_id", 9], ["created_at", "2020-08-21 01:48:24.795880"], ["updated_at", "2020-08-21 01:48:24.795880"]]
+  ↳ db/seeds.rb:115
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:115
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:119
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:119
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:119
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 28], ["project_id", 10], ["created_at", "2020-08-21 01:48:24.799672"], ["updated_at", "2020-08-21 01:48:24.799672"]]
+  ↳ db/seeds.rb:119
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:119
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:123
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:123
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:123
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 28], ["project_id", 11], ["created_at", "2020-08-21 01:48:24.803278"], ["updated_at", "2020-08-21 01:48:24.803278"]]
+  ↳ db/seeds.rb:123
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:123
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:127
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 28], ["project_id", 12], ["created_at", "2020-08-21 01:48:24.807400"], ["updated_at", "2020-08-21 01:48:24.807400"]]
+  ↳ db/seeds.rb:127
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:127
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:131
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:131
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 29], ["project_id", 7], ["created_at", "2020-08-21 01:48:24.811023"], ["updated_at", "2020-08-21 01:48:24.811023"]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:135
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mUsersProject Create (1.8ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 29], ["project_id", 8], ["created_at", "2020-08-21 01:48:24.814719"], ["updated_at", "2020-08-21 01:48:24.814719"]]
+  ↳ db/seeds.rb:135
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:135
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:139
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:139
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:139
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 29], ["project_id", 9], ["created_at", "2020-08-21 01:48:24.820404"], ["updated_at", "2020-08-21 01:48:24.820404"]]
+  ↳ db/seeds.rb:139
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:139
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 29], ["project_id", 10], ["created_at", "2020-08-21 01:48:24.824010"], ["updated_at", "2020-08-21 01:48:24.824010"]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:147
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:147
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:147
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 29], ["project_id", 11], ["created_at", "2020-08-21 01:48:24.828004"], ["updated_at", "2020-08-21 01:48:24.828004"]]
+  ↳ db/seeds.rb:147
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:147
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:151
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 29], ["project_id", 12], ["created_at", "2020-08-21 01:48:24.831944"], ["updated_at", "2020-08-21 01:48:24.831944"]]
+  ↳ db/seeds.rb:151
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:151
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:155
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:155
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:155
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 30], ["project_id", 7], ["created_at", "2020-08-21 01:48:24.835638"], ["updated_at", "2020-08-21 01:48:24.835638"]]
+  ↳ db/seeds.rb:155
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:155
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:159
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 30], ["project_id", 8], ["created_at", "2020-08-21 01:48:24.839427"], ["updated_at", "2020-08-21 01:48:24.839427"]]
+  ↳ db/seeds.rb:159
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:159
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:163
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:163
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:163
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 30], ["project_id", 9], ["created_at", "2020-08-21 01:48:24.843057"], ["updated_at", "2020-08-21 01:48:24.843057"]]
+  ↳ db/seeds.rb:163
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:163
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:167
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 30], ["project_id", 10], ["created_at", "2020-08-21 01:48:24.846748"], ["updated_at", "2020-08-21 01:48:24.846748"]]
+  ↳ db/seeds.rb:167
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:167
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 30], ["project_id", 11], ["created_at", "2020-08-21 01:48:24.850511"], ["updated_at", "2020-08-21 01:48:24.850511"]]
+  ↳ db/seeds.rb:171
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:175
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 30], ["project_id", 12], ["created_at", "2020-08-21 01:48:24.854507"], ["updated_at", "2020-08-21 01:48:24.854507"]]
+  ↳ db/seeds.rb:175
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:175
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:179
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ db/seeds.rb:179
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:179
+  [1m[36mUsersProject Create (1.1ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 31], ["project_id", 7], ["created_at", "2020-08-21 01:48:24.858000"], ["updated_at", "2020-08-21 01:48:24.858000"]]
+  ↳ db/seeds.rb:179
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:179
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:183
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 31], ["project_id", 8], ["created_at", "2020-08-21 01:48:24.862863"], ["updated_at", "2020-08-21 01:48:24.862863"]]
+  ↳ db/seeds.rb:183
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:183
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:187
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ db/seeds.rb:187
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:187
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 31], ["project_id", 9], ["created_at", "2020-08-21 01:48:24.866649"], ["updated_at", "2020-08-21 01:48:24.866649"]]
+  ↳ db/seeds.rb:187
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:187
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 31], ["project_id", 10], ["created_at", "2020-08-21 01:48:24.870349"], ["updated_at", "2020-08-21 01:48:24.870349"]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:195
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ db/seeds.rb:195
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:195
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 31], ["project_id", 11], ["created_at", "2020-08-21 01:48:24.874023"], ["updated_at", "2020-08-21 01:48:24.874023"]]
+  ↳ db/seeds.rb:195
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:195
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:200
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ db/seeds.rb:200
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:200
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 31], ["project_id", 12], ["created_at", "2020-08-21 01:48:24.877604"], ["updated_at", "2020-08-21 01:48:24.877604"]]
+  ↳ db/seeds.rb:200
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (2.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.8ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUsersProject Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users_projects"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "xfW84g0BCFBJG98IrCtbFw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "woz@woz.woz"], ["session_token", "xfW84g0BCFBJG98IrCtbFw"], ["password_digest", "$2a$12$E7KcNfF9Km4ZF.HLiqR/.uNflXDMF43JnL5WVjNBGC.o6YlLvp33O"], ["photo_url", ""], ["created_at", "2020-08-21 01:49:06.601161"], ["updated_at", "2020-08-21 01:49:06.601161"], ["name", "Steve Wozniak"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ll6KKXMUKjaVIygNbEBOuw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "byrne@byrne.byrne"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "byrne@byrne.byrne"], ["session_token", "ll6KKXMUKjaVIygNbEBOuw"], ["password_digest", "$2a$12$D26gSKIaqn1lciehlInjV.XKa.EGnOrmV6L4Ze15lUn5gkJS8FxOq"], ["photo_url", ""], ["created_at", "2020-08-21 01:49:06.830878"], ["updated_at", "2020-08-21 01:49:06.830878"], ["name", "David Byrne"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "f0ljgKdX7gNEZtuj9WltmQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@jeff.jeff"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jeff@jeff.jeff"], ["session_token", "f0ljgKdX7gNEZtuj9WltmQ"], ["password_digest", "$2a$12$WI6S02m5pR5J4Dm.Z3B0GelX2VWmsR/4VvxXkIm8GLw/GBoRb1vxe"], ["photo_url", ""], ["created_at", "2020-08-21 01:49:07.060382"], ["updated_at", "2020-08-21 01:49:07.060382"], ["name", "Jeff Lebowski"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qGysYv4wUKmntgu67W_O6A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruth@ruth.ruth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruth@ruth.ruth"], ["session_token", "qGysYv4wUKmntgu67W_O6A"], ["password_digest", "$2a$12$9mGAgqZAp86I4svk8F3hkezLa9.JT44r6k3xiBhYQCp02TG6LpJsi"], ["photo_url", ""], ["created_at", "2020-08-21 01:49:07.289199"], ["updated_at", "2020-08-21 01:49:07.289199"], ["name", "Ruth Bader Ginsberg"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "HqY3vBcMKl2DvAzcXAUjEA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rocky@dax.cat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "rocky@dax.cat"], ["session_token", "HqY3vBcMKl2DvAzcXAUjEA"], ["password_digest", "$2a$12$QS0Y7CydRdD33zf9iZDwfO8MNRPerMgtROMHY.oK/af8C1l2QJehm"], ["photo_url", ""], ["created_at", "2020-08-21 01:49:07.517440"], ["updated_at", "2020-08-21 01:49:07.517440"], ["name", "Rocky Dax"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (1.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUsersProject Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users_projects"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KaHcYw5H_2JKC1haki9_og"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "woz@woz.woz"], ["session_token", "KaHcYw5H_2JKC1haki9_og"], ["password_digest", "$2a$12$qWT6KYOg67Wm9.PGyERRkOELqNGAFRvorLmX4KvCuuukkpDMrdLge"], ["photo_url", ""], ["created_at", "2020-08-21 01:49:33.347625"], ["updated_at", "2020-08-21 01:49:33.347625"], ["name", "Steve Wozniak"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Jm_9_vSCaUGf3PgVVaMK2A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "byrne@byrne.byrne"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "byrne@byrne.byrne"], ["session_token", "Jm_9_vSCaUGf3PgVVaMK2A"], ["password_digest", "$2a$12$EYRNRpMipWZcyR3QBFh4ou3SsnQxQIfc1xJO0tarBitFp05GXzKca"], ["photo_url", ""], ["created_at", "2020-08-21 01:49:33.588948"], ["updated_at", "2020-08-21 01:49:33.588948"], ["name", "David Byrne"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gF_Bj0b_myqXFR8mN4kuBA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@jeff.jeff"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "jeff@jeff.jeff"], ["session_token", "gF_Bj0b_myqXFR8mN4kuBA"], ["password_digest", "$2a$12$pCz9Yq75KpQ/64H0Hjqj4.hFaF0FD8JOQouMfBtYJaV1yrO2/uvQi"], ["photo_url", ""], ["created_at", "2020-08-21 01:49:33.825358"], ["updated_at", "2020-08-21 01:49:33.825358"], ["name", "Jeff Lebowski"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UZhPxPjL8Dp3N3fvOlM8Qg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ruth@ruth.ruth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "ruth@ruth.ruth"], ["session_token", "UZhPxPjL8Dp3N3fvOlM8Qg"], ["password_digest", "$2a$12$WKI4dQDc7Rr9g67EyusyJOrdvwa4qjjCwjZedO/06jeZ6vkgk1uqq"], ["photo_url", ""], ["created_at", "2020-08-21 01:49:34.064074"], ["updated_at", "2020-08-21 01:49:34.064074"], ["name", "Ruth Bader Ginsberg"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "I8OeZNvRv1HJNFnoAXQr0w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rocky@dax.cat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "photo_url", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "rocky@dax.cat"], ["session_token", "I8OeZNvRv1HJNFnoAXQr0w"], ["password_digest", "$2a$12$iKbM6RrhR99p4LtuD1cu7e7.gif1piM1vPRDdQHH1IDFFjoUfTgNK"], ["photo_url", ""], ["created_at", "2020-08-21 01:49:34.300951"], ["updated_at", "2020-08-21 01:49:34.300951"], ["name", "Rocky Dax"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Figure out who kidnapped Mrs. Lebowski."], ["summary", "There's just a lot of in's and out's... And, look at the kid. The kid has a brand new corvette, man. We gotta get to the bottom of this."], ["created_at", "2020-08-21 01:49:34.314669"], ["updated_at", "2020-08-21 01:49:34.314669"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Usher in the era of modern computing."], ["summary", "We thought we wanted to build a video game machine, but now that we think of it there isn't anything cooler than a GUI and some spreadsheets."], ["created_at", "2020-08-21 01:49:34.316898"], ["updated_at", "2020-08-21 01:49:34.316898"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mProject Create (1.0ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Get as much kibble and canned cat food as is reasonable."], ["summary", "We are so hungry. We must figure out a method for procuring all of the food from the hoomons. This is a dire situation. Let us divide it into tasks."], ["created_at", "2020-08-21 01:49:34.320397"], ["updated_at", "2020-08-21 01:49:34.320397"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Determine if this is in fact our beautiful house."], ["summary", "We did not, in fact, find ourselves living in a shotgun shack. How did we get here? This is not my beautiful house... is it?"], ["created_at", "2020-08-21 01:49:34.325756"], ["updated_at", "2020-08-21 01:49:34.325756"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Keep on fighting!"], ["summary", "We made it this far. No time to slow down. Once I check out of this place it's time to go down to the martial arts gym and GET BACK IN SHAPE!"], ["created_at", "2020-08-21 01:49:34.328422"], ["updated_at", "2020-08-21 01:49:34.328422"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("project_name", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["project_name", "Build a website or something."], ["summary", "Do we want to build an internet? I think we do. We can get this done if we just put our minds to it. What is a javascript anyway? Who knows... I guess let's get started!"], ["created_at", "2020-08-21 01:49:34.330423"], ["updated_at", "2020-08-21 01:49:34.330423"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mUsersProject Create (0.5ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 37], ["project_id", 13], ["created_at", "2020-08-21 01:49:34.356148"], ["updated_at", "2020-08-21 01:49:34.356148"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:87
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:87
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:87
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 37], ["project_id", 14], ["created_at", "2020-08-21 01:49:34.361169"], ["updated_at", "2020-08-21 01:49:34.361169"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:91
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mUsersProject Create (0.7ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 37], ["project_id", 15], ["created_at", "2020-08-21 01:49:34.367821"], ["updated_at", "2020-08-21 01:49:34.367821"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:91
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:95
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:95
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 37], ["project_id", 16], ["created_at", "2020-08-21 01:49:34.372613"], ["updated_at", "2020-08-21 01:49:34.372613"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:99
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:99
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:99
+  [1m[36mUsersProject Create (0.5ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 37], ["project_id", 17], ["created_at", "2020-08-21 01:49:34.378990"], ["updated_at", "2020-08-21 01:49:34.378990"]]
+  ↳ db/seeds.rb:99
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:99
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 37], ["project_id", 18], ["created_at", "2020-08-21 01:49:34.384865"], ["updated_at", "2020-08-21 01:49:34.384865"]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:107
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:107
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:107
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 38], ["project_id", 13], ["created_at", "2020-08-21 01:49:34.389662"], ["updated_at", "2020-08-21 01:49:34.389662"]]
+  ↳ db/seeds.rb:107
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:107
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:111
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 38], ["project_id", 14], ["created_at", "2020-08-21 01:49:34.394126"], ["updated_at", "2020-08-21 01:49:34.394126"]]
+  ↳ db/seeds.rb:111
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:111
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:115
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:115
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:115
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 38], ["project_id", 15], ["created_at", "2020-08-21 01:49:34.398868"], ["updated_at", "2020-08-21 01:49:34.398868"]]
+  ↳ db/seeds.rb:115
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:115
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:119
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:119
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:119
+  [1m[36mUsersProject Create (0.5ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 38], ["project_id", 16], ["created_at", "2020-08-21 01:49:34.403924"], ["updated_at", "2020-08-21 01:49:34.403924"]]
+  ↳ db/seeds.rb:119
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:119
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:123
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:123
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:123
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 38], ["project_id", 17], ["created_at", "2020-08-21 01:49:34.408870"], ["updated_at", "2020-08-21 01:49:34.408870"]]
+  ↳ db/seeds.rb:123
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:123
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:127
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 38], ["project_id", 18], ["created_at", "2020-08-21 01:49:34.413711"], ["updated_at", "2020-08-21 01:49:34.413711"]]
+  ↳ db/seeds.rb:127
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:127
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ db/seeds.rb:131
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:131
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 39], ["project_id", 13], ["created_at", "2020-08-21 01:49:34.418277"], ["updated_at", "2020-08-21 01:49:34.418277"]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:135
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mUsersProject Create (0.3ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 39], ["project_id", 14], ["created_at", "2020-08-21 01:49:34.422439"], ["updated_at", "2020-08-21 01:49:34.422439"]]
+  ↳ db/seeds.rb:135
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:135
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:139
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ db/seeds.rb:139
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:139
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 39], ["project_id", 15], ["created_at", "2020-08-21 01:49:34.428038"], ["updated_at", "2020-08-21 01:49:34.428038"]]
+  ↳ db/seeds.rb:139
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:139
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 39], ["project_id", 16], ["created_at", "2020-08-21 01:49:34.434188"], ["updated_at", "2020-08-21 01:49:34.434188"]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:147
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ db/seeds.rb:147
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:147
+  [1m[36mUsersProject Create (0.5ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 39], ["project_id", 17], ["created_at", "2020-08-21 01:49:34.442472"], ["updated_at", "2020-08-21 01:49:34.442472"]]
+  ↳ db/seeds.rb:147
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:147
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:151
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 39], ["project_id", 18], ["created_at", "2020-08-21 01:49:34.449191"], ["updated_at", "2020-08-21 01:49:34.449191"]]
+  ↳ db/seeds.rb:151
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:151
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:155
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ db/seeds.rb:155
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:155
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 40], ["project_id", 13], ["created_at", "2020-08-21 01:49:34.455820"], ["updated_at", "2020-08-21 01:49:34.455820"]]
+  ↳ db/seeds.rb:155
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:155
+  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:159
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mUsersProject Create (6.1ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 40], ["project_id", 14], ["created_at", "2020-08-21 01:49:34.475192"], ["updated_at", "2020-08-21 01:49:34.475192"]]
+  ↳ db/seeds.rb:159
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:159
+  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:163
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ db/seeds.rb:163
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:163
+  [1m[36mUsersProject Create (1.0ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 40], ["project_id", 15], ["created_at", "2020-08-21 01:49:34.526559"], ["updated_at", "2020-08-21 01:49:34.526559"]]
+  ↳ db/seeds.rb:163
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:163
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:167
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mProject Load (4.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mUsersProject Create (0.8ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 40], ["project_id", 16], ["created_at", "2020-08-21 01:49:34.554100"], ["updated_at", "2020-08-21 01:49:34.554100"]]
+  ↳ db/seeds.rb:167
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:167
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[36mUsersProject Create (0.7ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 40], ["project_id", 17], ["created_at", "2020-08-21 01:49:34.567420"], ["updated_at", "2020-08-21 01:49:34.567420"]]
+  ↳ db/seeds.rb:171
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:175
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 40], ["project_id", 18], ["created_at", "2020-08-21 01:49:34.581097"], ["updated_at", "2020-08-21 01:49:34.581097"]]
+  ↳ db/seeds.rb:175
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:175
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:179
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:179
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:179
+  [1m[36mUsersProject Create (0.9ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 41], ["project_id", 13], ["created_at", "2020-08-21 01:49:34.589602"], ["updated_at", "2020-08-21 01:49:34.589602"]]
+  ↳ db/seeds.rb:179
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:179
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:183
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 41], ["project_id", 14], ["created_at", "2020-08-21 01:49:34.595582"], ["updated_at", "2020-08-21 01:49:34.595582"]]
+  ↳ db/seeds.rb:183
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:183
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:187
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:187
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:187
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 41], ["project_id", 15], ["created_at", "2020-08-21 01:49:34.603217"], ["updated_at", "2020-08-21 01:49:34.603217"]]
+  ↳ db/seeds.rb:187
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:187
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 41], ["project_id", 16], ["created_at", "2020-08-21 01:49:34.608724"], ["updated_at", "2020-08-21 01:49:34.608724"]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:195
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:195
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:195
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 41], ["project_id", 17], ["created_at", "2020-08-21 01:49:34.613426"], ["updated_at", "2020-08-21 01:49:34.613426"]]
+  ↳ db/seeds.rb:195
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:195
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:200
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:200
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:200
+  [1m[36mUsersProject Create (0.4ms)[0m  [1m[32mINSERT INTO "users_projects" ("user_id", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 41], ["project_id", 18], ["created_at", "2020-08-21 01:49:34.618419"], ["updated_at", "2020-08-21 01:49:34.618419"]]
+  ↳ db/seeds.rb:200
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:200
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mProject Load (3.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUsersProject Load (1.0ms)[0m  [1m[34mSELECT "users_projects".* FROM "users_projects"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" INNER JOIN "users_projects" ON "projects"."id" = "users_projects"."project_id" WHERE "users_projects"."user_id" = $1[0m  [["user_id", 38]]
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_projects" ON "users"."id" = "users_projects"."user_id" WHERE "users_projects"."project_id" = $1[0m  [["project_id", 14]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" INNER JOIN "users_projects" ON "projects"."id" = "users_projects"."project_id" WHERE "users_projects"."user_id" = $1[0m  [["user_id", 39]]
+Started POST "/api/session" for ::1 at 2020-08-20 19:53:56 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Adrian/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"woz@woz.woz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["updated_at", "2020-08-21 02:53:57.457192"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (3.0ms)
+Completed 200 OK in 374ms (Views: 11.9ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 19:54:27 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.0ms)
+  Rendered api/projects/index.json.jbuilder (18.5ms)
+Completed 200 OK in 35ms (Views: 21.2ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/projects/13" for ::1 at 2020-08-20 19:55:09 -0700
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 1.4ms)
+
+
+
+NameError - undefined local variable or method `project' for #<Api::ProjectsController:0x00007fbae280ff08>
+Did you mean?  proc:
+  app/controllers/api/projects_controller.rb:11:in `show'
+
+Started GET "/api/projects/13" for ::1 at 2020-08-20 19:56:20 -0700
+Processing by Api::ProjectsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/projects_controller.rb:11
+  Rendering api/projects/show.json.jbuilder
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/show.json.jbuilder (1.6ms)
+Completed 200 OK in 39ms (Views: 8.9ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/api/projects" for ::1 at 2020-08-20 19:57:56 -0700
+Processing by Api::ProjectsController#create as JSON
+  Parameters: {"test"=>{"project_name"=>"buttts", "summary"=>"donezo", "complete"=>"true"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `+' for :project:Symbol:
+  app/controllers/api/projects_controller.rb:51:in `project_params'
+  app/controllers/api/projects_controller.rb:16:in `create'
+
+Started POST "/api/projects" for ::1 at 2020-08-20 19:59:24 -0700
+Processing by Api::ProjectsController#create as JSON
+  Parameters: {"test"=>{"project"=>{"project_name"=>"buttts", "summary"=>"donezo", "complete"=>"true"}}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.2ms)
+
+
+
+NoMethodError - undefined method `+' for :project:Symbol:
+  app/controllers/api/projects_controller.rb:51:in `project_params'
+  app/controllers/api/projects_controller.rb:16:in `create'
+
+Started POST "/api/projects" for ::1 at 2020-08-20 20:00:05 -0700
+Processing by Api::ProjectsController#create as JSON
+  Parameters: {"test"=>{"project_name"=>"buttts", "summary"=>"donezo", "complete"=>"true"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 400 Bad Request in 27ms (ActiveRecord: 5.2ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: project:
+  app/controllers/api/projects_controller.rb:51:in `project_params'
+  app/controllers/api/projects_controller.rb:16:in `create'
+
+Started POST "/api/projects" for ::1 at 2020-08-20 20:00:26 -0700
+Processing by Api::ProjectsController#create as JSON
+  Parameters: {"test"=>{"project"=>{"project_name"=>"buttts", "summary"=>"donezo", "complete"=>"true"}}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 400 Bad Request in 6ms (ActiveRecord: 1.5ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: project:
+  app/controllers/api/projects_controller.rb:51:in `project_params'
+  app/controllers/api/projects_controller.rb:16:in `create'
+
+Started GET "/" for ::1 at 2020-08-20 21:34:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 480ms (Views: 476.0ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-08-20 21:34:18 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EaSrd7yimxQgzoqUpP2R9g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AlHv1gP5jy8wiYniz_ELGw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "AlHv1gP5jy8wiYniz_ELGw"], ["updated_at", "2020-08-21 04:34:18.475162"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 20ms (Views: 9.9ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-20 21:34:20 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"woz@woz.woz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lhZcFRe3zHZNwVQsx-5ShA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lhZcFRe3zHZNwVQsx-5ShA"], ["updated_at", "2020-08-21 04:34:21.119063"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 247ms (Views: 8.5ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-08-20 21:34:22 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lhZcFRe3zHZNwVQsx-5ShA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2tk8thJepfcQ7R7vTlWlPQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2tk8thJepfcQ7R7vTlWlPQ"], ["updated_at", "2020-08-21 04:34:22.495956"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 17ms (Views: 8.9ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-20 21:34:23 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-20 22:00:33 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-20 22:00:35 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"woz@woz.woz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2RclDNLBXyGEBMI_HnFfBg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2RclDNLBXyGEBMI_HnFfBg"], ["updated_at", "2020-08-21 05:00:35.581028"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.2ms)
+Completed 200 OK in 255ms (Views: 10.2ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-08-20 22:00:37 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2RclDNLBXyGEBMI_HnFfBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ESVPnHOZ1BbABh_nWkkTPg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ESVPnHOZ1BbABh_nWkkTPg"], ["updated_at", "2020-08-21 05:00:37.368302"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (2.3ms)
+Completed 200 OK in 21ms (Views: 9.8ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-20 22:00:38 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"woz@woz.woz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "p3kNQsGRA--Sfyym2UOeEw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "p3kNQsGRA--Sfyym2UOeEw"], ["updated_at", "2020-08-21 05:00:38.567418"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 251ms (Views: 8.9ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-08-20 22:00:41 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "p3kNQsGRA--Sfyym2UOeEw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FPtBWV-TcjDhwqrFB0TH7Q"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "FPtBWV-TcjDhwqrFB0TH7Q"], ["updated_at", "2020-08-21 05:00:41.235961"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 20ms (Views: 9.8ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/session" for ::1 at 2020-08-20 22:00:42 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"woz@woz.woz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "woz@woz.woz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:38
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:70
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:54
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "woz@woz.woz"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["updated_at", "2020-08-21 05:00:42.765105"], ["id", 37]]
+  ↳ app/models/user.rb:54
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:54
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 259ms (Views: 12.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-20 22:00:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 481ms (Views: 477.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-20 22:02:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 77ms (Views: 73.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-20 22:02:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 566ms (Views: 562.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-20 22:06:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 452ms (Views: 448.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:06:43 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.8ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (53.3ms)
+Completed 200 OK in 71ms (Views: 49.2ms | ActiveRecord: 18.4ms)
+
+
+Started PATCH "/api/projects/undefined" for ::1 at 2020-08-20 22:06:52 -0700
+Processing by Api::ProjectsController#update as JSON
+  Parameters: {"project"=>{"project_name"=>"Figure out who kidnapped Mrs. Lebowski.", "summary"=>"There's just a lot of in's and out's... And, look at the kid. The kid has a brand new corvette, man. We gotta get to the bottom of this.", "complete"=>"false"}, "id"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 0.9ms)
+
+
+
+NameError - undefined local variable or method `project' for #<Api::ProjectsController:0x00007fbaddd7ebd8>
+Did you mean?  proc:
+  app/controllers/api/projects_controller.rb:26:in `update'
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-20 22:07:40 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 234ms (ActiveRecord: 0.4ms)
+
+
+
+NameError - undefined local variable or method `project' for #<Api::ProjectsController:0x00007fbae2adeb08>
+Did you mean?  proc:
+  app/controllers/api/projects_controller.rb:36:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-20 22:09:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 560ms (Views: 556.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:09:32 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/index.json.jbuilder (22.2ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-20 22:09:37 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 0.3ms)
+
+
+
+NameError - undefined local variable or method `project' for #<Api::ProjectsController:0x00007fbae4814e70>
+Did you mean?  proc:
+  app/controllers/api/projects_controller.rb:36:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-20 22:14:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 650ms (Views: 645.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:14:07 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (16.9ms)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-20 22:14:09 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 0.5ms)
+
+
+
+NameError - undefined local variable or method `project' for #<Api::ProjectsController:0x00007fbae1a838a8>
+Did you mean?  proc:
+  app/controllers/api/projects_controller.rb:36:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-20 22:15:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 785ms (Views: 781.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:15:59 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (35.4ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-20 22:16:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 446ms (Views: 442.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:17:00 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (16.1ms)
+Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/api/projects/undefined" for ::1 at 2020-08-20 22:17:04 -0700
+Processing by Api::ProjectsController#update as JSON
+  Parameters: {"project"=>{"project_name"=>"Usher in the era of modern computing.", "summary"=>"We thought we wanted to build a video game machine, but now that we think of it there isn't anything cooler than a GUI and some spreadsheets.", "complete"=>"false"}, "id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.3ms)
+
+
+
+NameError - undefined local variable or method `project' for #<Api::ProjectsController:0x00007fbadde14c28>
+Did you mean?  proc:
+  app/controllers/api/projects_controller.rb:26:in `update'
+
+Started PATCH "/api/projects/undefined" for ::1 at 2020-08-20 22:17:59 -0700
+Processing by Api::ProjectsController#update as JSON
+  Parameters: {"project"=>{"project_name"=>"Keep on fighting!", "summary"=>"We made it this far. No time to slow down. Once I check out of this place it's time to go down to the martial arts gym and GET BACK IN SHAPE!", "complete"=>"false"}, "id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 0.4ms)
+
+
+
+NameError - undefined local variable or method `project' for #<Api::ProjectsController:0x00007fbae2a7ff18>
+Did you mean?  proc:
+  app/controllers/api/projects_controller.rb:26:in `update'
+
+Started GET "/" for ::1 at 2020-08-20 22:18:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 427ms (Views: 421.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:18:02 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.5ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.3ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (19.7ms)
+Completed 200 OK in 39ms (Views: 33.7ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/api/projects/undefined" for ::1 at 2020-08-20 22:18:03 -0700
+Processing by Api::ProjectsController#update as JSON
+  Parameters: {"project"=>{"project_name"=>"Keep on fighting!", "summary"=>"We made it this far. No time to slow down. Once I check out of this place it's time to go down to the martial arts gym and GET BACK IN SHAPE!", "complete"=>"false"}, "id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.2ms)
+
+
+
+NameError - undefined local variable or method `project' for #<Api::ProjectsController:0x00007fbae1921ff0>
+Did you mean?  proc:
+  app/controllers/api/projects_controller.rb:26:in `update'
+
+Started DELETE "/api/projects/undefined" for ::1 at 2020-08-20 22:18:12 -0700
+Processing by Api::ProjectsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 328ms (ActiveRecord: 0.9ms)
+
+
+
+NameError - undefined local variable or method `project' for #<Api::ProjectsController:0x00007fbaddda6048>
+Did you mean?  proc:
+  app/controllers/api/projects_controller.rb:36:in `destroy'
+
+Started GET "/" for ::1 at 2020-08-20 22:21:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 466ms (Views: 462.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:21:01 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.6ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.2ms)
+  Rendered api/projects/index.json.jbuilder (16.2ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-08-20 22:21:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 53ms (Views: 48.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:21:07 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.4ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (10.1ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-20 22:21:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 53ms (Views: 48.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/projects" for ::1 at 2020-08-20 22:21:16 -0700
+Processing by Api::ProjectsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "02ZBr1HdbEgnaNyB8c151A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/projects/index.json.jbuilder
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/api/projects/index.json.jbuilder:1
+  Rendered api/projects/_project.json.jbuilder (0.7ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/_project.json.jbuilder (0.1ms)
+  Rendered api/projects/index.json.jbuilder (14.9ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.9ms)
+
+

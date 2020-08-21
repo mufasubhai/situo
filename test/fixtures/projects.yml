@@ -5,12 +5,9 @@
 #  id           :bigint           not null, primary key
 #  project_name :string           not null
 #  summary      :string
-#  owner_id     :integer          not null
-#  start_date   :datetime         not null
-#  due_date     :datetime         not null
-#  complete     :boolean          not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  complete     :boolean          default(FALSE)
 #
 
 # This model initially had no columns defined. If you add columns to the

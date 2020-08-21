@@ -8,42 +8,47 @@ class Api::ProjectsController < ApplicationController
     end
 
     def show
-        @project = project.find_by(id: params[:id])
+        @project = Project.find_by(id: params[:id])
         render :show
-    end
-
-    def new
     end
     
     def create
         @project = Project.new(project_params)
-
+        
         if @project.save
             render :show
         else
             render json @project.errors.full_messages, status: 422
         end
     end
-
-    def edit
-
-    end
-
+    
     def update
         @project = project.find_by(id: params[:id])
-        # if @project.update_attributes
-        # end
-    end
 
+        if @project.update(post_params)
+            render :show
+        else
+            render json: @post.errors.full_messages, status: 422
+        end
+    end
     
     def destroy
+        @project = project.find_by(id: params[:id])
+
+        if @project.destroy
+            remder :show
+        else
+            remder json: @post.errors.full_messages, status: 422
+        end
+
+
     end
 
 
     private
 
     def project_params
-        require(:project).permit(:owner_id, :start_date, :project_name, :summary, :due_date, :complete)
+        params.require(:project).permit(:project_name, :summary, :complete)
     end
 
 

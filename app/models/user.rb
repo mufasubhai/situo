@@ -11,6 +11,8 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
+
+
 class User < ApplicationRecord
 
     attr_reader :password
@@ -21,6 +23,16 @@ class User < ApplicationRecord
 
 
   after_initialize :ensure_session_token
+
+     has_many(
+        :users_projects,
+        class_name: 'UsersProject',
+        foreign_key: :user_id,
+        primary_key: :id
+    )
+
+  has_many :projects, through: :users_projects, source: :project
+
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_20_034150) do
+ActiveRecord::Schema.define(version: 2020_08_21_010831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,13 +30,9 @@ ActiveRecord::Schema.define(version: 2020_08_20_034150) do
   create_table "projects", force: :cascade do |t|
     t.string "project_name", null: false
     t.string "summary"
-    t.integer "owner_id", null: false
-    t.datetime "start_date", null: false
-    t.datetime "due_date", null: false
-    t.boolean "complete", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_projects_on_owner_id"
+    t.boolean "complete", default: false
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -47,9 +43,9 @@ ActiveRecord::Schema.define(version: 2020_08_20_034150) do
     t.text "description"
     t.datetime "start_date", null: false
     t.datetime "due_date", null: false
-    t.boolean "complete", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status", default: "not-started"
     t.index ["creator_id"], name: "index_tasks_on_creator_id"
     t.index ["owner_id"], name: "index_tasks_on_owner_id"
     t.index ["project_id"], name: "index_tasks_on_project_id"
