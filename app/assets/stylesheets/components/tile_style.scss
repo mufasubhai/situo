@@ -1,0 +1,63 @@
+.tile_container {
+    box-sizing: border-box;
+    height: 220px;
+    min-width: 152px;
+    padding: 16px 0;
+    width: 152px;
+    align-items: center;
+    background: rgba(246,248,249,0);
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    transition-duration: .4s;
+}
+
+.tile_structure {
+    height: 120px;
+    width: 120px;
+}
+.tile_card {
+   
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0 -2px rgba(0,0,0,.05);
+    align-items: center;
+
+    display: flex;
+    fill: #fff;
+    flex-direction: column;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    cursor: pointer;
+    color: unset;
+}
+
+multi-color-icon {
+  height: 48px;
+    width: 48px;    
+    clip-rule: evenodd;
+    fill-rule: evenodd;
+}  
+
+.multi_color_icon_black {
+    fill: rgba(21,27,38,.75);
+}
+
+
+.blue_card {
+background-color: #7a6ff0;
+}
+
+.purple_card {
+    background-color: #aa62e3;
+}
+
+.red_card {
+    background-color: #ea4e9d;
+}
+
+.pink_card {
+ background-color: #e362e3;
+}

@@ -50,28 +50,28 @@ u5 = User.create!(
 
 
 p1 = Project.create!(
-  project_name: 'Figure out who kidnapped Mrs. Lebowski.',
+  project_name: 'Personell Investigation',
   summary: "There's just a lot of in's and out's... And, look at the kid. The kid has a brand new corvette, man. We gotta get to the bottom of this.",
   complete: false
 )
 p2 = Project.create!(
-  project_name: 'Usher in the era of modern computing.',
+  project_name: 'Computer Project.',
   summary: "We thought we wanted to build a video game machine, but now that we think of it there isn't anything cooler than a GUI and some spreadsheets.",
   complete: false
 )
 p3 = Project.create!(
-  project_name: 'Get as much kibble and canned cat food as is reasonable.',
+  project_name: 'Sustenance 4 katz',
   summary: 'We are so hungry. We must figure out a method for procuring all of the food from the hoomons. This is a dire situation. Let us divide it into tasks.',
   complete: false
 )
 p4 = Project.create!(
-  project_name: 'Determine if this is in fact our beautiful house.',
+  project_name: 'Fact Finding Mission',
   summary: 'We did not, in fact, find ourselves living in a shotgun shack. How did we get here? This is not my beautiful house... is it?',
   complete: false
 )
 
 p5 = Project.create!(
-  project_name: 'Build a get out the vote website.',
+  project_name: 'Website Building',
   summary: "Do we want to build an internet? I think we do. We can get this done if we just put our minds to it. What is a javascript anyway? Who knows... I guess let's get started!",
   complete: false
 )
