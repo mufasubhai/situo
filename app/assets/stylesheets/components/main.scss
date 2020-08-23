@@ -63,7 +63,9 @@
 .main_content {
     display: flex;
     flex-direction: column;
-      
+    will-change: transform;
+    justify-content: center;
+    width: 800px;
 }
 
 .right_page_content {
@@ -136,3 +138,11 @@ transition-timing-function:ease-out, ease-out;
      
 }
 
+.project_list {
+    display: flex;
+    flex-direction: row;
+   flex-flow: row wrap;
+    justify-self: center;
+    justify-content:    left;
+
+}

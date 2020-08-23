@@ -10,16 +10,18 @@ class Home extends React.Component {
         return (
 
             
-                <span className="situo_full_page">
+            <span className="situo_full_page">
                 <SideNavContainer/>
 
             <span className="right_page_content">
              <TopNavContainer/>
              <div className="main_content">
+                <div className="home_index_title">Tasks Due Soon</div>
                 <TaskIndexContainer />
-                <p>----------</p>
+                <div className="home_index_title">Recent Projects</div>
+                <span></span>
                 <ProjectIndexContainer/>
-                <p>---------</p>
+             
             </div>   
 
             </span>

@@ -8,7 +8,7 @@ class TaskIndex extends React.Component {
     }
     constructor(props) {
         super(props)
-        
+
         
     }
     
@@ -19,9 +19,9 @@ class TaskIndex extends React.Component {
         return (
 
 
-            <div>
-                <ul>
-    
+            
+                <ul className='home_task_list'>
+                    
                     {
 
 
@@ -37,8 +37,7 @@ class TaskIndex extends React.Component {
                         }
 
                 </ul>
-                        <button>New Task</button>
-            </div>
+           
         )
     }
 }

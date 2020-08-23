@@ -3,20 +3,19 @@ import { Link } from 'react-router-dom';
 
 const TaskIndexItem = props => (
 
-  <li>
-
   
-    <p>
+  
+    <Link className="task_index_item">
         {
                 (!props.task.complete) ? 
-                " Incomplete!  " : "Donezo!  "
+                "uncomplete" : "complete"
         }
       {props.task.task_name}
-        </p>
+    </Link>
  
 
      
-  </li>
+ 
 )
 
 export default TaskIndexItem;

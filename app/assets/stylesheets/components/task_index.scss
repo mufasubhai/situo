@@ -1,0 +1,41 @@
+.home_task_list {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #e8ecee;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px 0 rgba(21,27,38,.08);
+    overflow: hidden;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: normal;
+    width: 800px;
+
+}
+
+.task_index_item {
+    border-bottom: 1px solidt;
+    border-top: 1px solid #e8ecee;
+    height: 34px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    overflow: visible;
+    padding: 0 32px;
+    position: relative;
+    transition: box-shadow 0s ease-in;
+    white-space: nowrap;
+
+}
+
+.task_index_item:hover {
+    background-color: #e8ecee;
+}
+
+.home_index_title {
+    display: flex;
+    padding-top: 45px;
+    padding-bottom: 13px;
+    width: 800px;
+    margin: 0 24px;
+  
+}
