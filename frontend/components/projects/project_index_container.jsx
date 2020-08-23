@@ -3,7 +3,8 @@ import ProjectIndex from './project_index';
 import {fetchProjects, deleteProject, fetchProject, createProject, updateProject} from '../../actions/project_actions';
 
 const mSTP = state => ({
-    projects: Object.values(state.entities.projects)
+    projects: Object.values(state.entities.projects),
+    id: state.session.id
 });
 
 const mDTP = dispatch => ({

@@ -1,0 +1,49 @@
+#burger_logo_2 {
+    display: none;   
+    width: 25px;
+    height: 16px;
+    fill: rgb(111, 119, 130);
+    align-self: center;
+}
+
+#hidden_burger {
+    background-color: transparent;
+    border-color: transparent;
+    color: transparent;
+    padding: 0;
+    border-radius: 0;
+    transition: background-color 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: none;
+    text-align: center;
+    align-self: center;
+}
+
+.burger_button:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 72px;
+    padding: 0 24px;
+    
+}
+
+.left_top_nav {
+    display:flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.right_top_nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.label {
+    display: flex;
+}

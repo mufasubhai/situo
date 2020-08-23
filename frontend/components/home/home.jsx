@@ -8,10 +8,12 @@ class Home extends React.Component {
 
     render() {
         return (
-        <span className="situo_full_page">
+
+            
+                <span className="situo_full_page">
                 <SideNavContainer/>
 
-            <span className="left_page_contet">
+            <span className="right_page_content">
              <TopNavContainer/>
              <div className="main_content">
                 <TaskIndexContainer />
@@ -22,8 +24,8 @@ class Home extends React.Component {
 
             </span>
 
-        </span>
-
+            </span>
+            
         )
     }
 }

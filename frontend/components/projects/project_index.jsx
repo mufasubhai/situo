@@ -4,7 +4,9 @@ import ProjectIndexItem from './project_index_item'
 class ProjectIndex extends React.Component {
 
     componentDidMount() {
+     
         this.props.fetchProjects();
+        
     }
     constructor(props) {
         super(props)
@@ -21,6 +23,7 @@ class ProjectIndex extends React.Component {
             <div>
                 <ul>
                     {  
+                        
                         projects.map(project => (
                             <ProjectIndexItem 
                             project={project}

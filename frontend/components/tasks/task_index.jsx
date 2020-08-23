@@ -2,19 +2,20 @@ import React from 'react';
 import TaskIndexItem from './task_index_item'
 
 class TaskIndex extends React.Component {
-
+    
     componentDidMount() {
         this.props.fetchTasks(); 
     }
     constructor(props) {
         super(props)
-
-
+        
+        
     }
-
+    
     render() {
-
-        const { tasks, deleteTask, updateTask } = this.props;
+        
+        const userTasks = this.props.tasks.filter(task => (task.owner_id === this.props.id ));
+        const { tasks, deleteTask, updateTask} = this.props;
         return (
 
 
@@ -22,7 +23,9 @@ class TaskIndex extends React.Component {
                 <ul>
     
                     {
-                        tasks.map(task => (
+
+
+                        userTasks.map(task => (
                             <TaskIndexItem
                             task={task}
                             deleteTask={deleteTask}

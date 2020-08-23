@@ -1,14 +1,39 @@
 .burger_logo {
     display: flex;
-    width: 20px;
-    height: 20px;
-    fill: #cbd4db;
+    width: 25px;
+    height: 16px;
+    fill: rgb(111, 119, 130);;
     align-self: center;
-   padding: 0 8px 0 0; 
-
 
 }
 
+.rootdiv {
+    height:100%;
+}
+
+
+#root {
+   height: 100%;
+} 
+
+
+.burger_button {
+        background-color: transparent;
+    border-color: transparent;
+    color: transparent;
+    padding: 0;
+    border-radius: 0;
+    transition: background-color 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: none;
+    
+    text-align: center;
+}
+
+.burger_button:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
 .logo_container {
     display: flex;
     height: 72px;
@@ -31,18 +56,21 @@
 }
 .situo_full_page {
     display: flex;
-    flex-direction: row;
-  
+    height: 100%;
 }
+
 
 .main_content {
     display: flex;
     flex-direction: column;
+      
 }
 
-.left_page_content {
+.right_page_content {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .topnav {
@@ -54,8 +82,17 @@
     width: 240px;
      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 13px;
-
     background-color: #151b26;
+
+    
+   
+}
+
+#situo_sidebar {
+transition-delay:0s, 0s;
+transition-duration:0.25s, 0.25s;
+transition-property:margin-left, transform;
+transition-timing-function:ease-out, ease-out;
 }
 
 .sidebar_list {
@@ -73,7 +110,7 @@
    
 }
 .sidebar_nav_item:hover {
-    background-color: #9ca6af;
+    background-color: rgba(255,255,255,.08);
 }
 
 .sidebar_nav_link {
@@ -93,7 +130,7 @@
     display: flex;
     width: 20px;
     height: 20px;
-    fill: #cbd4db;
+    fill: rgb(111, 119, 130);;
     align-self: center;
    padding: 0 8px 0 0;
      

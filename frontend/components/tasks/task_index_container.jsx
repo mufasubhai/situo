@@ -3,7 +3,8 @@ import TaskIndex from './task_index';
 import { fetchTasks, deleteTask, fetchTask, createTask, updateTask } from '../../actions/task_actions';
 
 const mSTP = state => ({
-    tasks: Object.values(state.entities.tasks)
+    tasks: Object.values(state.entities.tasks),
+    id: state.session.id
 });
 
 const mDTP = dispatch => ({
