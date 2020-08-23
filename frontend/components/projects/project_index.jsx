@@ -19,22 +19,22 @@ class ProjectIndex extends React.Component {
             
 
             <div>
-                <button>New Project</button>
                 <ul>
                     {  
                         projects.map(project => (
                             <ProjectIndexItem 
-                                project={project}
-                                deleteProject={deleteProject}
-                                updateProject={updateProject}
-                                key={project.id}
+                            project={project}
+                            deleteProject={deleteProject}
+                            updateProject={updateProject}
+                            key={project.id}
                             />
-                        ))
-
-                    }
+                            ))
+                            
+                        }
 
                 </ul>
-                this is the project Index!
+                
+                        <button>New Project</button>
             </div>
         )
     }

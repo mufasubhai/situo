@@ -1,21 +1,21 @@
 export const fetchTasks = () => (
     $.ajax({
         method: 'GET',
-        url: '/api/Tasks',
+        url: '/api/tasks',
     })
 )
 
 export const fetchTask = id => (
     $.ajax({
         method: 'GET',
-        url: `/api/Tasks/${id}`
+        url: `/api/tasks/${id}`
     })
 )
 
 export const createTask = Task => (
     $.ajax({
         method: 'POST',
-        url: `/api/Tasks`,
+        url: `/api/tasks`,
         data: { Task }
     })
 )
@@ -23,7 +23,7 @@ export const createTask = Task => (
 export const updateTask = Task => (
     $.ajax({
         method: 'PATCH',
-        url: `/api/Tasks/${Task.id}`,
+        url: `/api/tasks/${Task.id}`,
         data: { Task }
     })
 )
@@ -31,7 +31,7 @@ export const updateTask = Task => (
 export const deleteTask = TaskId => {
     return $.ajax({
         method: 'DELETE',
-        url: `/api/Tasks/${TaskId}`,
+        url: `/api/tasks/${TaskId}`,
         data: TaskId
     })
 }

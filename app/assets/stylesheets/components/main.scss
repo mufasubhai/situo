@@ -1,0 +1,101 @@
+.burger_logo {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    fill: #cbd4db;
+    align-self: center;
+   padding: 0 8px 0 0; 
+
+
+}
+
+.logo_container {
+    display: flex;
+    height: 72px;
+   
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 24px;
+
+}
+
+.nav_logo_image {
+    height: 16px;
+    width: auto;
+}
+.nav_logo {
+  
+    display: flex;
+    align-self: center;
+    
+}
+.situo_full_page {
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.main_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.left_page_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.topnav {
+    display: flex;
+}
+.situo_sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+
+    background-color: #151b26;
+}
+
+.sidebar_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar_nav_item {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    height: 32px;
+    padding: 0 24px;
+
+   
+}
+.sidebar_nav_item:hover {
+    background-color: #9ca6af;
+}
+
+.sidebar_nav_link {
+    
+    display: flex;
+    align-self: center;
+    color: #cbd4db;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: .03 em;
+    width: auto;
+
+}
+
+.sidebar_icon {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    fill: #cbd4db;
+    align-self: center;
+   padding: 0 8px 0 0;
+     
+}
+

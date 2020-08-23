@@ -4,8 +4,11 @@ class TopNav extends React.Component {
 
     render() {
         return (
-            <div>
-                <p> this is the top nav</p>
+            <div className="topnav">
+                <h1 className="label">Home</h1>
+
+
+                
                 <button onClick={this.props.logout}>Logout</button>
 
             </div>
