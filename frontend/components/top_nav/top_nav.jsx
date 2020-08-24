@@ -5,6 +5,11 @@ class TopNav extends React.Component {
         super(props);
         this.revealNav = this.revealNav.bind(this);
         this.menuClick = this.menuClick.bind(this)
+        const parts = window.location.href.split('/');
+        const last = parts.pop();
+        const secondLast = parts.pop();
+        console.log(last)
+        console.log(secondLast)
     }
 
     revealNav() {
@@ -33,7 +38,12 @@ class TopNav extends React.Component {
                             <path d="M49,28H19c-0.6,0-1-0.4-1-1s0.4-1,1-1h30c0.6,0,1,0.4,1,1S49.6,28,49,28z"></path>
                         </svg>
                     </button>
-                    <h1 className="label">Home</h1>
+                    {
+                        window.location.href.includes('home') ? <h1 className="label">Home</h1> : null
+                
+                    
+                    }
+                    
                 </span>
 
                 <span className="right_top_nav">

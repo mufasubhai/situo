@@ -5,7 +5,7 @@ import { signup } from '../../actions/session_actions';
 import SideNav from './side_nav';
 
 const mSTP = state => ({
-
+    userId: state.session.id
 });
 
 const mDTP =dispatch => ({

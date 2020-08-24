@@ -6,7 +6,7 @@ import { logout } from '../../actions/session_actions';
 
 
 const mSTP = state => ({
-
+    
 });
 
 const mDTP = dispatch => ({
