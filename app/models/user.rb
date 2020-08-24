@@ -32,6 +32,13 @@ class User < ApplicationRecord
     )
     
     has_many(
+      :projects,
+      class_name: 'Project',
+      foreign_key: :owner_id,
+      primary_key: :id
+    )
+
+    has_many(
       :created_tasks,
       class_name: 'Task',
       foreign_key: :creator_id,

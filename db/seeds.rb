@@ -12,6 +12,7 @@ UsersProject.delete_all
 Comment.delete_all
 Task.delete_all
 
+date = DateTime.now
 
 u1 = User.create!(
   name: 'Steve Wozniak',
@@ -52,34 +53,46 @@ u5 = User.create!(
 p1 = Project.create!(
   project_name: 'Personel Investigation',
   summary: "There's just a lot of in's and out's... And, look at the kid. The kid has a brand new corvette, man. We gotta get to the bottom of this.",
-  complete: false
+  complete: false,
+  owner_id: u3.id,
+  due_date: date + 17
 )
 p2 = Project.create!(
   project_name: 'Computer Project.',
   summary: "We thought we wanted to build a video game machine, but now that we think of it there isn't anything cooler than a GUI and some spreadsheets.",
-  complete: false
+  complete: false,
+  owner_id: u1.id,
+  due_date: date + 14
 )
 p3 = Project.create!(
   project_name: 'Sustenance 4 katz',
   summary: 'We are so hungry. We must figure out a method for procuring all of the food from the hoomons. This is a dire situation. Let us divide it into tasks.',
-  complete: false
+  complete: false,
+  owner_id: u5.id,
+  due_date: date + 12
 )
 p4 = Project.create!(
   project_name: 'Fact Finding Mission',
   summary: 'We did not, in fact, find ourselves living in a shotgun shack. How did we get here? This is not my beautiful house... is it?',
-  complete: false
+  complete: false,
+  owner_id: u2.id,
+  due_date: date + 8
 )
 
 p5 = Project.create!(
   project_name: 'Website Building',
   summary: "Do we want to build an internet? I think we do. We can get this done if we just put our minds to it. What is a javascript anyway? Who knows... I guess let's get started!",
-  complete: false
+  complete: false,
+  owner_id: u4.id,
+  due_date: date + 4
 )
 
 p6 = Project.create!(
   project_name: 'Keep on fighting!',
   summary: "We made it this far. No time to slow down. Once I check out of this place it's time to go down to the martial arts gym and GET BACK IN SHAPE!",
-  complete: false
+  complete: false,
+  owner_id: u4.id,
+  due_date: date + 10
 )  
 
 
@@ -205,7 +218,7 @@ up30 = UsersProject.create!(
   project_id: p6.id
 )
 
-date = DateTime.now
+
 # project 1
 
 t1 = Task.create(

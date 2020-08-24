@@ -14,9 +14,11 @@ class SideNav extends React.Component {
         const nav = document.getElementById('situo_sidebar');
         const burger = document.getElementById('burger_logo_2');
         const burgerbutton = document.getElementById('hidden_burger')
+        const leftPad = document.getElementById('right_page_content')
         nav.style.marginLeft = '-240px';
         burger.style.display = "flex";
         burgerbutton.style.display   = "flex";
+        leftPad.style.paddingLeft = "0px"
     }
 
 

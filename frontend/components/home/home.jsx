@@ -16,7 +16,7 @@ class Home extends React.Component {
 
                 </div>
             
-                <span className="right_page_content">
+                <span className="right_page_content" id="right_page_content">
                     <TopNavContainer/>
                     <div className="main_content">
                         <div className="home_index_title">Tasks Due Soon</div>

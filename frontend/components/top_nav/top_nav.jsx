@@ -7,10 +7,12 @@ class TopNav extends React.Component {
         this.revealNav = this.revealNav.bind(this);
         this.menuClick = this.menuClick.bind(this)
         
+
+        
     }
 
     componentDidMount() {
-        const parts = window.location.href.split('/');
+        const parts = this.props.match.path.split('/');
         const last = parts.pop();
         const secondLast = parts.pop();
         (secondLast === 'project') ? this.props.fetchProject(last) : null
@@ -20,18 +22,21 @@ class TopNav extends React.Component {
         const nav = document.getElementById('situo_sidebar');
         const burger = document.getElementById('burger_logo_2');
         const burgerbutton = document.getElementById('hidden_burger');
+        const leftPad = document.getElementById('right_page_content');
+        leftPad.style.paddingLeft = '240px'
         nav.style.marginLeft = '0px';
         burger.style.display = "none"
         burgerbutton.style.display = "none"
     }
 
     menuClick() {
-        const menu = document.getElementById('top_nav_dropdown')
-        menu.style.display === "none" ? menu.style.display = "block" : menu.style.display = "none"
+        const menu = document.getElementById('top_nav_dropdown');
+       
+        menu.style.display === "none" ? menu.style.display = "block" : menu.style.display = "none";
     }
 
     render() {
-        const parts = window.location.href.split('/');
+        const parts = this.props.match.path.split('/');
         const last = parts.pop();
         const secondLast = parts.pop();
         
@@ -48,7 +53,7 @@ class TopNav extends React.Component {
                         </svg>
                     </button>
                     {
-                        window.location.href.includes('home') ? <h1 className="label">Home</h1> : null
+                        this.props.match.path.includes('home') ? <h1 className="label">Home</h1> : null
                     }
                     {
                         (secondLast === 'user') ? 

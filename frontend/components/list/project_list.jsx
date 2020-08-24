@@ -7,7 +7,7 @@ import TopNavContainer from '../top_nav/top_nav_container';
 class ProjectList extends React.Component {
     constructor(props) {
         super(props)
-        console.log(this.props)
+        
     }
 
     componentDidMount() {
