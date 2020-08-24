@@ -9,23 +9,24 @@ class Home extends React.Component {
     render() {
         return (
 
-            
+          
             <span className="situo_full_page">
-                <SideNavContainer/>
+                <div className="left_page_content">
+                    <SideNavContainer/>
 
-            <span className="right_page_content">
-             <TopNavContainer/>
-             <div className="main_content">
-                <div className="home_index_title">Tasks Due Soon</div>
-                <TaskIndexContainer />
-                <div className="home_index_title" id="bottom_index_title">Recent Projects</div>
-                <span clasName="list_spacing"></span>
-                <ProjectIndexContainer/>
-             
-            </div>   
-
-            </span>
-
+                </div>
+            
+                <span className="right_page_content">
+                    <TopNavContainer/>
+                    <div className="main_content">
+                        <div className="home_index_title">Tasks Due Soon</div>
+                        <TaskIndexContainer />
+                        <div className="home_index_title" id="bottom_index_title">Recent Projects</div>
+                        <span className="list_spacing"></span>
+                        <ProjectIndexContainer/>
+                    
+                    </div>   
+                </span>
             </span>
             
         )

@@ -56,9 +56,12 @@
 }
 .situo_full_page {
     display: flex;
-    height: 100%;
+    height: 100vh;
 }
 
+.left_page_content {
+    height: 100vh;
+}
 
 .main_content {
     display: flex;
@@ -81,6 +84,7 @@
 .situo_sidebar {
     display: flex;
     flex-direction: column;
+    height: 100%;
     width: 240px;
      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 13px;

@@ -18,13 +18,13 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
 const App = () => (
-    <div className="rootdiv">
+    <div>
         <Switch>
             <AuthRoute exact path='/' component={SplashPage} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <AuthRoute exact path="/login" component={LogInFormContainer} />
-            <ProtectedRoute path="/project/tasklist/:projectId" component={ProjectListContainer} />
-            <ProtectedRoute path="/tasklist/:userId" component={UserListContainer} />
+            <ProtectedRoute path="/tasklist/project/:projectId" component={ProjectListContainer} />
+            <ProtectedRoute path="/tasklist/user/:userId" component={UserListContainer} />
             <ProtectedRoute exact path="/home" component={HomeContainer} />
 
         
@@ -36,8 +36,8 @@ const App = () => (
 );
 
 {/* <Switch>
-    <AuthRoute path="/project/tasklist/:projectId" component={ProjectListContainer} />
-    <AuthRoute path="/project/taskcal/:projectId" component={ProjectCalContainer} />
+    <AuthRoute path="/tasklist/project/:projectId" component={ProjectListContainer} />
+    <AuthRoute path="/taskcal/user/:projectId" component={ProjectCalContainer} />
     <AuthRoute path="/tasklist/:userId" component={UserListContainer} />
     <AuthRoute path="/taskcak/:userId" component={UserCalContainer} />
 </Switch> */}

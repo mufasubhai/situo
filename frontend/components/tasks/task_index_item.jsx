@@ -5,7 +5,7 @@ const TaskIndexItem = props => (
 
   
   
-    <Link className="task_index_item">
+    <Link className="task_index_item" to=''>
         {
                 (!props.task.complete) ? 
                 "O " : "X "

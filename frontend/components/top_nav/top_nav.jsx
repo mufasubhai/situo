@@ -1,15 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class TopNav extends React.Component {
     constructor(props) {
         super(props);
         this.revealNav = this.revealNav.bind(this);
         this.menuClick = this.menuClick.bind(this)
+        
+    }
+
+    componentDidMount() {
         const parts = window.location.href.split('/');
         const last = parts.pop();
         const secondLast = parts.pop();
-        console.log(last)
-        console.log(secondLast)
+        (secondLast === 'project') ? this.props.fetchProject(last) : null
     }
 
     revealNav() {
@@ -27,6 +31,11 @@ class TopNav extends React.Component {
     }
 
     render() {
+        const parts = window.location.href.split('/');
+        const last = parts.pop();
+        const secondLast = parts.pop();
+        
+
         return (
             <div className="topnav">
                 
@@ -40,10 +49,25 @@ class TopNav extends React.Component {
                     </button>
                     {
                         window.location.href.includes('home') ? <h1 className="label">Home</h1> : null
-                
-                    
                     }
-                    
+                    {
+                        (secondLast === 'user') ? 
+                        <span>
+                            <h1 className="label">{this.props.user.name}
+                                    <Link to={`/tasklist/user/${last}`} className="topLink">List</Link>
+                                    <Link to={`/taskcal/user/${last}`} className="topLink">Calendar</Link>  
+                            </h1>
+                        </span> : null
+                    }
+                    {
+                        (secondLast === 'project' && (this.props.currentProject)) ? 
+                        <span>
+                            <h1 className="label">{this.props.currentProject.project_name}
+                                    <Link to={`/tasklist/project/${last}`} className="topLink">List</Link>
+                                    <Link to={`/taskcal/project/${last}`} className="topLink">Calendar</Link>  
+                            </h1>
+                        </span> : null
+                    }
                 </span>
 
                 <span className="right_top_nav">

@@ -16,7 +16,7 @@ class ProjectIndexItem extends React.Component {
     var idx = Math.floor(Math.random() * arr.length);
     const color = arr[idx]
     return ( 
-      <Link to={`/project/tasklist/${this.props.project.id}`} >
+      <Link to={`/tasklist/project/${this.props.project.id}`} >
       <div className="tile_container">  
       <div className="tile_structure">
         <div className={color}>
