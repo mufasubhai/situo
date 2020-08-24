@@ -29,9 +29,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 72px;
-    padding: 0 24px;
-    // padding-top: 18px;
+    // height: 72px;
+    padding: 19px 24px 24px 24px;
+    
 }
 
 .left_top_nav {
@@ -84,12 +84,7 @@
 .dropdown_item {
      border-top: 1px solid #e8ecee;
      border-bottom: 2px solid white;
-    height: 34px;
-
-
-
-    
-
+     height: 34px;
     white-space: nowrap;
     padding:4px;
     text-align: left;
