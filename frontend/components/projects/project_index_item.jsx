@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 
 class ProjectIndexItem extends React.Component {
   constructor(props) {
+    
     super(props)
- 
+  
   }
 
 
@@ -15,6 +16,7 @@ class ProjectIndexItem extends React.Component {
     var idx = Math.floor(Math.random() * arr.length);
     const color = arr[idx]
     return ( 
+      <Link to={`/project/tasklist/${this.props.project.id}`} >
       <div className="tile_container">  
       <div className="tile_structure">
         <div className={color}>
@@ -26,6 +28,7 @@ class ProjectIndexItem extends React.Component {
       </div>
         <div className="tile_title">{this.props.project.project_name}</div>
       </div>
+    </Link >
     )
   }
 }

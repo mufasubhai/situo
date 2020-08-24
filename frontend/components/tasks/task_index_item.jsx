@@ -8,7 +8,7 @@ const TaskIndexItem = props => (
     <Link className="task_index_item">
         {
                 (!props.task.complete) ? 
-                "uncomplete" : "complete"
+                "O " : "X "
         }
       {props.task.task_name}
     </Link>

@@ -10,9 +10,9 @@ import {
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import SplashPage from './splash_page/splash_page'
-import TopNavContainer from './top_nav/top_nav_container'
-import SideNavContainer from './side_nav/side_nav_container'
 import HomeContainer from './home/home_container'
+import ProjectListContainer from '../components/list/project_list_container'
+import UserListContainer from '../components/list/user_list_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
@@ -23,6 +23,8 @@ const App = () => (
             <AuthRoute exact path='/' component={SplashPage} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <AuthRoute exact path="/login" component={LogInFormContainer} />
+            <ProtectedRoute path="/project/tasklist/:projectId" component={ProjectListContainer} />
+            <ProtectedRoute path="/tasklist/:userId" component={UserListContainer} />
             <ProtectedRoute exact path="/home" component={HomeContainer} />
 
         

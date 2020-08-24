@@ -61,7 +61,7 @@
 
 #top_nav_dropdown {
     position: absolute;
-    display: block;
+    display: none;
     right: 0px;
     top: 35px;
     background-color: white;
@@ -79,6 +79,7 @@
     box-shadow: 0 0 0 1px rgba(111,119,130,.15), 0 5px 20px 0 rgba(21,27,38,.08);
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    
 }
 .dropdown_item {
      border-top: 1px solid #e8ecee;

@@ -50,7 +50,7 @@ u5 = User.create!(
 
 
 p1 = Project.create!(
-  project_name: 'Personell Investigation',
+  project_name: 'Personel Investigation',
   summary: "There's just a lot of in's and out's... And, look at the kid. The kid has a brand new corvette, man. We gotta get to the bottom of this.",
   complete: false
 )
