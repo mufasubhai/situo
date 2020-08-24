@@ -4,6 +4,7 @@
     height: 16px;
     fill: rgb(111, 119, 130);
     align-self: center;
+    padding-right: 23px;
 }
 
 #hidden_burger {
@@ -30,7 +31,7 @@
     justify-content: space-between;
     height: 72px;
     padding: 0 24px;
-    
+    // padding-top: 18px;
 }
 
 .left_top_nav {
@@ -46,4 +47,70 @@
 
 .label {
     display: flex;
+}
+
+
+.menu_button {
+        align-self: center;
+        background: linear-gradient(to right, #796eff 0%, #ff5263 100%);
+       position: relative;
+        width: 100px;
+        height: 32px;
+        padding: 0;
+}
+
+#top_nav_dropdown {
+    position: absolute;
+    display: block;
+    right: 0px;
+    top: 35px;
+    background-color: white;
+    color: black;
+    width: 400px;
+    z-index: 1;
+    border: 1px;
+    font-size: 13px;
+    background: #fff;
+    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(111,119,130,.15), 0 5px 20px 0 rgba(21,27,38,.08);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dropdown_item {
+     border-top: 1px solid #e8ecee;
+     border-bottom: 2px solid white;
+    height: 34px;
+
+
+
+    
+
+    white-space: nowrap;
+    padding:4px;
+    text-align: left;
+    padding-left: 30px;
+ 
+}
+
+#profile_settings_link {
+       border-image: linear-gradient(to right, #32c1ff 50%, #9287ff 100%) 1;
+    border-image-source: linear-gradient(to right, rgb(50, 193, 255) 50%, rgb(146, 135, 255) 100%);
+    border-image-slice: 1;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-top: 4px solid;
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-top-color: initial;
+    border-bottom: 0px;
+}
+
+.dropdown_item:hover {
+        background-color: #e8ecee;
+
 }

@@ -18,8 +18,8 @@ class Home extends React.Component {
              <div className="main_content">
                 <div className="home_index_title">Tasks Due Soon</div>
                 <TaskIndexContainer />
-                <div className="home_index_title">Recent Projects</div>
-                <span></span>
+                <div className="home_index_title" id="bottom_index_title">Recent Projects</div>
+                <span clasName="list_spacing"></span>
                 <ProjectIndexContainer/>
              
             </div>   

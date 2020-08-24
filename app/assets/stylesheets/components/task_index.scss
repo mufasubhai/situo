@@ -9,11 +9,12 @@
     font-size: 13px;
     line-height: normal;
     width: 800px;
+    align-self: center;
 
 }
 
 .task_index_item {
-    border-bottom: 1px solidt;
+
     border-top: 1px solid #e8ecee;
     height: 34px;
     align-items: center;
@@ -33,9 +34,15 @@
 
 .home_index_title {
     display: flex;
+    align-self: center;
     padding-top: 45px;
-    padding-bottom: 13px;
+    padding-bottom: 15px;
     width: 800px;
     margin: 0 24px;
   
 }
+
+#bottom_index_title {
+    border-bottom: 2px solid  #e8ecee;
+}
+

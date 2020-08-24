@@ -24,6 +24,8 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <ProtectedRoute exact path="/home" component={HomeContainer} />
+
+        
             <Route render={() => <Redirect to="/" />} />
         </Switch>
     </div>
@@ -32,11 +34,9 @@ const App = () => (
 );
 
 {/* <Switch>
-<Route exact path="/" component={SearchContainer} />
-    <AuthRoute exact path="/login" component={LogInFormContainer} />
-    <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-    <ProtectedRoute exact path="/benches/new" component={BenchFormContainer} />
-    <Route path="/benches/:benchId" component={BenchShowContainer} />
-    <Route exact path="/" component={SearchContainer} />
+    <AuthRoute path="/project/tasklist/:projectId" component={ProjectListContainer} />
+    <AuthRoute path="/project/taskcal/:projectId" component={ProjectCalContainer} />
+    <AuthRoute path="/tasklist/:userId" component={UserListContainer} />
+    <AuthRoute path="/taskcak/:userId" component={UserCalContainer} />
 </Switch> */}
 export default App;
