@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import TopNav from './top_nav';
 import { logout } from '../../actions/session_actions';
-import { fetchProject } from '../../actions/project_actions'
+import { fetchProject, deleteProject } from '../../actions/project_actions'
+import {openModal} from '../../actions/modal_actions'
 
 
 
@@ -14,8 +15,9 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = dispatch => ({
     logout: () => dispatch(logout()),
-    fetchProject: (postId) => dispatch(fetchProject(postId))
-
+    fetchProject: (postId) => dispatch(fetchProject(postId)),
+    deleteProject: projectId => dispatch(deleteProject(projectId)),
+    openModal: modal => dispatch(openModal(modal))
 })
 
 export default withRouter(connect(mSTP, mDTP)(TopNav))

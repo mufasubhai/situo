@@ -18,9 +18,11 @@ class ProjectList extends React.Component {
     render () {
         return (
             <span className="situo_full_page">
-                <SideNavContainer />
+                <div className="left_page_content">
+                    <SideNavContainer />
 
-                <span className="right_page_content">
+                </div>
+                <span className="right_page_content" id="right_page_content">
                     <TopNavContainer />
                    
                     <div className="main_content">

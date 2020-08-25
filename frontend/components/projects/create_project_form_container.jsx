@@ -10,7 +10,6 @@ const mSTP = state => ({
         summary: '',
         due_date: null,
         owner_id: state.session.id
-
     },
 
 

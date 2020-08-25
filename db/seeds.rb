@@ -14,6 +14,7 @@ Task.delete_all
 
 date = DateTime.now
 
+
 u1 = User.create!(
   name: 'Steve Wozniak',
   email: 'woz@woz.woz',
