@@ -13,6 +13,7 @@ Comment.delete_all
 Task.delete_all
 
 date = DateTime.now
+date2 = Date.today
 
 
 u1 = User.create!(
@@ -56,28 +57,28 @@ p1 = Project.create!(
   summary: "There's just a lot of in's and out's... And, look at the kid. The kid has a brand new corvette, man. We gotta get to the bottom of this.",
   complete: false,
   owner_id: u3.id,
-  due_date: date + 17
+  due_date: date2 + 17
 )
 p2 = Project.create!(
   project_name: 'Computer Project.',
   summary: "We thought we wanted to build a video game machine, but now that we think of it there isn't anything cooler than a GUI and some spreadsheets.",
   complete: false,
   owner_id: u1.id,
-  due_date: date + 14
+  due_date: date2 + 14
 )
 p3 = Project.create!(
   project_name: 'Sustenance 4 katz',
   summary: 'We are so hungry. We must figure out a method for procuring all of the food from the hoomons. This is a dire situation. Let us divide it into tasks.',
   complete: false,
   owner_id: u5.id,
-  due_date: date + 12
+  due_date: date2 + 12
 )
 p4 = Project.create!(
   project_name: 'Fact Finding Mission',
   summary: 'We did not, in fact, find ourselves living in a shotgun shack. How did we get here? This is not my beautiful house... is it?',
   complete: false,
   owner_id: u2.id,
-  due_date: date + 8
+  due_date: date2 + 8
 )
 
 p5 = Project.create!(
@@ -85,7 +86,7 @@ p5 = Project.create!(
   summary: "Do we want to build an internet? I think we do. We can get this done if we just put our minds to it. What is a javascript anyway? Who knows... I guess let's get started!",
   complete: false,
   owner_id: u4.id,
-  due_date: date + 4
+  due_date: date2 + 4
 )
 
 p6 = Project.create!(
@@ -93,7 +94,7 @@ p6 = Project.create!(
   summary: "We made it this far. No time to slow down. Once I check out of this place it's time to go down to the martial arts gym and GET BACK IN SHAPE!",
   complete: false,
   owner_id: u4.id,
-  due_date: date + 10
+  due_date: date2 + 10
 )  
 
 
@@ -228,8 +229,8 @@ t1 = Task.create(
   creator_id: u3.id,
   task_name: "Need music for negotiations.",
   description: "Can you help me out by putting together a playlist for hostage negotiations? I can't find my CCR tapes. Hoping you can provide me with something similar.",
-  start_date: date - 1 ,
-  due_date: date + 5 ,
+  start_date: date2 - 1 ,
+  due_date: date2 + 5 ,
   status: 'complete',
   created_at: date - 1.7 
 
@@ -290,8 +291,8 @@ t3 = Task.create(
   creator_id: u2.id,
   task_name: "Please provide more information.",
   description: "I realize that this ain't no party. This ain't no disco. This ain't no fooling around. Can you give me walter's contact information as well as some ideas as to how to best help on my end. I saw the task you assigned but I'd like a little more clarity.",
-  start_date: date - 3 ,
-  due_date: date + 1,
+  start_date: date2 - 3 ,
+  due_date: date2 + 1,
   status: 'not-started',
   created_at: date - 3 ,
 )
@@ -316,8 +317,8 @@ t4 = Task.create(
   creator_id: u1.id,
   task_name: "What's this all about?",
   description: "I have to say I'm a little confused by the relevance of this project to me. Can you provide a little more clarity?",
-  start_date: date - 1 ,
-  due_date: date + 3 ,
+  start_date: date2 - 1 ,
+  due_date: date2 + 3 ,
   status: 'not-started',
   created_at: date - 1 ,
 )
@@ -335,8 +336,8 @@ t5 = Task.create(
   creator_id: u3.id,
   task_name: 'Provide legal advice',
   description: "I think I may be in over my head. I'd like to consult the services of a qualified lawyer. Send notes when you have a chance.",
-  start_date: date - 2 ,
-  due_date: date + 2,
+  start_date: date2 - 2 ,
+  due_date: date2 + 2,
   status: 'not-started',
   created_at: date - 2 ,
 )
@@ -371,10 +372,10 @@ t6 = Task.create(
   creator_id: u4.id,
   task_name: 'Keep on being cute!',
   description: "Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow ",
-  start_date: date,
+  start_date: date2,
   created_at: date,
   status: 'started',
-  due_date: date +5 ,
+  due_date: date2 +5 ,
 )
 
 
@@ -395,8 +396,8 @@ t7 = Task.create(
   creator_id: u1.id,
   task_name: "Make me a noise",
   description: "I want a neat noise for computers. Can you make some bleeps?",
-  start_date: date,
-  due_date: date + 3 ,
+  start_date: date2,
+  due_date: date2 + 3 ,
   status: 'not-started',
   created_at: date ,
 )
@@ -429,8 +430,8 @@ t8 = Task.create(
   creator_id: u1.id,
   task_name: "Looking for information on competitors.",
   description: "I'm looking for some info on a competitor. Would you be able to do some sleuthing for me?",
-  start_date: date - 2,
-  due_date: date + 2 ,
+  start_date: date2 - 2,
+  due_date: date2 + 2 ,
   status: 'not-started',
   created_at: date - 2 
 )
@@ -462,8 +463,8 @@ t9 = Task.create(
   creator_id: u2.id,
   task_name: "What do you think this can do for the music?",
   description: "Interested in finding out what your new computational machine can do for post punk rock n' roll. Please send notes.",
-  start_date: date - 3 ,
-  due_date: date + 2,
+  start_date: date2 - 3 ,
+  due_date: date2 + 2,
   status: 'started',
   created_at: date - 3 ,
 )
@@ -495,8 +496,8 @@ t10 = Task.create(
   creator_id: u1.id,
   task_name: "Please clean up the basement",
   description: "The basement is really messy right now and it smells strange. Need I remind you that this is my workshop? Thanks in advance~",
-  start_date: date ,
-  due_date: date ,
+  start_date: date2 ,
+  due_date: date2 ,
   status: 'not-started',
   created_at: date - 0.2,
 )
@@ -521,8 +522,8 @@ t11 = Task.create(
   creator_id: u1.id,
   task_name: "project photos",
   description: "if you're OK with it, I'd love to take some photos of you two just chilling on stuff for my computer project. Let me know what you think!",
-  start_date: date - 2 ,
-  due_date: date + 2,
+  start_date: date2 - 2 ,
+  due_date: date2 + 2,
   status: 'not-started',
   created_at: date - 2 ,
 )
@@ -555,8 +556,8 @@ t12 = Task.create(
   creator_id: u4.id,
   task_name: "Accessibility Options",
   description: "I want to remind you that in any devices you make, we'll need to include accessibility options in order to remain compliant (and it's the right thing to do)",
-  start_date: date,
-  created_at: date,
+  start_date: date2,
+  created_at: date2,
   status: 'started',
   due_date: date +10 ,
 )
@@ -592,8 +593,8 @@ t13 = Task.create(
   creator_id: u5.id,
   task_name: "Help us get the kibble",
   description: "We need to get more kibble. You need to get it for us.",
-  start_date: date  ,
-  due_date: date + 5 ,
+  start_date: date2  ,
+  due_date: date2 + 5 ,
   status: 'complete',
   created_at: date,
 )
@@ -626,8 +627,8 @@ t14 = Task.create(
   creator_id: u5.id,
   task_name: "Please give us more kibble?",
   description: "Meow Meow Meow Meow Meow Meow ",
-  start_date: date - 2,
-  created_at: date - 2 ,
+  start_date: date2 - 2,
+  created_at: date2 - 2 ,
   status: 'started',
   due_date: date + 4 ,
 )
@@ -653,8 +654,8 @@ t15 = Task.create(
   creator_id: u5.id,
   task_name: "canned meat for cats",
   description: "meow Meow mew mow meow meow Meow mew mow meow meow Meow mew mow meow ",
-  start_date: date - 3 ,
-  created_at: date - 2.8,
+  start_date: date2 - 3 ,
+  created_at: date2 - 2,
   status: 'not-started',
   due_date: date + 4,
 )
@@ -687,8 +688,8 @@ t16 = Task.create(
   creator_id: u5.id,
   task_name: "mew mew mew",
   description: "Please can we have more kibble?",
-  start_date: date - 1 ,
-  due_date: date + 3 ,
+  start_date: date2 - 1 ,
+  due_date: date2 + 3 ,
   status: 'not-started',
   created_at: date - 2,
 )
@@ -713,8 +714,8 @@ t17 = Task.create(
   creator_id: u5.id,
   task_name: "We are very serious. Please take us seriously.",
   description: "meow Meow mew mow meow ",
-  start_date: date - 2 ,
-  due_date: date + 2,
+  start_date: date2 - 2 ,
+  due_date: date2 + 2,
   status: 'not-started',
   created_at: date - 2.4,
 )
@@ -747,8 +748,8 @@ t18 = Task.create(
   creator_id: u5.id,
   task_name: "Figure out how to get them to take us seriously.",
   description: "",
-  start_date: date -10,
-  due_date: date + 15 ,
+  start_date: date2 -10,
+  due_date: date2 + 15 ,
   status: 'started',
   created_at: date - 9,
 )
@@ -785,8 +786,8 @@ t19 = Task.create(
   creator_id: u2.id,
   task_name: "Where do we live?",
   description: "Trying to determine if this is in fact where we live. Any insight would be great!",
-  start_date: date - 1 ,
-  due_date: date + 5 ,
+  start_date: date2 - 1 ,
+  due_date: date2 + 5 ,
   status: 'complete',
   created_at: date - 2,
 )
@@ -818,8 +819,8 @@ t20 = Task.create(
   creator_id: u2.id,
   task_name: "We need a database of residents.",
   description: "Do you think that you're able to use your fancy new machine? Let me know what you think.",
-  start_date: date - 2,
-  due_date: date + 2 ,
+  start_date: date2 - 2,
+  due_date: date2 + 2 ,
   status: 'started',
   created_at: date - 2.4,
 )
@@ -851,8 +852,8 @@ t21 = Task.create(
   creator_id: u2.id,
   task_name: "Need advice on music copyright",
   description: "Looking into copyrighting the music I'm making, as well as the music for ",
-  start_date: date,
-  due_date: date + 2,
+  start_date: date2,
+  due_date: date2 + 2,
   status: 'not-started',
   created_at: date - 1,
 )
@@ -878,8 +879,8 @@ t22 = Task.create(
   creator_id: u2.id,
   task_name: "I need security at an upcoming show. ",
   description: "Hoping to have a lot of people there. Do you think you can help me out? It'll be 5 days from now.",
-  start_date: date + 5 ,
-  due_date: date + 6 ,
+  start_date: date2 + 5 ,
+  due_date: date2 + 6 ,
   status: 'not-started',
   created_at: date,
 )
@@ -912,8 +913,8 @@ t23 = Task.create(
   creator_id: u4.id,
   task_name: "Birthday Song",
   description: "It's going to be my birthday in a week. Can you please record a birthday song for me?",
-  start_date: date + 6 ,
-  due_date: date + 7,
+  start_date: date2 + 6 ,
+  due_date: date2 + 7,
   status: 'not-started',
   created_at: date,
 )
@@ -939,8 +940,8 @@ t24 = Task.create(
   creator_id: u1.id,
   task_name: "MLS website results - Housing search",
   description: "Bad news. I checkedd it out and this isn't our beautiful house. We're going to need to start looking for a new place. Can you take the lead on this? ",
-  start_date: date,
-  due_date: date +8 ,
+  start_date: date2,
+  due_date: date2 +8 ,
   status: 'not-started',
   created_at: date - 1,
 )
@@ -969,8 +970,8 @@ t25 = Task.create(
   creator_id: u4.id,
   task_name: "Set up email campaign.",
   description: "We're going to need to set up a large email campaign in order to turn out voters. Can you take the lead on this?",
-  start_date: date - 1 ,
-  due_date: date + 14 ,
+  start_date: date2 - 1 ,
+  due_date: date2 + 14 ,
   status: 'complete',
   created_at: date - 2,
 )
@@ -1002,8 +1003,8 @@ t26 = Task.create(
   creator_id: u4.id,
   task_name: "Get fluent in React-Redux",
   description: "I need a modern website. Do you think you two can get fluent in React & Redux over the next few days?",
-  start_date: date + 1,
-  due_date: date + 9 ,
+  start_date: date2 + 1,
+  due_date: date2 + 9 ,
   status: 'not-started',
   created_at: date,
 )
@@ -1035,8 +1036,8 @@ t27 = Task.create(
   creator_id: u4.id,
   task_name: "User testing.",
   description: "Jeff once Rocky & Dax are done with the website I'm going to need some user-testing with...below average users. Are you up to the challenge?",
-  start_date: date + 4 ,
-  due_date: date + 12 ,
+  start_date: date2 + 4 ,
+  due_date: date2 + 12 ,
   status: 'not-started',
   created_at: date - 0.2,
 )
@@ -1061,8 +1062,8 @@ t28 = Task.create(
   creator_id: u1.id,
   task_name: "Help with user testing",
   description: "I heard that you and jeff are user testing. I'd like to get in on that.",
-  start_date: date + 4 ,
-  due_date: date + 9 ,
+  start_date: date2 + 4 ,
+  due_date: date2 + 9 ,
   status: 'not-started',
   created_at: date -0.2,
 )
@@ -1096,8 +1097,8 @@ t29 = Task.create(
   creator_id: u2.id,
   task_name: "Music Review",
   description: "Putting together some music for our get out the vote campain. Would love to have you take a look.",
-  start_date: date - 1 ,
-  due_date: date + 2,
+  start_date: date2 - 1 ,
+  due_date: date2 + 2,
   status: 'started',
   created_at: date - 2,
 )
@@ -1130,8 +1131,8 @@ t30 = Task.create(
   creator_id: u4.id,
   task_name: "Cat poses",
   description: "Can you cats put together some cute poses for me?",
-  start_date: date + 2,
-  due_date: date + 5,
+  start_date: date2 + 2,
+  due_date: date2 + 5,
   status: 'started',
   created_at: date - 0.3,
 )
@@ -1169,8 +1170,8 @@ t31 = Task.create(
   creator_id: u3.id,
   task_name: "Set up Gym memberships",
   description: "I called to set up a gym membership for all of us, but they said I needed a credit history...",
-  start_date: date - 2 ,
-  due_date: date + 4 ,
+  start_date: date2 - 2 ,
+  due_date: date2 + 4 ,
   status: 'complete',
   created_at: date -5,
 )
@@ -1195,8 +1196,8 @@ t32 = Task.create(
   creator_id: u1.id,
   task_name: "Guided Meditation",
   description: "Can you help us get ready for our workouts by guiding us in meditation over the next few days?",
-  start_date: date ,
-  due_date: date + 7 ,
+  start_date: date2 ,
+  due_date: date2 + 7 ,
   status: 'started',
   created_at: date -0.5,
 )
@@ -1228,8 +1229,8 @@ t33 = Task.create(
   creator_id: u4.id,
   task_name: "Music playlist for training montage",
   description: "Once again I need to enlist your help. Can you finish putting together a montage playlist for our martial arts session?",
-  start_date: date - 3 ,
-  due_date: date + 1,
+  start_date: date2 - 3 ,
+  due_date: date2 + 1,
   status: 'started',
   created_at: date -7,
 )
@@ -1261,8 +1262,8 @@ t34 = Task.create(
   creator_id: u4.id,
   task_name: "Inspiring oration",
   description: "can you compe up with an inspiring oration in advance of our montage?",
-  start_date: date - 4 ,
-  due_date: date + 1 ,
+  start_date: date2 - 4 ,
+  due_date: date2 + 1 ,
   status: 'complete',
   created_at: date -5,
 )
@@ -1294,8 +1295,8 @@ t35 = Task.create(
   creator_id: u5.id,
   task_name: "We're ready!",
   description: "**moews fiercely**",
-  start_date: date - 2 ,
-  due_date: date + 2,
+  start_date: date2- 2 ,
+  due_date: date2 + 2,
   status: 'not-started',
   created_at: date -2.4,
 )
@@ -1328,8 +1329,8 @@ t36 = Task.create(
   creator_id: u2.id,
   task_name: "GET HULKED OUT!",
   description: "Buy lots of protein powder so I can get strong. I'm sick of being such a twig!",
-  start_date: date,
-  due_date: date + 1 ,
+  start_date: date2,
+  due_date: date2 + 1 ,
   status: 'complete',
   created_at: date - 0.1,
 )

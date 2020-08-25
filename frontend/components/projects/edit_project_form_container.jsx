@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
     return {
         project: state.entities.projects[projectId],
         projectId: projectId,
-        users: state.entities.users
+
     }
 }
 

@@ -1,10 +1,14 @@
 import React from 'react';
-import { fetchProject, updateProject} from '../../actions/project_actions';
+
 
 
 class EditProjectForm extends React.Component {
     constructor(props) {
         super(props)
+        this.state = this.props.project
+        console.log(this.props.project)
+        console.log(this.props.projectId)
+        console.log(this.props.users)
 
         this.handleChange = this.handleChange.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
@@ -55,7 +59,7 @@ class EditProjectForm extends React.Component {
 
                 <div className="update-project-modal-buttons">
                     <button className="edit_project" onClick={this.handleUpdate}>
-                        Update
+                        Update Project
                     </button>
                 </div>
 

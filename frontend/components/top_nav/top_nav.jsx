@@ -80,9 +80,9 @@ class TopNav extends React.Component {
                                         <path className="comp_top" d="M0 4C0 2.89543 0.895431 2 2 2H22C23.1046 2 24 2.89543 24 4V15H0V4Z"></path>
                                         <path className="comp_bottom" d="M24 15H0V17C0 18.1046 0.89543 19 2 19H8L7 22H17L16 19H22C23.1046 19 24 18.1046 24 17V15Z"></path></svg>
                                     <h1 className="label">{this.props.currentProject.project_name}</h1>
-                                    <button>Edit</button>
-                                    <button onClick={this.deleteAction}>Delete</button>
                                     <button onClick={() => this.props.openModal('edit_project')}>Edit Project</button>
+                                    <button onClick={() => this.props.openModal('delete_project')}>Delete Project</button>
+                                    
                                 </div>         
                                 <div>
                                     <Link to={`/tasklist/project/${this.props.match.params.projectId}`} className="topLink">List</Link>
