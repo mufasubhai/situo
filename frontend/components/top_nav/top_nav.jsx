@@ -75,20 +75,39 @@ class TopNav extends React.Component {
                     {
                         (secondLast === 'project' && (this.props.currentProject)) ? 
                         <span>
-                                <div className="Project_Title">
-                                    <svg className="Project_Tile_Logo" viewBox="0 0 24 24" title="list" services="[object Object]">
+                            <span className="header_wrapper">
+
+                                <div className="project_title">
+                                    <svg className="project_tile_logo" viewBox="-11 -11 46 46" title="list" services="[object Object]">
                                         <path className="comp_top" d="M0 4C0 2.89543 0.895431 2 2 2H22C23.1046 2 24 2.89543 24 4V15H0V4Z"></path>
-                                        <path className="comp_bottom" d="M24 15H0V17C0 18.1046 0.89543 19 2 19H8L7 22H17L16 19H22C23.1046 19 24 18.1046 24 17V15Z"></path></svg>
-                                    <h1 className="label">{this.props.currentProject.project_name}</h1>
-                                    <button onClick={() => this.props.openModal('edit_project')}>Edit Project</button>
-                                    <button onClick={() => this.props.openModal('delete_project')}>Delete Project</button>
-                                    
-                                </div>         
-                                <div>
-                                    <Link to={`/tasklist/project/${this.props.match.params.projectId}`} className="topLink">List</Link>
-                                    <Link to={`/taskcal/project/${this.props.match.params.projectId}`} className="topLink">Calendar</Link>     
-                                </div>                   
-                        </span> : null
+                                        <path className="comp_bottom" d="M24 15H0V17C0 18.1046 0.89543 19 2 19H8L7 22H17L16 19H22C23.1046 19 24 18.1046 24 17V15Z">
+                                        </path>
+                                    </svg> 
+                                </div>        
+
+                                    <span>
+                                            <span className="project_top_line">
+
+                                                <h1 className="label">{this.props.currentProject.project_name}</h1>
+
+
+                                                <div className="modal_dropdown_trigger">
+                                                        <span className="modal_dropdown">
+                                                            <button onClick={() => this.props.openModal('edit_project')}>Edit Project</button>
+                                                            <button onClick={() => this.props.openModal('delete_project')}>Delete Project</button>  
+                                                        </span>
+                                                </div>
+                                            </span>
+                                            <div className="project_nav_links">
+                                                <Link to={`/tasklist/project/${this.props.match.params.projectId}`} className="topLink">List</Link>
+                                                <Link to={`/taskcal/project/${this.props.match.params.projectId}`} className="topLink">Calendar</Link>   
+                                            </div>                   
+                                    </span> 
+                            </span>
+                            <span>
+                            </span> 
+                        </span>
+                        : null
                     }
                 </span>
 
