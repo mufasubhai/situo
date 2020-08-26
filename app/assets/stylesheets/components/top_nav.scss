@@ -30,7 +30,8 @@
     flex-direction: row;
     justify-content: space-between;
     // height: 72px;
-    padding: 19px 24px 24px 24px;
+    padding: 0px 24px 0px 0px;
+    height: 70px;
     
 }
 
@@ -119,6 +120,7 @@
 }
 
 .project_tile_logo {
+    position: relative;
     height: 45px;
 }
 
@@ -132,4 +134,95 @@
 .project_top_line {
     display: flex;
     flex-direction: row;
+}
+
+#modal_dropdown {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 190px;
+    background-color: white;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(111,119,130,.15), 0 5px 20px 0 rgba(21,27,38,.08);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+.modal_dropdown_trigger {
+    z-index: 1;
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+padding: 0px;
+}
+
+.modal_dropdown_trigger:hover {
+     background-color: transparent;
+    border-color: transparent;
+}
+
+.down_icon {
+    height: 13px;
+    width: 13px;
+    fill: #6f7782;
+}
+
+.down_icon:hover {
+    fill: #32c1ff
+}
+
+.project_modal_button {
+    width: 100%;
+    text-align: left;
+    color: black;
+    font-size: 13px;
+    background-color: white;
+    border-color:  white;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-bottom-color: white;
+    border-top-color: white;
+    padding: 4px 16px 4px 8px;
+    
+    
+
+}
+
+.project_modal_button:hover {
+    background-color: #f6f8f9;
+    border-color: white;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-radius: 0px;
+    border-bottom-color: white;
+    border-top-color: white;
+    border-radius: 4px;
+
+}
+
+.project_header_container {
+    border-bottom: 2px solid black;
+}
+
+.project_name_label {
+    font-size: 20px;
+    padding-left: 14px;
+    padding-right: 10px;
+}
+
+.top_link {
+    font-size: 12px;
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+.top_link:hover {
+    color: #AA62E3
+}
+
+.label_2 {
+   padding-top: 23px;
+   padding-bottom: 29px;
 }

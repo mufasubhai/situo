@@ -10,11 +10,11 @@ class TopNav extends React.Component {
         this.menuClick = this.menuClick.bind(this);
 
         this.deleteAction = this.deleteAction.bind(this);
+        this.editClick = this.editClick.bind(this)
     }
 
     componentDidMount() {
         const parts = this.props.match.path.split('/');
-        
         const secondLast = parts.pop();
         (secondLast === 'project') ? this.props.fetchProject(this.props.currentProject.id) : null
     }
@@ -31,7 +31,6 @@ class TopNav extends React.Component {
     }
 
     deleteAction() {
-
         this.props.deleteProject(this.props.currentProject.id);
         this.props.history.push('/home');
     }
@@ -41,6 +40,11 @@ class TopNav extends React.Component {
     menuClick() {
         const menu = document.getElementById('top_nav_dropdown');
         menu.style.display === "none" ? menu.style.display = "block" : menu.style.display = "none";
+    }
+
+    editClick() {
+        const dropDown = document.getElementById('modal_dropdown')
+        dropDown.style.display === "none" ? dropDown.style.display = "block" : dropDown.style.display = "none";
     }
 
     render() {
@@ -61,8 +65,9 @@ class TopNav extends React.Component {
                         </svg>
                     </button>
                     {
-                        this.props.match.path.includes('home') ? <h1 className="label">Home</h1> : null
+                        this.props.match.path.includes('home') ? <h1 className="label_2">Home</h1> : null
                     }
+                    
                     {
                         (secondLast === 'user') ? 
                         <span>
@@ -88,19 +93,25 @@ class TopNav extends React.Component {
                                     <span>
                                             <span className="project_top_line">
 
-                                                <h1 className="label">{this.props.currentProject.project_name}</h1>
+                                                <h1 className="project_name_label">{this.props.currentProject.project_name}</h1>
 
 
-                                                <div className="modal_dropdown_trigger">
-                                                        <span className="modal_dropdown">
-                                                            <button onClick={() => this.props.openModal('edit_project')}>Edit Project</button>
-                                                            <button onClick={() => this.props.openModal('delete_project')}>Delete Project</button>  
+                                                <button className="modal_dropdown_trigger" onClick={this.editClick}>
+                                                        <span>
+                                                    <svg className="down_icon"  focusable="false" viewBox="0 0 32 32">
+
+                                                            <path d="M16,22.5c-0.3,0-0.7-0.1-0.9-0.3l-11-9c-0.6-0.5-0.7-1.5-0.2-2.1s1.5-0.7,2.1-0.2l10,8.2l10-8.2c0.6-0.5,1.6-0.4,2.1,0.2c0.5,0.6,0.4,1.6-0.2,2.1l-11,9C16.7,22.4,16.3,22.5,16,22.5z">
+                                                        </path></svg>
                                                         </span>
-                                                </div>
+                                                        <span id="modal_dropdown">
+                                                            <div className="project_modal_button" onClick={() => this.props.openModal('edit_project')}>Edit Project</div>
+                                                           <div className="project_modal_button" onClick={() => this.props.openModal('delete_project')}>Delete Project</div>  
+                                                        </span>
+                                                </button>
                                             </span>
                                             <div className="project_nav_links">
-                                                <Link to={`/tasklist/project/${this.props.match.params.projectId}`} className="topLink">List</Link>
-                                                <Link to={`/taskcal/project/${this.props.match.params.projectId}`} className="topLink">Calendar</Link>   
+                                                <Link to={`/tasklist/project/${this.props.match.params.projectId}`} className="top_link">List</Link>
+                                                <Link to={`/taskcal/project/${this.props.match.params.projectId}`} className="top_link">Calendar</Link>   
                                             </div>                   
                                     </span> 
                             </span>

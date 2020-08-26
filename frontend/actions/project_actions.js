@@ -1,10 +1,12 @@
 import * as ProjectAPIUtil from '../util/project_api_util'
+import {closeModal} from './modal_actions'
 
 export const RECEIVE_PROJECTS = 'RECEIVE_PROJECTS';
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const REMOVE_PROJECT = "REMOVE_PROJECT";
 export const RECEIVE_PROJECT_ERRORS ="RECEIVE_PROJECT_ERRORS"
-export const CLEAR_ERRORS = 'CLEAR_ERRORS'
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+
 
 const receiveErrors = errors => ({
     type: RECEIVE_PROJECT_ERRORS,
@@ -52,12 +54,19 @@ return     ProjectAPIUtil.createProject(project)
 }
 export const updateProject = project => dispatch => (
     ProjectAPIUtil.updateProject(project)
-        .then(project => (dispatch(receiveProject(project))
-        ), err => (
+        .then(
+            project => {
+                dispatch(receiveProject(project));
+                dispatch(closeModal());
+        }, err => (
             dispatch(receiveErrors(err.responseJSON))
         ))
 )
 export const deleteProject = projectId => dispatch => (
     ProjectAPIUtil.deleteProject(projectId)
-        .then(() => dispatch(removeProject(projectId)))
+        .then(
+            () => {
+                dispatch(removeProject(projectId));
+                dispatch(closeModal());
+            })
 )
