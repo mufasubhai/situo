@@ -8,7 +8,6 @@ class TopNav extends React.Component {
         super(props);
         this.revealNav = this.revealNav.bind(this);
         this.menuClick = this.menuClick.bind(this);
-
         this.deleteAction = this.deleteAction.bind(this);
         this.editClick = this.editClick.bind(this)
     }
@@ -72,11 +71,19 @@ class TopNav extends React.Component {
                     {
                         (secondLast === 'user') ? 
                         <span>
-                            <h1 className="label">{this.props.user.name}
-                                    <Link to={`/tasklist/user/${last}`} className="topLink">List</Link>
-                                    <Link to={`/taskcal/user/${last}`} className="topLink">Calendar</Link>  
-                            </h1>
-                        </span> : null
+                            <span className="header_wrapper user_list_header">
+                                <span className="project_top_line user_list_header">
+                                        <div className="project_name_label">{this.props.user.name}'s task's</div>
+
+                                
+                                </span>
+                                <div className="project_nav_links user_nav_links">
+                                    <Link to={`/tasklist/user/${last}`} className="top_link">List</Link>
+                                    <Link to={`/taskcal/user/${last}`} className="top_link">Calendar</Link>  
+                                </div>     
+                            </span>
+                        </span>
+                        : null
                     }
                     {
                         (secondLast === 'project' && (this.props.currentProject)) ? 
@@ -119,8 +126,7 @@ class TopNav extends React.Component {
                                             </div>                   
                                     </span> 
                             </span>
-                            <span>
-                            </span> 
+                         
                         </span>
                         : null
                     }

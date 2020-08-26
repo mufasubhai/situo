@@ -1,0 +1,54 @@
+.task_index_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project_index_item_left {
+    width: 80%;
+        display: flex;
+    flex-direction: row;
+}
+
+.project_index_item_right {
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    
+}
+
+.project_index_divider {
+    display: flex;
+
+}
+
+.task_due_date {
+    display: flex;
+    align-self: flex-end;
+}
+
+.main_list_container {
+    background-color: #f6f8f9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main_list_inner {
+    display: flex;
+    align-self: flex-end;
+    
+    flex-direction: column;
+    background-color: white;
+    width: 97%;
+    height: 98%;
+    border-radius: 4px 4px 0 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 4px 0 rgba(21,27,38,.08);
+}

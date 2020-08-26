@@ -68,6 +68,7 @@
     flex-direction: column;
     will-change: transform;
     justify-content: center;
+    height: 100%
 
 }
 
@@ -96,6 +97,7 @@
     font-size: 13px;
     background-color: #151b26;
     position: fixed;
+    z-index: 1;
    
 }
 

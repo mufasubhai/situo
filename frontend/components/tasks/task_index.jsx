@@ -3,13 +3,13 @@ import TaskIndexItem from './task_index_item'
 
 class TaskIndex extends React.Component {
     
-    componentDidMount() {
-        this.props.fetchTasks(); 
-    }
     constructor(props) {
         super(props)
 
         
+    }
+    componentDidMount() {
+        this.props.fetchTasks(); 
     }
     
     render() {

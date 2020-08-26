@@ -35,7 +35,7 @@ export const fetchComments = () => dispatch => (
 )
 
 export const fetchComment = comment => dispatch => (
-    CommentAPIUtil.fetchcomment(comment)
+    CommentAPIUtil.fetchComment(comment)
         .then(comment => (dispatch(receiveComment(comment))
         ), err => (
             dispatch(receiveErrors(err.responseJSON))

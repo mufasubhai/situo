@@ -233,3 +233,20 @@ padding: 0px;
    padding-bottom: 29px;
    padding-left: 20px;
 }
+
+.user_list_header {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.user_nav_links {
+    display: flex;
+    align-self: baseline;
+    
+}
+
+.username_div {
+    padding-left: 20px;
+
+}

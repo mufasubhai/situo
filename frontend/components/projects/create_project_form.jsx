@@ -7,7 +7,7 @@ class CreateProjectForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = this.props.project;
-        console.log(this.props.project)
+       
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
