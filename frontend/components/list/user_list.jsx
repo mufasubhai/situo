@@ -24,6 +24,7 @@ class UserList extends React.Component {
 
                 <span className="right_page_content" id="right_page_content">
                     <TopNavContainer />
+                    <span className='separator'></span>
                     <div className="main_content">
 
                         <div>{this.props.user.name}</div>

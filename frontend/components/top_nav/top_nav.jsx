@@ -19,6 +19,7 @@ class TopNav extends React.Component {
         (secondLast === 'project') ? this.props.fetchProject(this.props.currentProject.id) : null
     }
 
+ 
     revealNav() {
         const nav = document.getElementById('situo_sidebar');
         const burger = document.getElementById('burger_logo_2');
@@ -82,6 +83,8 @@ class TopNav extends React.Component {
                         <span>
                             <span className="header_wrapper">
 
+                                    <span id="logo_pad">
+
                                 <div className="project_title">
                                     <svg className="project_tile_logo" viewBox="-11 -11 46 46" title="list" services="[object Object]">
                                         <path className="comp_top" d="M0 4C0 2.89543 0.895431 2 2 2H22C23.1046 2 24 2.89543 24 4V15H0V4Z"></path>
@@ -89,6 +92,7 @@ class TopNav extends React.Component {
                                         </path>
                                     </svg> 
                                 </div>        
+                                    </span>
 
                                     <span>
                                             <span className="project_top_line">

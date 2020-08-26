@@ -15,6 +15,10 @@ class DeleteProjectForm extends React.Component {
         this.props.fetchProject(this.props.projectId)
     }
 
+    clickDelete() {
+        this.props.deleteProject(this.props.projectId);
+        this.props.history.push('/home/');
+    }
     render() {
         return (
         
@@ -34,7 +38,7 @@ class DeleteProjectForm extends React.Component {
                 <span className="delete_buttons">
                     <button className="cancel_button" onClick={() => this.props.closeModal()}>Cancel</button>
                     <span className="spacer"></span>
-                    <Link className="delete_button" onClick={() => this.props.deleteProject(this.props.projectId)} to="/home">Delete</Link>
+                    <button className="delete_button" onClick={() => this.clickDelete()}>Delete</button>
                 </span>
                 </span>
             </div>

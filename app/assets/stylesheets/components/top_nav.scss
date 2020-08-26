@@ -4,7 +4,8 @@
     height: 16px;
     fill: rgb(111, 119, 130);
     align-self: center;
-    padding-right: 23px;
+    padding-bottom: 6px;
+    
 }
 
 #hidden_burger {
@@ -48,6 +49,7 @@
 
 .label {
     display: flex;
+    padding-left: 20px;
 }
 
 
@@ -122,8 +124,12 @@
 .project_tile_logo {
     position: relative;
     height: 45px;
+    
 }
 
+#logo_pad {
+    padding-left: 20px
+}
 .comp_bottom {    
     fill: white;
 }
@@ -225,4 +231,5 @@ padding: 0px;
 .label_2 {
    padding-top: 23px;
    padding-bottom: 29px;
+   padding-left: 20px;
 }

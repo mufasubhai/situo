@@ -24,7 +24,7 @@ class ProjectList extends React.Component {
                 </div>
                 <span className="right_page_content" id="right_page_content">
                     <TopNavContainer />
-                   
+                    <span className='separator'></span>
                     <div className="main_content">
                 
                          <div>{this.props.match.params.projectId}</div>
