@@ -60,14 +60,14 @@ class UserTaskIndexItem extends React.Component {
                         </button>
                     </span>
                     <span className="project_index_divider">
-                        <p className="task_index">{this.state.status}</p>
                     </span>
-                    <span className="project_index_divider">
-                       <input type="text" className="text_input" value={this.state.task_name} onChange={this.update('task_name')}/>
+                     <span className="text_input project_input">
+                       <input type="text" className="task_index_item_field" value={this.state.task_name} onChange={this.update('task_name')}/>
     
                     </span>
                 </span>
-                <span className="project_index_item_right">
+                        <p className="task_index col_4 ">{this.state.status}</p>
+               <span className="task_index col_3 index_border_1">
                    <input className="cal" type="date" value={this.state.due_date} onChange={this.update('due_date')} />                    
                 </span>
                     <button className="delete_button2" onClick={()=> this.props.deleteTask(this.state.id)}>Delete</button>

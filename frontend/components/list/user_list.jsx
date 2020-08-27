@@ -55,8 +55,9 @@ class UserList extends React.Component {
 
                         <div className="main_list_inner">
                             <span className="add_task_container">
-                                <button className="add_task_button" onClick={this.newTask}>Add Task</button>
-
+                                <div className="spacer_4"></div>
+                                <button className="add_task_button" id="user_add_task" onClick={this.newTask}>Add Task</button>
+                                <div className="spacer_3"></div>
                             </span>
                             {
                                 
