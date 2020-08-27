@@ -9,6 +9,7 @@ class Api::TasksController < ApplicationController
 
     def show 
         @task = Task.find_by(id: params[:id])
+        render :show
     end
 
     def create

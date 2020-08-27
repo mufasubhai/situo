@@ -3,7 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import EditProjectFormContainer from '../../components/projects/edit_project_form_container'
 import DeleteProjectFormContainer from '../../components/projects/delete_project_form_container'
-
+import ProfileSettingsFormContainer from '../../components/user/profile_settings_form_container'
 function Modal({ modal, closeModal }) {
     if (!modal) {
         return null;
@@ -16,15 +16,15 @@ function Modal({ modal, closeModal }) {
         case 'delete_project':
             component = <DeleteProjectFormContainer />;
             break;
-        // case 'new_task':
+        case 'profile_settings':
+            component = <ProfileSettingsFormContainer />;
+            break;
+                   // case 'new_task':
         //     component = <NewTaskFormContainer />;
         //     break;
         // case 'edit_task':
         //     component = <EditTaskFormContainer />;
         //     break;
-        // case 'profile_settings';
-            // component = <ProfileSettingsFormContainer />;
-            // break;
         default:
             return null;
     }

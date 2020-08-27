@@ -1,1 +1,3 @@
-json.extract! user, :id, :email, :name
+## partial
+
+git 
