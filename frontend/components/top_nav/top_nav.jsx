@@ -83,7 +83,7 @@ class TopNav extends React.Component {
                                     <span>
                                         <span className="project_top_line">
 
-                                            <h1 className="project_name_label">{this.props.user.name}'s task's</h1>
+                                            <h1 className="project_name_label">{this.props.user.name}'s tasks</h1>
 
 
                                         </span>
