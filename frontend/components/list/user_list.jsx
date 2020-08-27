@@ -19,7 +19,7 @@ class UserList extends React.Component {
     newTask() {
         const userId = parseInt(this.props.userId)
         this.props.createTask({
-            task_name: "Test", 
+            task_name: "New task", 
             description: "", 
             due_date: Date(),
             owner_id: userId,

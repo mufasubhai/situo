@@ -21,7 +21,7 @@ class ProjectList extends React.Component {
         const projectId = parseInt(this.props.match.params.projectId)
         const userId = this.props.userId
         this.props.createTask({
-            task_name: "Test",
+            task_name: "New task",
             description: "",
             due_date: Date(),
             owner_id: userId,
@@ -53,8 +53,10 @@ class ProjectList extends React.Component {
                     <TopNavContainer />
                     <span className='separator'></span>
                     <div className="main_content">
-                        <span className="main_list_container">
+                        {/* <span className="main_list_container"> */}
+                                <span className="project_list_container">
 
+                                
                                 <div className="main_list_inner project_list_inner">
                                     <span className="add_task_container">
                                     <div className="spacer_4"></div>
@@ -83,8 +85,8 @@ class ProjectList extends React.Component {
                                             
                                         }
                                 </div>
-                                
                         </span>
+                        {/* </span> */}
                     </div>  
                 </span>
 

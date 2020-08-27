@@ -3,6 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
 }
+.project_task_index_item {
+    padding-left: 20px;
+}
 
 .project_index_item_left {
     width: 50%;
@@ -65,9 +68,8 @@
 }
 
 .project_list_inner {
-    padding: 20px;
     width: 100%;
-    height: 97%;
+    box-shadow: none;
     
 }
 
@@ -105,7 +107,7 @@
 }
 
 .spacer_4 {
-    height: 5px;
+    height: 15px;
 }
 
 .row_1 {
@@ -125,4 +127,10 @@
 
 .cal_2 {
     
+}
+
+.project_list_container {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100%;
 }

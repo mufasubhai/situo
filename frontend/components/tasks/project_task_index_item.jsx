@@ -28,7 +28,7 @@ class ProjectTaskIndexItem extends React.Component {
     render () {
 
     return (
-                <li className="task_index_item">
+                <li className="task_index_item ">
                     <span className="project_index_item_left">
                         <span className="project_index_divider">
                     <button className="check_mark_button" onClick={this.updateStatusField}>
