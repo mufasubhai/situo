@@ -21,7 +21,7 @@ class DeleteProjectForm extends React.Component {
         this.props.deleteProject(this.props.projectId).then(() => this.props.history.push('/home'))
     }
     render() {
-        debugger
+       
         return (
         
             <div className="modal_container">

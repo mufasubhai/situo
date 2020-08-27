@@ -45,7 +45,7 @@ export const fetchProject = project => dispatch => (
 )
 
 export const createProject = project => dispatch => {
-    debugger
+    
 return     ProjectAPIUtil.createProject(project)
         .then(project => (dispatch(receiveProject(project))
         ), err => (
