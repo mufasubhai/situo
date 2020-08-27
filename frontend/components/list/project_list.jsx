@@ -57,7 +57,16 @@ class ProjectList extends React.Component {
 
                                 <div className="main_list_inner project_list_inner">
                                     <span className="add_task_container">
-                                        <button className="add_task_button" onClick={this.newTask}>Add Task</button>
+                                    <div className="spacer_4"></div>
+                                        <button className="add_task_button project_add_task" onClick={this.newTask}>Add task</button>
+                                        <div className="spacer_3"></div>
+                                    <span id="project_list_top">
+                                        <div className="project_header row_1">Task name</div>
+                                        <div className="project_header row_2">Status</div>
+                                        <div className="project_header row_3">Due date</div>
+                                        
+                                    </span>
+
 
                                     </span>
                                     {

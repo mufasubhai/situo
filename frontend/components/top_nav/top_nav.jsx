@@ -70,20 +70,32 @@ class TopNav extends React.Component {
                     
                     {
                         (secondLast === 'user') ? 
-                        <span>
-                            <span className="header_wrapper user_list_header">
-                                <span className="project_top_line user_list_header">
-                                        <div className="project_name_label">{this.props.user.name}'s task's</div>
+                            <span>
+                                <span className="header_wrapper">
 
-                                
+                                    <span id="logo_pad">
+
+                                        <div className="user_title">
+                                            
+                                        </div>
+                                    </span>
+
+                                    <span>
+                                        <span className="project_top_line">
+
+                                            <h1 className="project_name_label">{this.props.user.name}'s task's</h1>
+
+
+                                        </span>
+                                        <div className="project_nav_links">
+                                            <Link to={`/tasklist/user/${last}`} className="top_link">List</Link>
+                                            <Link to={`/taskcal/user/${last}`} className="top_link">Calendar</Link>
+                                        </div>
+                                    </span>
                                 </span>
-                                <div className="project_nav_links user_nav_links">
-                                    <Link to={`/tasklist/user/${last}`} className="top_link">List</Link>
-                                    <Link to={`/taskcal/user/${last}`} className="top_link">Calendar</Link>  
-                                </div>     
+
                             </span>
-                        </span>
-                        : null
+                            : null
                     }
                     {
                         (secondLast === 'project' && (this.props.currentProject)) ? 

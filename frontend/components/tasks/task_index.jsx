@@ -15,6 +15,7 @@ class TaskIndex extends React.Component {
     render() {
         
         const userTasks = this.props.tasks.filter(task => (task.owner_id === this.props.id ));
+        const incompleteTasks = userTasks.filter(task => (task.status !== 'complete'));
         const { tasks, deleteTask, updateTask} = this.props;
         return (
 
@@ -25,7 +26,7 @@ class TaskIndex extends React.Component {
                     {
 
 
-                        userTasks.map(task => (
+                        incompleteTasks.map(task => (
                             <TaskIndexItem
                             task={task}
                             deleteTask={deleteTask}

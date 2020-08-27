@@ -5,7 +5,7 @@
 }
 
 .project_index_item_left {
-    width: 80%;
+    width: 50%;
         display: flex;
     flex-direction: row;
 }
@@ -54,8 +54,8 @@
 }
 
 .index_border_1 {
-    border-left: 1px solid #e8ecee;
-    border-right: 1px solid #e8ecee;
+    
+    
     text-align: center
 }
 .project_input {
@@ -74,3 +74,45 @@
 .task_index_item_field {
     width: 100%;
 }
+
+
+#project_list_top {
+    display: flex;
+    flex-direction: row;
+    height: 38px;  
+}
+
+.project_header {
+    color:#6f7782;
+    font-size: 12px;
+    text-align: left;
+    align-self: center;
+}
+
+.project_add_task {
+    background: #fff;
+    border-color: #9ca6af;
+    color: #6f7782;
+    border-radius: 4px;
+    border: 1px solid #9ca6af;
+    height: 20px;
+    width: 100px;
+    padding: 0px;
+}
+
+.spacer_3 {
+    height: 10px;
+}
+
+.spacer_4 {
+    height: 5px;
+}
+
+.row_1 {
+    width: 60%;
+}
+
+.row_2 {
+    width: 15%;
+}
+
