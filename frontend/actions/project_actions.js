@@ -66,7 +66,7 @@ export const deleteProject = projectId => dispatch => (
     ProjectAPIUtil.deleteProject(projectId)
         .then(
             () => {
-                dispatch(removeProject(projectId));
                 dispatch(closeModal());
+                dispatch(removeProject(projectId));
             })
 )

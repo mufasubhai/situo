@@ -19,13 +19,38 @@
     height: 34px;
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     overflow: visible;
-    padding: 0 32px;
+    padding-right: 10px;
+    padding-left: 5px;
     position: relative;
     transition: box-shadow 0s ease-in;
     white-space: nowrap;
+    font-size: 12px;
+    text-align: left;
+}
 
+.task_index {
+    font-size: 13px;
+    text-align: left;
+}
+
+.col_1 {
+    width: 3%;
+}
+
+.col_2 {
+    width: 77%;
+}
+
+.col_3 {
+    width: 10%;
+
+}
+
+.col_4 {
+    width: 10%;
+    height: auto;
 }
 
 .task_index_item:hover {
@@ -46,3 +71,70 @@
     border-bottom: 2px solid  #e8ecee;
 }
 
+.check_mark_small {
+    height: 15px;
+    width: 15px;
+    border: 1px solid grey;
+    border-radius: 40px;
+    fill: #6f7782;
+}
+
+.outer_checkmark_small {
+    height: 15px;
+    width: 15px;
+    fill: white;
+    z-index: 1;
+}
+
+.inner_checkmark_small {
+    fill: #6f7782;
+    z-index: 1;
+}
+
+.check_mark_button {
+    background-color: transparent;
+    border: none;
+    align-self: center;
+    width: 20px;
+    height:20px;
+    z-index: 1;
+}
+
+.check_mark_button:hover {
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+.delete_button2 {
+ align-items: center;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .2s;
+    transition-property: background,border,box-shadow,color,fill;
+    user-select: none;
+    background: #ff5263;
+    border-color: #ff5263;
+    color: #fff;
+    fill: #fff;
+    height: 28px;
+    width: 64px;
+
+
+}
+
+.delete_button2:hover {
+  background: #d84d5b;
+    border-color: #d84d5b;
+}
+
+.index_calendar {
+    font-weight: 400;
+}

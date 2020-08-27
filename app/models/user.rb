@@ -24,12 +24,7 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-    has_many(
-      :owned_tasks,
-      class_name: 'Task',
-      foreign_key: :owner_id,
-      primary_key: :id
-    )
+
     
     has_many(
       :projects,

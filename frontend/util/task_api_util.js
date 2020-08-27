@@ -12,19 +12,19 @@ export const fetchTask = id => (
     })
 )
 
-export const createTask = Task => (
+export const createTask = task => (
     $.ajax({
         method: 'POST',
         url: `/api/tasks`,
-        data: { Task }
+        data: { task }
     })
 )
 
-export const updateTask = Task => (
+export const updateTask = task => (
     $.ajax({
         method: 'PATCH',
-        url: `/api/tasks/${Task.id}`,
-        data: { Task }
+        url: `/api/tasks/${task.id}`,
+        data: { task }
     })
 )
 

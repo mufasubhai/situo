@@ -53,7 +53,7 @@ u5 = User.create!(
 
 
 p1 = Project.create!(
-  project_name: 'Personel Investigation',
+  project_name: 'Personnel Investigation',
   summary: "There's just a lot of in's and out's... And, look at the kid. The kid has a brand new corvette, man. We gotta get to the bottom of this.",
   complete: false,
   owner_id: u3.id,
@@ -231,7 +231,7 @@ t1 = Task.create(
   description: "Can you help me out by putting together a playlist for hostage negotiations? I can't find my CCR tapes. Hoping you can provide me with something similar.",
   start_date: date2 - 1 ,
   due_date: date2 + 5 ,
-  status: 'complete',
+  status: 'started',
   created_at: date - 1.7 
 
 )
@@ -595,7 +595,7 @@ t13 = Task.create(
   description: "We need to get more kibble. You need to get it for us.",
   start_date: date2  ,
   due_date: date2 + 5 ,
-  status: 'complete',
+  status: 'started',
   created_at: date,
 )
 c29 = Comment.create!(
@@ -788,7 +788,7 @@ t19 = Task.create(
   description: "Trying to determine if this is in fact where we live. Any insight would be great!",
   start_date: date2 - 1 ,
   due_date: date2 + 5 ,
-  status: 'complete',
+  status: 'started',
   created_at: date - 2,
 )
 c45 = Comment.create!(
@@ -972,7 +972,7 @@ t25 = Task.create(
   description: "We're going to need to set up a large email campaign in order to turn out voters. Can you take the lead on this?",
   start_date: date2 - 1 ,
   due_date: date2 + 14 ,
-  status: 'complete',
+  status: 'started',
   created_at: date - 2,
 )
 c60 = Comment.create!(
@@ -1172,7 +1172,7 @@ t31 = Task.create(
   description: "I called to set up a gym membership for all of us, but they said I needed a credit history...",
   start_date: date2 - 2 ,
   due_date: date2 + 4 ,
-  status: 'complete',
+  status: 'started',
   created_at: date -5,
 )
 c77 = Comment.create!(
@@ -1264,7 +1264,7 @@ t34 = Task.create(
   description: "can you compe up with an inspiring oration in advance of our montage?",
   start_date: date2 - 4 ,
   due_date: date2 + 1 ,
-  status: 'complete',
+  status: 'started',
   created_at: date -5,
 )
 c85 = Comment.create!(
@@ -1331,7 +1331,7 @@ t36 = Task.create(
   description: "Buy lots of protein powder so I can get strong. I'm sick of being such a twig!",
   start_date: date2,
   due_date: date2 + 1 ,
-  status: 'complete',
+  status: 'started',
   created_at: date - 0.1,
 )
 

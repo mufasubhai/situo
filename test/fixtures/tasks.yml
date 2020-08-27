@@ -3,13 +3,13 @@
 # Table name: tasks
 #
 #  id          :bigint           not null, primary key
-#  project_id  :integer          not null
-#  owner_id    :integer          not null
+#  project_id  :integer
+#  owner_id    :integer
 #  creator_id  :integer          not null
 #  task_name   :string           not null
 #  description :text
-#  start_date  :datetime         not null
-#  due_date    :datetime         not null
+#  start_date  :date
+#  due_date    :date
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  status      :string           default("not-started")

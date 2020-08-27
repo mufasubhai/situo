@@ -9,17 +9,19 @@ class DeleteProjectForm extends React.Component {
 
     constructor(props) {
         super(props)
+        this.clickDelete = this.clickDelete.bind(this)
     }
 
     componentDidMount() {
         this.props.fetchProject(this.props.projectId)
     }
 
-    clickDelete() {
-        this.props.deleteProject(this.props.projectId);
-        this.props.history.push('/home/');
+    clickDelete(e) {
+       
+        this.props.deleteProject(this.props.projectId).then(() => this.props.history.push('/home'))
     }
     render() {
+        debugger
         return (
         
             <div className="modal_container">
@@ -48,8 +50,9 @@ class DeleteProjectForm extends React.Component {
 }
 
 const mSTP = (state, ownProps) => {
+    
     const parts = ownProps.location.pathname.split("/")
-    const projectId = parts.pop()
+    const projectId = parseInt(parts[parts.length-1])
 
     return {
         project: state.entities.projects[projectId],

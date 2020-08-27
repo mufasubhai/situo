@@ -9,7 +9,8 @@ import { fetchTasks, deleteTask, fetchTask, createTask, updateTask } from '../..
 
 const mSTP = (state, ownProps) => ({
     projectId: state.entities.projects[ownProps.match.params.projectId],
-    tasks: Object.values(state.entities.tasks)
+    tasks: Object.values(state.entities.tasks),
+    userId: state.session.id
 });
 
 

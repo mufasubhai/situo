@@ -9,16 +9,27 @@ class ProjectList extends React.Component {
     
     constructor(props) {
         super(props)
-        
-      
-        
+        this.newTask = this.newTask.bind(this)    
     }
+
     componentDidMount() {
         this.props.fetchTasks()
         this.props.fetchProject(this.props.match.params.projectId)
     }
 
-
+    newTask() {
+        const projectId = parseInt(this.props.match.params.projectId)
+        const userId = this.props.userId
+        this.props.createTask({
+            task_name: "Test",
+            description: "",
+            due_date: Date(),
+            owner_id: userId,
+            creator_id: userId,
+            status: "not-started",
+            project_id: projectId
+        })
+    }
 
 
     render () {
@@ -27,6 +38,8 @@ class ProjectList extends React.Component {
         const projectTasks = this.props.tasks.filter(task => {
             
             return task.project_id === parseInt(boundProjectId)});
+        const incompleteTasks = projectTasks.filter(task => (task.status !== 'complete'))
+
         const { tasks, projectId, fetchTask, deleteTask, updateTask, createTask } = this.props;
      
       
@@ -42,11 +55,14 @@ class ProjectList extends React.Component {
                     <div className="main_content">
                         <span className="main_list_container">
 
-                                <div className="main_list_inner">
-                                    <button className="add_task_button">Add Task</button>
+                                <div className="main_list_inner project_list_inner">
+                                    <span className="add_task_container">
+                                        <button className="add_task_button" onClick={this.newTask}>Add Task</button>
+
+                                    </span>
                                     {
                                         
-                                        projectTasks.map(task => (
+                                        incompleteTasks.map(task => (
                                             <ProjectTaskIndexItem
                                             task={task}
                                             deleteTask={deleteTask}

@@ -8,6 +8,8 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  complete     :boolean          default(FALSE)
+#  owner_id     :integer
+#  due_date     :date
 #
 require 'test_helper'
 
