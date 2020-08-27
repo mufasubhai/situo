@@ -231,7 +231,7 @@ t1 = Task.create(
   description: "Can you help me out by putting together a playlist for hostage negotiations? I can't find my CCR tapes. Hoping you can provide me with something similar.",
   start_date: date2 - 1 ,
   due_date: date2 + 5 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date - 1.7 
 
 )
@@ -260,7 +260,7 @@ t2 = Task.create(
   description: "I know you're the computer guy. Can I borrow a palm pilot? I need to keep track of what's going on with this project, and right now all the other PIs I speak with seem to have more gadgets than me.",
   start_date: date - 2,
   due_date: date + 2 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date - 2 ,
 )
 
@@ -374,7 +374,7 @@ t6 = Task.create(
   description: "Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow ",
   start_date: date2,
   created_at: date,
-  status: 'started',
+  status: 'not-started',
   due_date: date2 +5 ,
 )
 
@@ -465,7 +465,7 @@ t9 = Task.create(
   description: "Interested in finding out what your new computational machine can do for post punk rock n' roll. Please send notes.",
   start_date: date2 - 3 ,
   due_date: date2 + 2,
-  status: 'started',
+  status: 'not-started',
   created_at: date - 3 ,
 )
 c18 = Comment.create!(
@@ -558,7 +558,7 @@ t12 = Task.create(
   description: "I want to remind you that in any devices you make, we'll need to include accessibility options in order to remain compliant (and it's the right thing to do)",
   start_date: date2,
   created_at: date2,
-  status: 'started',
+  status: 'not-started',
   due_date: date +10 ,
 )
 
@@ -595,7 +595,7 @@ t13 = Task.create(
   description: "We need to get more kibble. You need to get it for us.",
   start_date: date2  ,
   due_date: date2 + 5 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date,
 )
 c29 = Comment.create!(
@@ -629,7 +629,7 @@ t14 = Task.create(
   description: "Meow Meow Meow Meow Meow Meow ",
   start_date: date2 - 2,
   created_at: date2 - 2 ,
-  status: 'started',
+  status: 'not-started',
   due_date: date + 4 ,
 )
 c32 = Comment.create!(
@@ -750,7 +750,7 @@ t18 = Task.create(
   description: "",
   start_date: date2 -10,
   due_date: date2 + 15 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date - 9,
 )
 
@@ -788,7 +788,7 @@ t19 = Task.create(
   description: "Trying to determine if this is in fact where we live. Any insight would be great!",
   start_date: date2 - 1 ,
   due_date: date2 + 5 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date - 2,
 )
 c45 = Comment.create!(
@@ -821,7 +821,7 @@ t20 = Task.create(
   description: "Do you think that you're able to use your fancy new machine? Let me know what you think.",
   start_date: date2 - 2,
   due_date: date2 + 2 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date - 2.4,
 )
 c48 = Comment.create!(
@@ -972,7 +972,7 @@ t25 = Task.create(
   description: "We're going to need to set up a large email campaign in order to turn out voters. Can you take the lead on this?",
   start_date: date2 - 1 ,
   due_date: date2 + 14 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date - 2,
 )
 c60 = Comment.create!(
@@ -1099,7 +1099,7 @@ t29 = Task.create(
   description: "Putting together some music for our get out the vote campain. Would love to have you take a look.",
   start_date: date2 - 1 ,
   due_date: date2 + 2,
-  status: 'started',
+  status: 'not-started',
   created_at: date - 2,
 )
 
@@ -1133,7 +1133,7 @@ t30 = Task.create(
   description: "Can you cats put together some cute poses for me?",
   start_date: date2 + 2,
   due_date: date2 + 5,
-  status: 'started',
+  status: 'not-started',
   created_at: date - 0.3,
 )
 
@@ -1172,7 +1172,7 @@ t31 = Task.create(
   description: "I called to set up a gym membership for all of us, but they said I needed a credit history...",
   start_date: date2 - 2 ,
   due_date: date2 + 4 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date -5,
 )
 c77 = Comment.create!(
@@ -1198,7 +1198,7 @@ t32 = Task.create(
   description: "Can you help us get ready for our workouts by guiding us in meditation over the next few days?",
   start_date: date2 ,
   due_date: date2 + 7 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date -0.5,
 )
 c79 = Comment.create!(
@@ -1231,7 +1231,7 @@ t33 = Task.create(
   description: "Once again I need to enlist your help. Can you finish putting together a montage playlist for our martial arts session?",
   start_date: date2 - 3 ,
   due_date: date2 + 1,
-  status: 'started',
+  status: 'not-started',
   created_at: date -7,
 )
 c82 = Comment.create!(
@@ -1264,7 +1264,7 @@ t34 = Task.create(
   description: "can you compe up with an inspiring oration in advance of our montage?",
   start_date: date2 - 4 ,
   due_date: date2 + 1 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date -5,
 )
 c85 = Comment.create!(
@@ -1331,7 +1331,7 @@ t36 = Task.create(
   description: "Buy lots of protein powder so I can get strong. I'm sick of being such a twig!",
   start_date: date2,
   due_date: date2 + 1 ,
-  status: 'started',
+  status: 'not-started',
   created_at: date - 0.1,
 )
 
