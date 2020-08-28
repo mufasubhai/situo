@@ -133,18 +133,20 @@ class SessionForm extends React.Component {
 
                 <p className='footer-el footer-top'>{this.props.navLinkPhrase}<button id="session-button">{this.props.navLink}</button></p>
 
-                    <ul className='footer-el footer-list'>
-                    <a className='navli' href="#">Link 1</a>
-                    <a className='navli' href="#">Link 2</a>
-                    <a className='navli' href="#">Link 3</a>
-                    <a className='navli' href="#">Link 4</a>
+                    <ul className='footer-el footer-list footer-list-2'>
+                        <a className='navli' href="https://reactjs.org/">React</a>
+                        <a className='navli' href="https://redux.js.org/">Redux</a>
+                        <a className='navli' href="https://rubyonrails.org/">Ruby on Rails</a>
+                        <a className='navli' href="https://webpack.js.org/">webpack</a>
+                        <a className='navli' href="https://dashboard.heroku.com/apps">Heroku</a>
+                        <a className='navli' href="https://www.postgresql.org/">PostgreSQL</a>
                 </ul>
                 
                     <ul className='footer-el footer-list'>
-                    <a className='navli' href="#">Link 1</a>
-                    <a className='navli' href="#">Link 2</a>
-                    <a className='navli' href="#">Link 3</a>
-                    <a className='navli' href="#">Link 4</a>
+                        <a className='navli' href="https://www.linkedin.com/in/adrianpatrickapodaca/">LinkedIn</a>
+                        <a className='navli' href="https://github.com/mufasubhai">GitHub</a>
+                        <a className='navli' href="https://angel.co/u/adrian-apodaca">AngelList</a>
+                    <a className='navli' href="mailto:aapodaca@gmail.com">Contact</a>
                 </ul>
             </div>
                 
