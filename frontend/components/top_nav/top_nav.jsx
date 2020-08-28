@@ -150,7 +150,7 @@ class TopNav extends React.Component {
                     <button className="menu_button" onClick={this.menuClick}> Menu
 
                         <ul id="top_nav_dropdown" >
-                            <li className="dropdown_item" id="profile_settings_link">My Profile Settings...</li>
+                            <li onClick={() => this.props.openModal('profile_settings')} className="dropdown_item" id="profile_settings_link" >My Profile Settings...</li>
                             <li className="dropdown_item"><a href="emailto:aapodaca@gmail.com">Contact</a></li>
                             <li className="dropdown_item" onClick={this.props.logout}>Logout</li> 
                         </ul>

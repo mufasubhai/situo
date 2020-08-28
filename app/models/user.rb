@@ -22,7 +22,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: true
 
 
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :ensure_user_photo
 
 
   has_one_attached :photo
@@ -58,6 +58,14 @@ class User < ApplicationRecord
     
   has_many :projects, through: :users_projects, source: :project
 
+
+  def ensure_user_photo
+    file = File.open('app/assets/images/userdefault.png')
+
+    if !self.photo.attached? 
+      self.photo.attach(io: file, filename: 'userdefault.png')
+    end
+  end
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
