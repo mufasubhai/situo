@@ -34,26 +34,11 @@ class ProfileSettingsForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const formData = new FormData();
-        formData.append('user[name]', this.state.name);
-        formData.append('user[email]', this.state.email)
-        formData.append('user[password]', this.state.password)
-        if (this.state.photoFile) {
 
-            formData.append('user[photo]', this.state.photoFile);
-        }
-        $.ajax({
-            url: `/api/users/${this.props.userId}`,
-            method: 'PATCH',
-            data: formData,
-            // contentType: false,
-            // processData: false
-        }).then(
-            (response) => console.log(response.message),
-            (response) => {
-                console.log(response.responseJSON)
-            }
-        );
+
+        this.props.updateUser(this.state)
+     
+    
     }
 
 
