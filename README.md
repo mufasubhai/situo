@@ -1,4 +1,4 @@
-![situo](https://github.com/mufasubhai/situo/blob/master/app/assets/images/situologo2.png?raw=true
+![situo](https://github.com/mufasubhai/situo/blob/master/app/assets/images/situologo2.png?raw=true "logo")
 
 Situo is a clone of the popular team project management and productivity suite, Asana. Users can add projects, add tasks. Update projects and tasks and mark tasks as complete. Other features are in development!
 [Live Site](https://situo.herokuapp.com/)
@@ -17,7 +17,7 @@ Situo is a clone of the popular team project management and productivity suite, 
 [Design Docs](https://github.com/mufasubhai/situo/wiki)
 
 ## Task Completion 
-![Task Gif](https://github.com/mufasubhai/situo/blob/master/app/assets/images/taskgif.gif?raw=true "logo")
+![Task Gif](https://github.com/mufasubhai/situo/blob/master/app/assets/images/taskgif.gif?raw=true "task-completion")
 
 
 ## Task Update Functionality
@@ -83,7 +83,7 @@ export default TaskIndex;
 ```
 ## Project Creation & Modal Updating
 Project creation and modal updating, with style!
-![Project Gif](https://github.com/mufasubhai/situo/blob/master/app/assets/images/projectgif.gif?raw=true)
+![Project Gif](https://github.com/mufasubhai/situo/blob/master/app/assets/images/projectgif.gif?raw=true "project gif")
 
 
 ## Shuffle Color!
