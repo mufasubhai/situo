@@ -1,7 +1,7 @@
-[situo](https://github.com/mufasubhai/situo/blob/master/app/assets/images/situologo2.png?raw=true
+![situo](https://github.com/mufasubhai/situo/blob/master/app/assets/images/situologo2.png?raw=true
 
 Situo is a clone of the popular team project management and productivity suite, Asana. Users can add projects, add tasks. Update projects and tasks and mark tasks as complete. Other features are in development!
-![Live Site](https://situo.herokuapp.com/)
+[Live Site](https://situo.herokuapp.com/)
 
 
 ## Technologies
