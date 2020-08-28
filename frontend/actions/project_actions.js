@@ -12,6 +12,9 @@ const receiveErrors = errors => ({
     type: RECEIVE_PROJECT_ERRORS,
     errors
 })
+export const clearErrors = () => ({
+    type: CLEAR_ERRORS
+}) 
 
 const receiveProjects = projects => ({
     type: RECEIVE_PROJECTS,

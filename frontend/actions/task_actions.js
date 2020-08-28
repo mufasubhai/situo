@@ -11,6 +11,10 @@ const receiveErrors = errors => ({
     errors
 })
 
+export const clearErrors = () => ({
+    type: CLEAR_ERRORS
+}) 
+
 const receiveTasks = tasks => ({
     type: RECEIVE_TASKS,
     tasks

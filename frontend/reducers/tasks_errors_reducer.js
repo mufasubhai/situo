@@ -8,7 +8,7 @@ export default (state = [], action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_TASK_ERRORS:
-            return []
+            return action.errors
         case CLEAR_ERRORS:
             return [];
         default:

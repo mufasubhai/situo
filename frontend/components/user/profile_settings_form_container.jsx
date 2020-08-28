@@ -2,15 +2,61 @@ import React from 'react';
 import {Link, withConnect, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux'
 import { openModal, closeModal } from '../../actions/modal_actions'
+import {fetchUsers, updateUser, fetchUser} from '../../actions/user_actions'
 
 class ProfileSettingsForm extends React.Component {
     constructor(props) {
         super(props)
-
+        this.state = this.props.user
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleFile = this.handleFile.bind(this)
     }
-            handleChange(field) {
-            return e => { this.setState({ [field]: e.target.value }) }
+
+    componentDidMount() {
+        
+    }
+
+    handleChange(field) {
+        return e => { this.setState({ [field]: e.target.value }) }
+    }
+
+    handleFile(e) {
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+
+            this.setState({ photoFile: file, photoUrl: fileReader.result });
+        };
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('user[name]', this.state.name);
+        formData.append('user[email]', this.state.email)
+        formData.append('user[password]', this.state.password)
+        if (this.state.photoFile) {
+
+            formData.append('user[photo]', this.state.photoFile);
+        }
+        $.ajax({
+            url: `/api/users/${this.props.userId}`,
+            method: 'PATCH',
+            data: formData,
+            // contentType: false,
+            // processData: false
+        }).then(
+            (response) => console.log(response.message),
+            (response) => {
+                console.log(response.responseJSON)
             }
+        );
+    }
+
+
     render () {
         return (
             <div className="modal_container">
@@ -28,17 +74,26 @@ class ProfileSettingsForm extends React.Component {
 
                     <label className="modal_label" >Name
                     <span className="spacer"></span>
-                        <input type="text" className="project_name_update text_input" value={""} onChange={this.handleChange('')} />
+                        <input type="text" className="project_name_update text_input" value={this.state.name} onChange={this.handleChange('name')} />
+                    </label>
+                    <label className="modal_label" >email
+                    <span className="spacer"></span>
+                        <input type="text" className="project_name_update text_input" value={this.state.email} onChange={this.handleChange('email')} />
                     </label>
                     <label className="modal_label" >Password
                     <span className="spacer"></span>
-                        <input type="password" className="project_name_update text_input" value={""} onChange={this.handleChange('')} />
+                        <input type="password" className="project_name_update text_input" value={this.state.password} onChange={this.handleChange('password')} />
+                        
+                        
+                        
+                    </label>
+                    <label className="modal_label" >Upload photo
+                    <span className="spacer"></span>
+                        <input className="update-project-modal-button edit_project" type="file" onChange={this.handleFile}/>
                     </label>
 
-                
-
                     <div className="update-project-modal-button">
-                        <button className="edit_project" >Update Profile
+                        <button className="edit_project" onClick={this.handleSubmit} >Update Profile
                     </button>
                     </div>
                 </span>
@@ -50,12 +105,14 @@ class ProfileSettingsForm extends React.Component {
     }
 }
 
-const mSTP = state => ({
-
+const mSTP = (state, ownProps) => ({
+    user: state.entities.users[state.session.id],
+    userId: state.session.id
 });
 
 const mDTP = dispatch => ({
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    updateUser: (userId) => dispatch(updateUser(userId))
 })
 
 export default withRouter(connect(mSTP, mDTP)(ProfileSettingsForm))
