@@ -19,3 +19,14 @@ export const updateUser = (user) => (
         data: { user }
     })
 )
+
+
+export const updateUserPhoto = (userId, photo) => {
+  return $.ajax({
+    url: `/api/users/${userId}`,
+    method: "PATCH",
+    data: photo,
+    contentType: false,
+    processData: false,
+  });
+};

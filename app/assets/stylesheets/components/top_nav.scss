@@ -146,6 +146,14 @@
 .header_wrapper {
     display: flex;
 }
+.profile_photo {
+    height: 35px;
+    width:auto;
+    border-radius:100px;
+    position: relative;
+    left: 6px;
+    top: 5px;
+}
 
 .project_top_line {
     display: flex;

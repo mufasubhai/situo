@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, withConnect, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux'
 import { openModal, closeModal } from '../../actions/modal_actions'
-import {fetchUsers, updateUser, fetchUser} from '../../actions/user_actions'
+import {fetchUsers, updateUser, fetchUser, updateUserPhoto} from '../../actions/user_actions'
 
 class ProfileSettingsForm extends React.Component {
     constructor(props) {
@@ -23,9 +23,11 @@ class ProfileSettingsForm extends React.Component {
     handleFile(e) {
         const file = e.currentTarget.files[0];
         const fileReader = new FileReader();
-        fileReader.onloadend = () => {
-            debugger
+
+
+        fileReader.onloadend = () => {   
             this.setState({ photoFile: file, photoUrl: fileReader.result });
+          
         };
         if (file) {
             fileReader.readAsDataURL(file);

@@ -47,8 +47,15 @@ export const updateUser = user => dispatch => (
                 dispatch(receiveUser(user));
                 dispatch(closeModal());
             }
-        
             , err => (
                 dispatch(receiveErrors(err.responseJSON))
             ))
 )
+
+export const updateUserPhoto = (userId, photo) => (dispatch) => {
+  return UserAPIUtil.updateUserPhoto(userId, photo)
+    .then(user => dispatch(receiveUser(user))
+    ), err => (
+      dispatch(receiveErrors(err.responseJSON))
+    )
+};
