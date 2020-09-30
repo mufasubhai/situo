@@ -24,7 +24,7 @@ class ProfileSettingsForm extends React.Component {
         const file = e.currentTarget.files[0];
         const fileReader = new FileReader();
         fileReader.onloadend = () => {
-
+            debugger
             this.setState({ photoFile: file, photoUrl: fileReader.result });
         };
         if (file) {
@@ -34,11 +34,7 @@ class ProfileSettingsForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-
-
         this.props.updateUser(this.state)
-     
-    
     }
 
 
@@ -67,10 +63,7 @@ class ProfileSettingsForm extends React.Component {
                     </label>
                     <label className="modal_label" >Password
                     <span className="spacer"></span>
-                        <input type="password" className="project_name_update text_input" value={this.state.password} onChange={this.handleChange('password')} />
-                        
-                        
-                        
+                        {/* <input type="password" className="project_name_update text_input" value={this.state.password} onChange={this.handleChange('password')} />        */}
                     </label>
                     <label className="modal_label" >Upload photo
                     <span className="spacer"></span>
@@ -82,9 +75,6 @@ class ProfileSettingsForm extends React.Component {
                     </button>
                     </div>
                 </span>
-
-
-
             </div>
         )
     }
