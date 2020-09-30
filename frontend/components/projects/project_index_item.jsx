@@ -7,10 +7,7 @@ class ProjectIndexItem extends React.Component {
   constructor(props) {
     
     super(props)
-  
   }
-
-
   render () {
     var arr = ['tile_card blue_card', 'tile_card purple_card', 'tile_card red_card', 'tile_card pink_card'];
     var idx = Math.floor(Math.random() * arr.length);
