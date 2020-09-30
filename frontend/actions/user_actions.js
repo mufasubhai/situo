@@ -46,7 +46,9 @@ export const updateUser = user => dispatch => (
             user => {
                 dispatch(receiveUser(user));
                 dispatch(closeModal());
-            }, err => (
+            }
+        
+            , err => (
                 dispatch(receiveErrors(err.responseJSON))
             ))
 )

@@ -63,7 +63,7 @@ class ProfileSettingsForm extends React.Component {
                     </label>
                     <label className="modal_label" >Password
                     <span className="spacer"></span>
-                        {/* <input type="password" className="project_name_update text_input" value={this.state.password} onChange={this.handleChange('password')} />        */}
+                        <input type="password" className="project_name_update text_input" value={this.state.password} onChange={this.handleChange('password')} />       
                     </label>
                     <label className="modal_label" >Upload photo
                     <span className="spacer"></span>
