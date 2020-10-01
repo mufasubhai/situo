@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import Calendar from './calendar'
+import {
+  fetchTasks,
+  deleteTask,
+  fetchTask,
+  createTask,
+  updateTask,
+} from "../../actions/task_actions";
+
 
 
 const mSTP = (state) => ({

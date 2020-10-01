@@ -10,14 +10,34 @@ class Calendar extends React.Component {
     super(props);
   }
 
- 
+  componentDidMount() {
+      this.props.fetchTasks()
+  }
+
 
   render() {
-    const userId = parseInt(this.props.userId);
+            console.log(this.props);
 
-    const userTasks = this.props.tasks.filter(
-      (task) => task.owner_id === userId
-    );
+    const userId = parseInt(this.props.id);
+
+    
+    let activeTasks;
+
+    if (this.props.match.params.projectId) {
+        const projectTasks = this.props.tasks.filter(
+            (task) => task.project_id === parseInt(this.props.match.params.projectId)
+            )
+        activeTasks = projectTasks;
+    } else {
+        const userTasks = this.props.tasks.filter(
+            (task) => task.owner_id === userId
+        )
+        activeTasks = userTasks
+    }
+    
+    console.log(activeTasks)
+
+
     const incompleteTasks = userTasks.filter(
       (task) => task.status !== "complete"
     );
@@ -40,13 +60,10 @@ class Calendar extends React.Component {
           <TopNavContainer />
           <span className="separator"></span>
           <div className="main_content">
-   
-                <FullCalendar 
-                className="calendar_container"
-                plugins={[dayGridPlugin]} 
-                initialView="dayGridMonth" />
-   
-              
+            <FullCalendar
+              plugins={[dayGridPlugin]}
+              initialView="dayGridMonth"
+            />
           </div>
         </span>
       </span>

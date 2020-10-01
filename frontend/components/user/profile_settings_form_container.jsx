@@ -28,11 +28,6 @@ class ProfileSettingsForm extends React.Component {
 
         fileReader.onloadend = () => {   
             this.setState({ photoFile: file, photoUrl: fileReader.result });
-        //   console.log(file)
-        //   console.log(fileReader)
-        //   console.log(this.props.user.photoUrl)
-        //   console.log(fileReader.result)
-        //   console.log(this.state)
         };
         if (file) {
             fileReader.readAsDataURL(file);
@@ -70,7 +65,6 @@ class ProfileSettingsForm extends React.Component {
 
 
     render () {
-        console.log(this.state)
         return (
           <div className="modal_container">
             <span className="modal_top">
