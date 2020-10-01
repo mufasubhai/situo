@@ -172,7 +172,7 @@ class TopNav extends React.Component {
                           List
                         </Link>
                         <Link
-                          to={`/taskcal/project/${this.props.match.params.projectId}`}
+                          to={`/calendar/project/${this.props.match.params.projectId}`}
                           className="top_link"
                         >
                           Calendar
