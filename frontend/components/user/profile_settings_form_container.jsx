@@ -10,6 +10,7 @@ class ProfileSettingsForm extends React.Component {
         this.state = this.props.user
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleFile = this.handleFile.bind(this)
+        this.photoUpload = React.createRef()
     }
 
     componentDidMount() {
@@ -27,20 +28,32 @@ class ProfileSettingsForm extends React.Component {
 
         fileReader.onloadend = () => {   
             this.setState({ photoFile: file, photoUrl: fileReader.result });
-          
+        //   console.log(file)
+        //   console.log(fileReader)
+        //   console.log(this.props.user.photoUrl)
+        //   console.log(fileReader.result)
+        //   console.log(this.state)
         };
         if (file) {
             fileReader.readAsDataURL(file);
+            
         }
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.updateUser(this.state)
+        const formData = new FormData();
+        // formData.append()
+        
+        console.log(this.state.photoFile)
+        console.log(formData)
+        formData.append('user[photo]', this.state.photoFile)
+        this.props.updateUserPhoto(this.props.user.id, formData);
     }
 
 
     render () {
+        console.log(this.state)
         return (
             <div className="modal_container">
 
@@ -89,7 +102,8 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = dispatch => ({
     closeModal: () => dispatch(closeModal()),
-    updateUser: (userId) => dispatch(updateUser(userId))
+    updateUser: (userId) => dispatch(updateUser(userId)),
+    updateUserPhoto: (userId, photo) => dispatch(updateUserPhoto(userId, photo))
 })
 
 export default withRouter(connect(mSTP, mDTP)(ProfileSettingsForm))
