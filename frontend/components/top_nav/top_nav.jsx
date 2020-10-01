@@ -94,7 +94,7 @@ class TopNav extends React.Component {
                         >
                           List
                         </Link>
-                        <Link to={`/taskcal/user/${last}`} className="top_link">
+                        <Link to={`/calendar/user/${last}`} className="top_link">
                           Calendar
                         </Link>
                       </div>

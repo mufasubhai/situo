@@ -32,7 +32,7 @@ const App = () => (
             <ProtectedRoute path="/project/new" component={CreateProjectFormContainer} />
             <ProtectedRoute path="/tasklist/project/:projectId" component={ProjectListContainer} />
             <ProtectedRoute path="/calendar/project/:projectId" component={ProjectCalendarContainer} />
-            <ProtectedRoute path="/calendar/project/:userId" component={UserCalendarContainer} />
+            <ProtectedRoute path="/calendar/user/:userId" component={UserCalendarContainer} />
             <ProtectedRoute path="/tasklist/user/:userId" component={UserListContainer} />
             <ProtectedRoute exact path="/home" component={HomeContainer} />
 

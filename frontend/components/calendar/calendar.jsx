@@ -41,7 +41,10 @@ class Calendar extends React.Component {
           <span className="separator"></span>
           <div className="main_content">
    
-                <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" />
+                <FullCalendar 
+                className="calendar_container"
+                plugins={[dayGridPlugin]} 
+                initialView="dayGridMonth" />
    
               
           </div>
