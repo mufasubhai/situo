@@ -43,12 +43,18 @@ class ProfileSettingsForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const formData = new FormData();
-        // formData.append()
+        if (this.state.photoFile) {
+            formData.append('user[photo]', this.state.photoFile)
+            formData.append('user[password]', this.state.password)
+            formData.append('user[email]', this.state.email)
+            formData.append('user[name]', this.state.name)
+            this.props.updateUserPhoto(this.props.user.id, formData);
+
+        } else {
+            this.props.updateUser(this.state)
+        }
         
-        console.log(this.state.photoFile)
-        console.log(formData)
-        formData.append('user[photo]', this.state.photoFile)
-        this.props.updateUserPhoto(this.props.user.id, formData);
+
     }
 
 
