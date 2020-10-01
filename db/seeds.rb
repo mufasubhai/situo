@@ -23,12 +23,19 @@ u1 = User.create!(
   photo_url: ''
 )
 
+file1 = File.open('app/assets/images/woz.jpeg')
+u1.photo.attach(io: file1, filename: 'woz.jpeg')
+  
+
 u2 = User.create!(
   name: 'David Byrne',
   email: 'byrne@byrne.byrne',
   password: 'hunter2',
   photo_url: ''
 )
+
+file2 = File.open('app/assets/images/davidbyrne.jpg')
+u2.photo.attach(io: file2, filename: 'davidbyrne.jpg')
 
 u3 = User.create!(
   name: 'Jeff Lebowski',
@@ -37,12 +44,18 @@ u3 = User.create!(
   photo_url: ''
 )
 
+file3 = File.open('app/assets/images/thedude.jpg')
+u3.photo.attach(io: file3, filename: 'thedude.jpg')
+
 u4 = User.create!(
   name: 'Ruth Bader Ginsberg',
   email: 'ruth@ruth.ruth',
   password: 'hunter2',
   photo_url: ''
 )
+
+file4 = File.open('app/assets/images/ruth.jpeg')
+u4.photo.attach(io: file4, filename: 'ruth.jpeg')
 
 u5 = User.create!(
   name: 'Rocky Dax',
@@ -51,6 +64,8 @@ u5 = User.create!(
   photo_url: ''
 )
 
+file5 = File.open('app/assets/images/rockydax.jpeg')
+u5.photo.attach(io: file5, filename: 'rockydax.jpeg')
 
 p1 = Project.create!(
   project_name: 'Personnel Investigation',
