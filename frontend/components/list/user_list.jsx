@@ -22,6 +22,7 @@ class UserList extends React.Component {
             task_name: "New task", 
             description: "", 
             due_date: Date(),
+            start_date: Date(),
             owner_id: userId,
             creator_id: userId,
             status: "not-started"

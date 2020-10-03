@@ -38,8 +38,11 @@ class Calendar extends React.Component {
     console.log(activeTasks)
 
     const events = [];
-
-    activeTasks.forEach(task => {
+    const incompleteTasks = activeTasks.filter(
+      (task) => task.status !== "complete"
+    );
+    
+    incompleteTasks.forEach(task => {
         const details = {
             id: task.id,
             start: task.start_date,
@@ -50,9 +53,6 @@ class Calendar extends React.Component {
         events.push(details)
     })
 
-    // const incompleteTasks = activeTasks.filter(
-    //   (task) => task.status !== "complete"
-    // );
 
 
 

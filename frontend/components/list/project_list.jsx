@@ -24,6 +24,7 @@ class ProjectList extends React.Component {
             task_name: "New task",
             description: "",
             due_date: Date(),
+            start_date: Date(),
             owner_id: userId,
             creator_id: userId,
             status: "not-started",
@@ -63,9 +64,7 @@ class ProjectList extends React.Component {
                                         <button className="add_task_button project_add_task" onClick={this.newTask}>Add task</button>
                                         <div className="spacer_3"></div>
                                     <span id="project_list_top">
-                                        <div className="project_header row_1">Task name</div>
-                                        <div className="project_header row_2">Status</div>
-                                        <div className="project_header row_3">Due date</div>
+                               
                                         
                                     </span>
 

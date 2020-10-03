@@ -68,6 +68,11 @@ class UserTaskIndexItem extends React.Component {
                 </span>
                         <p className="task_index col_4 ">{this.state.status}</p>
                <span className="task_index col_3 index_border_1">
+                   Start:
+                   <input className="cal" type="date" value={this.state.start_date} onChange={this.update('start_date')} />                    
+                </span>
+               <span className="task_index col_3 index_border_1">
+                   Due:
                    <input className="cal" type="date" value={this.state.due_date} onChange={this.update('due_date')} />                    
                 </span>
                     <button className="delete_button2" onClick={()=> this.props.deleteTask(this.state.id)}>Delete</button>
