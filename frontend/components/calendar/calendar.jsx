@@ -37,18 +37,34 @@ class Calendar extends React.Component {
     
     console.log(activeTasks)
 
+    const events = [];
 
-    const incompleteTasks = userTasks.filter(
-      (task) => task.status !== "complete"
-    );
-    const {
-      tasks,
-      projectId,
-      fetchTask,
-      deleteTask,
-      updateTask,
-      createTask,
-    } = this.props;
+    activeTasks.forEach(task => {
+        const details = {
+            id: task.id,
+            start: task.start_date,
+            end: task.due_date,
+            title: task.task_name
+        };
+
+        events.push(details)
+    })
+
+    // const incompleteTasks = activeTasks.filter(
+    //   (task) => task.status !== "complete"
+    // );
+
+
+
+
+    // const {
+    //   tasks,
+    //   projectId,
+    //   fetchTask,
+    //   deleteTask,
+    //   updateTask,
+    //   createTask,
+    // } = this.props;
 
     return (
       <span className="situo_full_page">
@@ -63,6 +79,7 @@ class Calendar extends React.Component {
             <FullCalendar
               plugins={[dayGridPlugin]}
               initialView="dayGridMonth"
+              events={events}
             />
           </div>
         </span>
