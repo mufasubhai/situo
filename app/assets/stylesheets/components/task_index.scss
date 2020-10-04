@@ -151,6 +151,33 @@
 
 }
 
+.edit_button:hover {
+  background: #1fbda2;
+    border-color: #1fbda2;
+    cursor: pointer;
+}
+.edit_button {
+ align-items: center;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .2s;
+    transition-property: background,border,box-shadow,color,fill;
+    user-select: none;
+    background: #25e8c8;
+    border-color: #25e8c8;
+    color: #fff;
+    fill: #fff;
+    height: 28px;
+    width: 64px;
+
+
+}
+
 .delete_button2:hover {
   background: #d84d5b;
     border-color: #d84d5b;

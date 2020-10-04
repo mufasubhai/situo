@@ -3,6 +3,8 @@ import { Link, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux'
 import UserList from './user_list'
 import { fetchTasks, deleteTask, fetchTask, createTask, updateTask } from '../../actions/task_actions'
+import { setTask } from "../../actions/current_task_actions";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 
 const mSTP = state => ({
@@ -18,7 +20,8 @@ const mDTP = (dispatch) => ({
   deleteTask: (taskId) => dispatch(deleteTask(taskId)),
   updateTask: (taskId) => dispatch(updateTask(taskId)),
   closeModal: () => dispatch(closeModal()),
-  openModal: () => dispatch(openModal()),
+  openModal: (modal) => dispatch(openModal(modal)),
+  setTask: (taskId) => dispatch(setTask(taskId)),
 });
 
 

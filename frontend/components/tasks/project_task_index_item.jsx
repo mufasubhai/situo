@@ -26,7 +26,7 @@ class ProjectTaskIndexItem extends React.Component {
     }
 
     openEdit(key) {
-        // this.props.openModal('edit_task');
+        this.props.openModal('edit_task');
         this.props.setTask(key)
     }
     render () {
@@ -74,8 +74,7 @@ class ProjectTaskIndexItem extends React.Component {
                                            
                         </span>
                         <button className="delete_button2" onClick={() => this.props.deleteTask(this.state.id)}>Delete</button>
-                        <div className="delete_button2" onClick={
-                                () => this.openEdit(this.state.id)} >Edit</div>
+                        <div className="edit_button" onClick={() => this.openEdit(this.state.id)}>View</div>
             </li>
         )
 
