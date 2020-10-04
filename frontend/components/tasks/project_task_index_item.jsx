@@ -5,9 +5,9 @@ class ProjectTaskIndexItem extends React.Component {
     constructor(props) {
         super(props)
         this.state = this.props.task;
-
         this.updateStatus = this.updateStatus.bind(this)
         this.updateStatusField = this.updateStatusField.bind(this)
+        this.openEdit = this.openEdit.bind(this)
     }
 
     update(field) {
@@ -15,16 +15,20 @@ class ProjectTaskIndexItem extends React.Component {
     }
 
     updateStatus() {
-
         (this.state.status === 'not-started') ? this.setState({ status: 'started' }, () => this.props.updateTask(this.state)) :
             (this.state.status === 'started') ? this.setState({ status: 'complete' }, () => this.props.updateTask(this.state)) : this.setState({ status: 'not-started' }, () => this.props.updateTask(this.state))
     }
+
+
 
     updateStatusField() {
         this.updateStatus();
     }
 
-
+    openEdit(key) {
+        // this.props.openModal('edit_task');
+        this.props.setTask(key)
+    }
     render () {
 
     return (
@@ -70,6 +74,8 @@ class ProjectTaskIndexItem extends React.Component {
                                            
                         </span>
                         <button className="delete_button2" onClick={() => this.props.deleteTask(this.state.id)}>Delete</button>
+                        <div className="delete_button2" onClick={
+                                () => this.openEdit(this.state.id)} >Edit</div>
             </li>
         )
 

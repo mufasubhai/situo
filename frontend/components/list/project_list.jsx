@@ -41,7 +41,7 @@ class ProjectList extends React.Component {
             return task.project_id === parseInt(boundProjectId)});
         const incompleteTasks = projectTasks.filter(task => (task.status !== 'complete'))
 
-        const { tasks, projectId, fetchTask, deleteTask, updateTask, createTask } = this.props;
+        const { tasks, projectId, fetchTask, deleteTask, updateTask, createTask, openModal, setTask} = this.props;
      
       
         return (
@@ -78,6 +78,9 @@ class ProjectList extends React.Component {
                                             deleteTask={deleteTask}
                                             updateTask={updateTask}
                                             key={task.id}
+                                            openModal={openModal}
+                                            setTask={setTask}
+
                                             />
                                             ))
                                             
