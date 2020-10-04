@@ -9,6 +9,9 @@ import { fetchComment, fetchComments, updateComment, deleteComment, createCommen
 
 
 const mSTP = state => ({
+    currentTaskId: state.entities.currentTask.id,
+    comments: state.entities.comments
+
 });
 
 

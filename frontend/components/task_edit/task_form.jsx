@@ -8,10 +8,15 @@ class TaskForm extends React.Component {
         super(props)
     }
 
-
+    componentDidMount() {
+        this.props.fetchComments();
+    }
 
     render() {
-        // console.log(this.state.selectedItem)
+        const {comments, currentTaskId } = this.props;
+        console.log(comments);
+        console.log(currentTaskId);
+        
         return (
             <div> THIS IS THE TASK EDIT FORM</div>
         )
