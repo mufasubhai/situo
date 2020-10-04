@@ -10,7 +10,8 @@ import { fetchComment, fetchComments, updateComment, deleteComment, createCommen
 
 const mSTP = state => ({
     currentTaskId: state.entities.currentTask.id,
-    comments: state.entities.comments
+    comments: Object.values(state.entities.comments),
+    tasks: state.entities.tasks
 
 });
 
