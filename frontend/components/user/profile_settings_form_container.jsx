@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link, withConnect, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux'
-import { openModal, closeModal } from '../../actions/modal_actions'
-import {fetchUsers, updateUser, fetchUser, updateUserPhoto} from '../../actions/user_actions'
+import { closeModal } from '../../actions/modal_actions'
+import { updateUser, updateUserPhoto } from '../../actions/user_actions'
 
 class ProfileSettingsForm extends React.Component {
     constructor(props) {

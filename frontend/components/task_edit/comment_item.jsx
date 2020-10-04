@@ -8,10 +8,12 @@ class CommentItem extends React.Component {
 
     render() {
         const { author_id, project_id, body, created_at, updated_at} = this.props.comment;
+        // console.log(userName)
         return (
             <div>
-                <p>{author_id}</p>
+                <p>{this.props.userName}</p>
                 <p>{body}</p>
+                
             </div>
         )
     }

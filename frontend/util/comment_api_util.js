@@ -12,13 +12,14 @@ export const fetchComment = id => (
     })
 )
 
-export const createComment = comment => (
-    $.ajax({
+export const createComment = comment => {
+    debugger
+ return   $.ajax({
         method: 'POST',
         url: `/api/comments`,
         data: { comment }
     })
-)
+}
 
 export const updateComment = comment => (
     $.ajax({
