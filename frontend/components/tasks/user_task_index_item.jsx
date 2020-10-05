@@ -126,18 +126,21 @@ class UserTaskIndexItem extends React.Component {
             onChange={this.update("due_date")}
           />
         </span>
-        <button
-          className="delete_button2"
-          onClick={() => this.props.deleteTask(this.state.id)}
-        >
-          Delete
-        </button>
-        <div
-          className="edit_button"
-          onClick={() => this.openEdit(this.state.id)}
-        >
-          View
-        </div>
+        <span>
+            <button
+            className="delete_button2"
+            onClick={() => this.props.deleteTask(this.state.id)}
+            >
+            Delete
+            </button>
+            <button
+            className="edit_button"
+            onClick={() => this.openEdit(this.state.id)}
+            >
+            View
+            </button>
+
+        </span>
       </li>
     );
   }
