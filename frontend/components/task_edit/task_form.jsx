@@ -56,7 +56,7 @@ handleChange(field) {
           {currentTaskComments.map((comment) => {
             const user = this.props.users.filter(
               (user) => user.id === comment.author_id
-            )[0];
+            )[0] || null;
             
             return (
               <CommentItem
