@@ -54,15 +54,15 @@ handleChange(field) {
         <p>{currentTask.start_date}</p>
         <div>
           {currentTaskComments.map((comment) => {
-            const user = this.props.users.filter(
+            const userName = this.props.users.filter(
               (user) => user.id === comment.author_id
-            )[0] || null;
+            )[0].name;
             
             return (
               <CommentItem
                 comment={comment}
                 key={comment.id}
-                userName={user.name}
+                userName={userName}
               />
             );
           })}
