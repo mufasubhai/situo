@@ -45,7 +45,9 @@ handleChange(field) {
       (comment) => comment.task_id === currentTaskId
     );
     const currentTask = tasks[currentTaskId];
-
+    if (this.props.users.length === 0) {
+        return null;
+    } else {
     return (
       <div>
         <p>{currentTask.task_name}</p>
@@ -78,6 +80,7 @@ handleChange(field) {
         
       </div>
     );
+}
   }
 }
 
