@@ -5,6 +5,7 @@ import ProjectList from './project_list'
 import { fetchProject } from '../../actions/project_actions'
 import { fetchTasks, deleteTask, fetchTask, createTask, updateTask } from '../../actions/task_actions'
 import {setTask} from '../../actions/current_task_actions'
+import { fetchUsers } from "../../actions/user_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 
@@ -18,6 +19,7 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = (dispatch) => ({
   fetchProject: (projectId) => dispatch(fetchProject(projectId)),
+  fetchUsers: () => dispatch(fetchUsers()),
   fetchTasks: () => dispatch(fetchTasks()),
   fetchTask: (taskId) => dispatch(fetchTask(taskId)),
   createTask: (task) => dispatch(createTask(task)),
@@ -25,7 +27,7 @@ const mDTP = (dispatch) => ({
   updateTask: (taskId) => dispatch(updateTask(taskId)),
   closeModal: () => dispatch(closeModal()),
   setTask: (taskId) => dispatch(setTask(taskId)),
-  openModal: (modal) => dispatch(openModal(modal))
+  openModal: (modal) => dispatch(openModal(modal)),
 });
 
 

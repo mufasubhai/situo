@@ -12,8 +12,9 @@ class UserList extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchTasks()
-        this.newTask = this.newTask.bind(this)
+        this.props.fetchTasks();
+        this.props.fetchUsers();
+        this.newTask = this.newTask.bind(this);
     }
 
     newTask() {

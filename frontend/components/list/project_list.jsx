@@ -15,6 +15,8 @@ class ProjectList extends React.Component {
     componentDidMount() {
         this.props.fetchTasks()
         this.props.fetchProject(this.props.match.params.projectId)
+                this.props.fetchUsers();
+
     }
 
     newTask() {
