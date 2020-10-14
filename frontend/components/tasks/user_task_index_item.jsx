@@ -137,6 +137,7 @@ class UserTaskIndexItem extends React.Component {
             className="edit_button"
             onClick={() => this.openEdit(this.state.id)}
             >
+              
             View
             </button>
 

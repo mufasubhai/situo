@@ -17,7 +17,8 @@ class Calendar extends React.Component {
 
   render() {
             console.log(this.props);
-
+    const setTask = this.props.setTask
+    const openModal = this.props.openModal
     const userId = parseInt(this.props.id);
 
     
@@ -35,7 +36,7 @@ class Calendar extends React.Component {
         activeTasks = userTasks
     }
     
-    console.log(activeTasks)
+    // console.log(activeTasks)
 
     const events = [];
     const incompleteTasks = activeTasks.filter(
@@ -80,6 +81,22 @@ class Calendar extends React.Component {
               plugins={[dayGridPlugin]}
               initialView="dayGridMonth"
               events={events}
+              // setTask={setTask}
+              // setTask={() => openModal()}
+              eventClick={
+                function(e) {
+                  // console.log(e)
+                  e.jsEvent.preventDefault();
+                  // console.log(e);
+                  const currentTaskId = (e.event._def.publicId)
+
+                  console.log(currentTaskId)
+                  
+                  setTask(currentTaskId);
+                  openModal('edit_task');
+
+                }
+              }
             />
           </div>
         </span>

@@ -9,7 +9,8 @@ import {
   createTask,
   updateTask,
 } from "../../actions/task_actions";
-
+import { setTask } from "../../actions/current_task_actions";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 
 const mSTP = (state) => ({
@@ -23,6 +24,9 @@ const mDTP = (dispatch) => ({
   createTask: (task) => dispatch(createTask(task)),
   deleteTask: (taskId) => dispatch(deleteTask(taskId)),
   updateTask: (taskId) => dispatch(updateTask(taskId)),
+    closeModal: () => dispatch(closeModal()),
+  setTask: (taskId) => dispatch(setTask(taskId)),
+  openModal: (modal) => dispatch(openModal(modal)),
 });
 
 
