@@ -21,8 +21,8 @@ u1 = User.create!(
   email: 'woz@woz.woz',
   password: 'hunter2',
   photo_url: '',
-  bio: `Stephen Gary Wozniak, also known by his nickname "Woz", is an American electronics engineer, programmer, philanthropist, and technology entrepreneur. In 1976, he co-founded Apple Inc., 
-  which later became the world's largest information technology company by revenue and the largest company in the world by market capitalization. Through their work at Apple in the 1970s and 1980s, he and Apple co-founder Steve Jobs are widely recognized as two prominent pioneers of the personal computer revolution.`
+  bio: 'Stephen Gary Wozniak, also known by his nickname "Woz", is an American electronics engineer, programmer, philanthropist, and technology entrepreneur. In 1976, he co-founded Apple Inc., 
+  which later became the world`s largest information technology company by revenue and the largest company in the world by market capitalization. Through their work at Apple in the 1970s and 1980s, he and Apple co-founder Steve Jobs are widely recognized as two prominent pioneers of the personal computer revolution.'
 )
 
 file1 = File.open('app/assets/images/woz.jpeg')
@@ -34,8 +34,8 @@ u2 = User.create!(
   email: 'byrne@byrne.byrne',
   password: 'hunter2',
   photo_url: '',
-  bio:  `David Byrne is a British-American singer, songwriter, musician, record producer, artist, actor, writer, music theorist, and filmmaker, who was a founding member and the principal songwriter, lead singer, and guitarist of the American new wave band Talking Heads.
-  Byrne has released solo recordings and worked with various media including film, photography, opera, fiction, and non-fiction. He has received Academy, Grammy, and Golden Globe Awards, and he is an inductee to the Rock and Roll Hall of Fame as part of Talking Heads.`
+  bio:  'David Byrne is a British-American singer, songwriter, musician, record producer, artist, actor, writer, music theorist, and filmmaker, who was a founding member and the principal songwriter, lead singer, and guitarist of the American new wave band Talking Heads.
+  Byrne has released solo recordings and worked with various media including film, photography, opera, fiction, and non-fiction. He has received Academy, Grammy, and Golden Globe Awards, and he is an inductee to the Rock and Roll Hall of Fame as part of Talking Heads.'
 )
 
 file2 = File.open('app/assets/images/davidbyrne.jpg')
@@ -46,7 +46,7 @@ u3 = User.create!(
   email: 'jeff@jeff.jeff',
   password: 'hunter2',
   photo_url: '',
-  bio: `Jeffrey "The Dude" Lebowski is a Los Angeles slacker and avid bowler.`
+  bio: 'Jeffrey "The Dude" Lebowski is a Los Angeles slacker and avid bowler.'
 )
 
 file3 = File.open('app/assets/images/thedude.jpg')
@@ -57,9 +57,7 @@ u4 = User.create!(
   email: 'ruth@ruth.ruth',
   password: 'hunter2',
   photo_url: '',
-  bio: `Ruth Bader Ginsburg was an associate justice of the Supreme Court of the United States from 1993 until her death. She was nominated by President Bill Clinton and at the time was generally viewed as a moderate consensus-builder. She eventually became part of the liberal wing of the Court as the Court shifted to the right over time. Ginsburg was the first Jewish woman and the second woman to serve on the Court, after Sandra Day O'Connor. During her tenure, Ginsburg wrote notable majority opinions, including United States v. Virginia (1996), Olmstead v. L.C. (1999), Friends of the Earth, Inc. v. Laidlaw Environmental Services, Inc. (2000), and City of Sherrill v. Oneida Indian Nation of New York (2005).
-
-`
+  bio: 'Ruth Bader Ginsburg was an associate justice of the Supreme Court of the United States from 1993 until her death. She was nominated by President Bill Clinton and at the time was generally viewed as a moderate consensus-builder. She eventually became part of the liberal wing of the Court as the Court shifted to the right over time. Ginsburg was the first Jewish woman and the second woman to serve on the Court, after Sandra Day OConnor. During her tenure, Ginsburg wrote notable majority opinions, including United States v. Virginia (1996), Olmstead v. L.C. (1999), Friends of the Earth, Inc. v. Laidlaw Environmental Services, Inc. (2000), and City of Sherrill v. Oneida Indian Nation of New York (2005).'
 )
 
 file4 = File.open('app/assets/images/ruth.jpeg')
