@@ -40,24 +40,24 @@ class ProfileSettingsForm extends React.Component {
         const formData = new FormData();
         if (this.state.photoFile) {
 
-            if (this.state.password2 !== this.state.password3) {
-                alert('Passwords must match')
-            } else {
+            // if (this.state.password2 !== this.state.password3) {
+            //     alert('Passwords must match')
+            // } else {
                 formData.append('user[photo]', this.state.photoFile)
-                formData.append('user[password]', this.state.password)
-                formData.append('user[email]', this.state.email)
+                // formData.append('user[password]', this.state.password)
+                formData.append('user[bio]', this.state.bio)
                 formData.append('user[name]', this.state.name)
                 this.props.updateUserPhoto(this.props.user.id, formData);
 
-            }
+            // }
 
         } else {
-            if (this.state.password2 !== this.state.password3) {
-                alert('Passwords must match')
-            } else {
+            // if (this.state.password2 !== this.state.password3) {
+            //     alert('Passwords must match')
+            // } else {
 
                 this.props.updateUser(this.state)
-            }
+            // }
         }
         
 
@@ -67,7 +67,7 @@ class ProfileSettingsForm extends React.Component {
     render () {
         return (
           <div className="modal_container">
-            <span className="modal_top">
+            <span className="modal_top  user_modal">
               <h1 className="edit_title">Profile Settings</h1>
 
               <div
@@ -99,14 +99,21 @@ class ProfileSettingsForm extends React.Component {
                 />
               </label>
               <label className="modal_label">
-                email
+                Bio
                 <span className="spacer"></span>
-                <input
-                  type="text"
-                  className="project_name_update text_input"
-                  value={this.state.email}
-                  onChange={this.handleChange("email")}
+                <textarea
+                  
+                  className="project_name_update text_input bio_update"
+                  value={this.state.bio}
+                  onChange={this.handleChange("bio")}
                 />
+              </label>
+              <label className="modal_label">Current Profile Photo:
+              <img
+                            className="profile_photo_preview"
+                            src={this.state.photoUrl}
+                            />
+
               </label>
               {/* <label className="modal_label">
                 Password

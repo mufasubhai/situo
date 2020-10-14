@@ -10,7 +10,7 @@
 
 .modal_child {
   position: relative;
-  top: 240px;
+  top: 400px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
@@ -26,6 +26,7 @@
 .modal_container {
   display: flex;
   flex-direction: column;
+  
 
 }
 
