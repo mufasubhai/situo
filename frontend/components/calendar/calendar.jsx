@@ -12,14 +12,17 @@ class Calendar extends React.Component {
 
   componentDidMount() {
       this.props.fetchTasks()
+      this.props.fetchComments()
+      this.props.fetchUsers()
   }
 
 
   render() {
-            console.log(this.props);
+            // console.log(this.props);
     const setTask = this.props.setTask
     const openModal = this.props.openModal
     const userId = parseInt(this.props.id);
+    const comment = this.props.comment
 
     
     let activeTasks;
@@ -81,22 +84,17 @@ class Calendar extends React.Component {
               plugins={[dayGridPlugin]}
               initialView="dayGridMonth"
               events={events}
-              // setTask={setTask}
-              // setTask={() => openModal()}
               eventClick={
                 function(e) {
-                  // console.log(e)
                   e.jsEvent.preventDefault();
-                  // console.log(e);
                   const currentTaskId = (e.event._def.publicId)
-
-                  console.log(currentTaskId)
-                  
                   setTask(currentTaskId);
                   openModal('edit_task');
-
                 }
+                
               }
+   
+    
             />
           </div>
         </span>
@@ -106,3 +104,15 @@ class Calendar extends React.Component {
 }
 
 export default Calendar
+
+//  currentTaskId: state.entities.currentTask.id,
+//   comments: Object.values(state.entities.comments),
+//   users: Object.values(state.entities.users),
+//   tasks: state.entities.tasks,
+//   tasksObjects: Object.values(state.entities.tasks),
+//   userId: state.session.id,
+//   comment: {
+//     body: "",
+//     task_id: state.entities.currentTask.id,
+//     author_id: state.session.id
+//   },

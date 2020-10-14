@@ -11,7 +11,8 @@ import {
 } from "../../actions/task_actions";
 import { setTask } from "../../actions/current_task_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
-
+import {fetchComments} from "../../actions/comment_actions";
+import {fetchUsers } from '../../actions/user_actions';
 
 
 const mSTP = (state) => ({
@@ -27,7 +28,9 @@ const mDTP = (dispatch) => ({
   closeModal: () => dispatch(closeModal()),
   setTask: (taskId) => dispatch(setTask(taskId)),
   openModal: (modal) => dispatch(openModal(modal)),
-});
+  fetchComments: () => dispatch(fetchComments()),
+  fetchUsers: () => dispatch(fetchUsers())
+ });
 
 
 

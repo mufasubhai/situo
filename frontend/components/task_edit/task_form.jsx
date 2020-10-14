@@ -2,14 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import CommentItem from './comment_item'
+import DateUpdateComponent from './date_update_component';
 
 class TaskForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state= this.props.comment
+    this.state = this.props.comment
+    // console.log('task form')
+    // console.log(this.state)
+    // console.log(this.props)
     this.handleChange = this.handleChange.bind(this);
-    const currentTask = this.props.tasksObjects.filter(task => (task.id === this.props.currentTaskId))[0];
-    this.currentTask =  currentTask;
+    this.currentTask = this.props.tasksObjects.filter(task => (task.id === parseInt(this.props.currentTaskId)))[0];
+    // this.currentTask = this.props.tasks.filter(task => (task.id === this.props.currentTaskId))[0];
+    // // console.log(this.currentTask);
+    // console.log(parseInt(this.props.currentTaskId))
+    // console.log(this.currentTask)
+  
+  
+    // this.currentTask =  currentTask;
 }   
 
 componentDidMount() {
@@ -31,6 +41,9 @@ handleChange(field) {
     };
   }
 
+
+   
+
   componentDidUpdate() {
   }
 
@@ -39,11 +52,20 @@ handleChange(field) {
 //   }
 
   render() {
-    const { tasks, comments, currentTaskId } = this.props;
+
+    const tasks = this.props.tasks;
+    const comments = this.props.comments;
+    const currentTaskId = parseInt(this.props.currentTaskId);
+    console.log(this.props.users)
+    // const { tasks, comments, currentTaskId } = this.props;
+    // console.log(comments)
 
     const currentTaskComments = comments.filter(
       (comment) => comment.task_id === currentTaskId
+
     );
+
+    // console.log(currentTaskComments)
     const currentTask = tasks[currentTaskId];
     if (this.props.users.length === 0) {
         return null;
@@ -52,6 +74,8 @@ handleChange(field) {
       <div>
         <p>{currentTask.task_name}</p>
         <p>{currentTask.description}</p>
+        <DateUpdateComponent currentTask={this.currentTask}/>
+
         <p>{currentTask.due_date}</p>
         <p>{currentTask.start_date}</p>
         <div>
