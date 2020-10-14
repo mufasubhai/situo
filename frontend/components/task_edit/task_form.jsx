@@ -71,8 +71,8 @@ handleChange(field) {
         return null;
     } else {
     return (
-      <div>
-        <p>{currentTask.task_name}</p>
+      <div className="task_edit_modal">
+        <p className="task_title">{currentTask.task_name}</p>
         <p>{currentTask.description}</p>
         <DateUpdateComponent currentTask={this.currentTask}/>
         <div>

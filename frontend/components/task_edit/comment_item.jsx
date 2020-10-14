@@ -18,7 +18,7 @@ class CommentItem extends React.Component {
         // let time = 
         return (
             <div className="task_comment">
-                <p className="task_comment_name">{this.props.userName} </p>
+                <p className="task_comment_name">{this.props.userName}: </p>
                     <p className="date_time">Date: {year}-{month}</p> 
                     <p className="date_time">Time: {time}</p>
                 <p className="task_comment_body">{body}</p>
