@@ -67,6 +67,14 @@ class User < ApplicationRecord
     end
   end
 
+  def updated_at_utc
+    updated_at.to_f * 1000
+  end
+
+  def created_at_utc
+    updated_at.to_f * 1000
+  end
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil unless user

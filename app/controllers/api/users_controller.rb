@@ -30,6 +30,9 @@ class Api::UsersController < ApplicationController
     render :show
   end
 
+  def search
+  end
+
   private
 
   def user_params
