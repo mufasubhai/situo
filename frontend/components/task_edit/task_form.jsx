@@ -75,9 +75,6 @@ handleChange(field) {
         <p>{currentTask.task_name}</p>
         <p>{currentTask.description}</p>
         <DateUpdateComponent currentTask={this.currentTask}/>
-
-        <p>{currentTask.due_date}</p>
-        <p>{currentTask.start_date}</p>
         <div>
           {currentTaskComments.map((comment) => {
             const userName = this.props.users.filter(
