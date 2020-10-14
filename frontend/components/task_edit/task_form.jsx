@@ -91,13 +91,14 @@ handleChange(field) {
           })}
         </div>
        
-          New Comment:
-          <input
+ 
+          <input className="comment_input"
             type="text"
             value={this.state.body}
+            placeholder={"Ask a question or post an update"}
             onChange={this.handleChange("body")}
           />
-          <button onClick={() => {this.props.createComment(this.state), this.setState({body: ""})}}>New Comment</button>
+          <button onClick={() => {this.props.createComment(this.state), this.setState({body: ""})}}>Comment</button>
         
       </div>
     );

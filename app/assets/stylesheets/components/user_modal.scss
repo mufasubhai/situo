@@ -12,3 +12,31 @@
     margin-top: 10px;
     margin-bottom: 40xp;
 }
+
+.date_time {
+    font-size: 11px;
+    padding-left: 15px;
+    // background-color: ;
+}
+
+.task_comment {
+    padding-left: 64px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+}
+
+.task_comment_name {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.comment_input {
+    padding: 4px 8px;
+    min-height: 32px;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+.task_comment_body {
+    font-size: 13px;
+}
