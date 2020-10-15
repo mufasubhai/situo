@@ -14,7 +14,8 @@
 }
 
 .date_time {
-    font-size: 11px;
+    font-size: 10px;
+    font-weight: 600;
     padding-left: 15px;
     // background-color: ;
 }
@@ -23,7 +24,9 @@
     padding-left: 64px;
     padding-right: 24px;
     padding-bottom: 5px;
+    padding-top: 3px;
     background-color: #f6f8f9;
+     border-top: #e8ecee .5px solid;
 }
 
 .task_comment_name {
@@ -33,21 +36,45 @@
 
 .comment_input {
     padding: 4px 8px;
+    margin: 20px;
     min-height: 32px;
     line-height: 20px;
     font-size: 13px;
-    border: grey 1px solid;
+    // width: 100%;
+    justify-self: center;
+    border: #e8ecee 1px solid;
     border-radius: 4px;
+    background-color: white;
+
+}
+
+.comment_button {
+    width: 20%;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.comment_input_wrapper {
+            background-color: #f6f8f9;
+    display: flex;
+    flex-direction:column;
+
 }
 
 .task_comment_body {
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 300;
     // margin-bottom: 20px;
 }
 
 .task_edit_modal {
     display: flex; 
     flex-direction: column;
+    width: 600px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #e8ecee;
 }
 
 .calendar_item_2 {
@@ -57,4 +84,23 @@
     justify-content: center;
     align-items: space-around;
     padding-bottom: 10px;
+    padding-top: 30px;
+}
+
+.last_date {
+    margin-left: 80px;
+}
+
+.task_title {
+    font-weight: 400;
+    text-align: left;
+    padding-top:20px;
+    padding-left: 20px;
+}
+
+.task_description {
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 20px;
+
 }

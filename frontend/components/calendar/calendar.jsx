@@ -18,7 +18,7 @@ class Calendar extends React.Component {
 
 
   render() {
-            // console.log(this.props);
+            
     const setTask = this.props.setTask
     const openModal = this.props.openModal
     const userId = parseInt(this.props.id);
@@ -39,7 +39,7 @@ class Calendar extends React.Component {
         activeTasks = userTasks
     }
     
-    // console.log(activeTasks)
+
 
     const events = [];
     const incompleteTasks = activeTasks.filter(

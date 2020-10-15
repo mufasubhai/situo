@@ -8,18 +8,8 @@ class TaskForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.comment
-    // console.log('task form')
-    // console.log(this.state)
-    // console.log(this.props)
     this.handleChange = this.handleChange.bind(this);
     this.currentTask = this.props.tasksObjects.filter(task => (task.id === parseInt(this.props.currentTaskId)))[0];
-    // this.currentTask = this.props.tasks.filter(task => (task.id === this.props.currentTaskId))[0];
-    // // console.log(this.currentTask);
-    // console.log(parseInt(this.props.currentTaskId))
-    // console.log(this.currentTask)
-  
-  
-    // this.currentTask =  currentTask;
 }   
 
 componentDidMount() {
@@ -42,38 +32,24 @@ handleChange(field) {
   }
 
 
-   
-
-  componentDidUpdate() {
-  }
-
-//   componentDidUpdate() {
-//       this.props.fetchComments();
-//   }
-
   render() {
 
     const tasks = this.props.tasks;
     const comments = this.props.comments;
     const currentTaskId = parseInt(this.props.currentTaskId);
-    console.log(this.props.users)
-    // const { tasks, comments, currentTaskId } = this.props;
-    // console.log(comments)
-
     const currentTaskComments = comments.filter(
       (comment) => comment.task_id === currentTaskId
 
     );
 
-    // console.log(currentTaskComments)
     const currentTask = tasks[currentTaskId];
     if (this.props.users.length === 0) {
         return null;
     } else {
     return (
       <div className="task_edit_modal">
-        <p className="task_title">{currentTask.task_name}</p>
-        <p>{currentTask.description}</p>
+        <h2 className="task_title">{currentTask.task_name}</h2>
+        <p className="task_description">{currentTask.description}</p>
         <DateUpdateComponent currentTask={this.currentTask}/>
         <div>
           {currentTaskComments.map((comment) => {
@@ -91,14 +67,17 @@ handleChange(field) {
           })}
         </div>
        
- 
+          <div className="comment_input_wrapper">
+
           <input className="comment_input"
             type="text"
             value={this.state.body}
-            placeholder={"Ask a question or post an update"}
+            placeholder={"Ask a question or post an update..."}
             onChange={this.handleChange("body")}
           />
-          <button onClick={() => {this.props.createComment(this.state), this.setState({body: ""})}}>Comment</button>
+          <button className="comment_button"onClick={() => {this.props.createComment(this.state), this.setState({body: ""})}}>Comment</button>
+
+          </div>
         
       </div>
     );

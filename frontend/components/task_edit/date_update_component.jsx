@@ -30,15 +30,15 @@ class DateUpdateComponent extends React.Component {
             <div className="calendar_item calendar_item_2">
                 <div>
                         <span className="task_index col_3 index_border_1">
-                            Start:
+                            Started:
                         </span>
                             <input className="cal" type="date" value={this.state.start_date} onChange={this.update('start_date')} />                    
 
                 </div>
                 <div>
 
-                        <span className="task_index col_3 index_border_1">
-                            Due:
+                        <span className="task_index col_3 index_border_1 last_date">
+                            Due Date:
                         </span>
                             <input className="cal" type="date" value={this.state.due_date} onChange={this.update('due_date')} />                    
                 </div>
