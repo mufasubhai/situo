@@ -28,7 +28,7 @@ class Api::TasksController < ApplicationController
         if @task.update(task_params)
             render :show
         else
-            render jseon: @task.errors.full_messages, status: 422
+            render json: @task.errors.full_messages, status: 422
         end
     end
 
